@@ -36,15 +36,17 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        int enemyIndex = Random.Range(0, enemies.Length - 1);
+        Enemy[] spawnableEnemies = enemies.Where((x, i) => enemyCountsForBattle[i] != 0).ToArray();
+
+        int enemyIndex = Random.Range(0, spawnableEnemies.Length - 1);
         GameObject enemyClone = Instantiate(enemyPrefab);
         enemyClone.transform.position = spawnPositions[Random.Range(0, spawnPositions.Length - 1)].position;
         EnemyManager enemyManager = enemyClone.GetComponent<EnemyManager>();
-        enemyManager.currentEnemy = enemies[enemyIndex];
+        enemyManager.currentEnemy = spawnableEnemies[enemyIndex];
         enemyManager.SetStats();
         enemyClone.SetActive(true);
 
-        enemyCountsForBattle[enemyIndex]--;
+        enemyCountsForBattle[System.Array.IndexOf(enemies, spawnableEnemies[enemyIndex])]--;
         enemysInBattle++;
     }
 

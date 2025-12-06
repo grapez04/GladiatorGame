@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class AbilitySelector : MonoBehaviour
 {
-
+    [SerializeField] public Level level;
     Abillity[] abillities;
 
     private void Start()

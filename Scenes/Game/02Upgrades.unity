@@ -119,6 +119,70 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &651535768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651535771}
+  - component: {fileID: 651535769}
+  - component: {fileID: 651535770}
+  m_Layer: 0
+  m_Name: Level1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &651535769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651535768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91168e94d1456f4b8a9bdde2f3fd82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level
+  abilities: {fileID: 651535770}
+  enemies:
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyCounts: 0c00000017000000
+  maxEnemysOnScreen: 34
+--- !u!114 &651535770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651535768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f3a236ced13b94bb40c2abbd81ffd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Abilities
+  abillities: []
+--- !u!4 &651535771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651535768}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.14704, y: -9.03876, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 994912844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994912841
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,6 +194,7 @@ GameObject:
   - component: {fileID: 994912844}
   - component: {fileID: 994912843}
   - component: {fileID: 994912842}
+  - component: {fileID: 994912845}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -189,9 +254,25 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 651535771}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &994912845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994912841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0aaa470e5b71f46992cd347835d0cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Levels
+  levels:
+  - {fileID: 651535769}
+  - {fileID: 651535769}
 --- !u!1 &1128476706
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +284,9 @@ GameObject:
   - component: {fileID: 1128476708}
   - component: {fileID: 1128476707}
   - component: {fileID: 1128476709}
+  - component: {fileID: 1128476712}
+  - component: {fileID: 1128476711}
+  - component: {fileID: 1128476710}
   m_Layer: 5
   m_Name: Upgrade
   m_TagString: Untagged
@@ -260,6 +344,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28ec7e498c5cbf428e4c72800f6089f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilitySelector
+  level: {fileID: 0}
+--- !u!114 &1128476710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128476706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f3a236ced13b94bb40c2abbd81ffd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Abilities
+  abillities: []
+--- !u!114 &1128476711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128476706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91168e94d1456f4b8a9bdde2f3fd82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level
+  abilities: {fileID: 1128476710}
+  enemies: []
+  enemyCounts: 
+  maxEnemysOnScreen: 0
+--- !u!114 &1128476712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128476706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0aaa470e5b71f46992cd347835d0cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Levels
+  levels:
+  - {fileID: 1128476711}
 --- !u!1 &1740726898
 GameObject:
   m_ObjectHideFlags: 0
