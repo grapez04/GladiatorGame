@@ -17,7 +17,9 @@ public class PlayerManager : MonoBehaviour
 
     private void SetStats()
     {
-        movement.movespeed = stats.defaultMoveSpeed;
+        //healthManager.health = stats.health
+        movement.movespeed = stats.speed;
+        //attackHandler.attackDamager = stats.attackDamage;
         attackHandler.radius = stats.defaultAttackRange;
     }
 }
