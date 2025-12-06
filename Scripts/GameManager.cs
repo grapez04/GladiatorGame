@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [Header("Player stats")]
-    public static float playerSpeed = 1f;
+    public static float playerSpeed = 3f;
     public static float playerDamage = 1f;
     public static float playerHealth = 1f;
     public static float playerRange = 1f;
@@ -23,9 +23,7 @@ public class GameManager : MonoBehaviour
 
         PlayerStats playerStats = FindAnyObjectByType<PlayerStats>();
         playerStats.attackDamage = playerDamage;
-        playerStats.defaultAttackRange = playerRange;
         playerStats.health = playerHealth;
-        playerStats.defaultMoveSpeed = playerSpeed;
         playerStats.speed = playerSpeed;
 
         FindAnyObjectByType<PlayerManager>().StartBattle();

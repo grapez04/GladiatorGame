@@ -20,6 +20,6 @@ public class HealthManager : MonoBehaviour
 
     private void Die()
     {
-        GameManager.Restart();
+        //GameManager.RestartGame();
     }
 }

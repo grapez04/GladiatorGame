@@ -10,21 +10,16 @@ public class PlayerManager : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
-    private void Awake()
-    {
-        SetStats();
-    }
-
     private void SetStats()
     {
         //healthManager.health = stats.health
         movement.movespeed = stats.speed;
         //attackHandler.attackDamager = stats.attackDamage;
-        attackHandler.radius = stats.defaultAttackRange;
+        attackHandler.radius = stats.attackRange;
     }
 
     public void StartBattle()
     {
-
+        SetStats();
     }
 }
