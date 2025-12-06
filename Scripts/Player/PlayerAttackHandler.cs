@@ -15,6 +15,9 @@ public class PlayerAttackHandler : MonoBehaviour
     [Space]
     [SerializeField] private Collider2D[] hitColliders;
 
+    [Header("DamageValues")]
+    public int attackDamage = 1;
+
     private void Awake()
     {
         manager = GetComponent<PlayerManager>();
@@ -54,7 +57,7 @@ public class PlayerAttackHandler : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
 
         if (manager != null)
@@ -68,8 +71,42 @@ public class PlayerAttackHandler : MonoBehaviour
             // Right boundary
             Vector3 rightDir = Quaternion.Euler(0, 0, -detectionAngle * 0.5f) * aimDir;
 
+            Gizmos.color = Color.green;
             Gizmos.DrawLine(origin, origin + leftDir * detectionRadius);
             Gizmos.DrawLine(origin, origin + rightDir * detectionRadius);
+
+
+            if (hitColliders != null)
+            {
+                Gizmos.color = Color.green;
+                foreach (var col in hitColliders)
+                {
+                    if (col != null)
+                    {
+                        Gizmos.DrawLine(origin, col.transform.position);
+                    }
+                }
+            }
+        }
+    }
+
+    public void Attack()
+    {
+        foreach (Collider2D col in hitColliders)
+        {
+            if (col != null)
+            {
+                // Get EnemyManager
+                EnemyManager enemyManager = col.GetComponent<EnemyManager>();
+                if (enemyManager == null) continue;
+
+                // Get EnemyStats
+                EnemyStats enemyStats = enemyManager.enemyStats;
+                if (enemyStats == null) continue;
+
+                // Call Damage
+                enemyStats.TakeDamage(attackDamage);
+            }
         }
     }
 }

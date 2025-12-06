@@ -4,16 +4,14 @@ public class PlayerManager : MonoBehaviour
 {
     public PlayerStats stats;
     public PlayerMovement movement;
+    public PlayerAnimatorManager animator;
     public PlayerAttackHandler attackHandler;
     public MouseHandler mouseHandler;
 
+    public SpriteRenderer spriteRenderer;
+
     private void Awake()
     {
-        stats = GetComponent<PlayerStats>();
-        movement = GetComponent<PlayerMovement>();
-        attackHandler = GetComponent<PlayerAttackHandler>();
-        mouseHandler = GetComponent<MouseHandler>();
-
         SetStats();
     }
 

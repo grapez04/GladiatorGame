@@ -3,14 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputManager : MonoBehaviour
 {
-    PlayerMovement movement;
+    private PlayerManager manager;
 
     PlayerControls playerControls;
     [SerializeField] private Vector2 moveInput;
 
     private void Awake()
     {
-        movement = GetComponent<PlayerMovement>();
+        manager = GetComponent<PlayerManager>();
     }
 
     private void Update()
@@ -28,6 +28,8 @@ public class PlayerInputManager : MonoBehaviour
             playerControls.Player.Move.canceled += i => moveInput = Vector2.zero;
 
             playerControls.Player.Aim.performed += OnMousePos;
+
+            playerControls.Player.Attack.performed += OnAttack;
         }
 
         playerControls.Enable();
@@ -35,11 +37,17 @@ public class PlayerInputManager : MonoBehaviour
 
     private void OnMovement()
     {
-        movement.move = moveInput;
+        manager.movement.move = moveInput;
     }
 
     private void OnMousePos(InputAction.CallbackContext context)
     {
-        movement.mouseHandler.mousePos = context.ReadValue<Vector2>();
+        manager.movement.mouseHandler.mousePos = context.ReadValue<Vector2>();
+    }
+
+    private void OnAttack(InputAction.CallbackContext context)
+    {
+        manager.animator.PlayTargetAnim("Attack");
+        manager.attackHandler.Attack();
     }
 }
