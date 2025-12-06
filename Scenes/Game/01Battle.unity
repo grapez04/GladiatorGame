@@ -2791,7 +2791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244306661190271864, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
       propertyPath: enemyLayer.m_Bits
-      value: 0
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 8059155061369008200, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
       propertyPath: cursor
@@ -2862,6 +2862,10 @@ PrefabInstance:
       propertyPath: enemyPrefab
       value: 
       objectReference: {fileID: 5307606281017908436, guid: 07760eba49bd01e46bfa78dda9484690, type: 3}
+    - target: {fileID: 7811267866769449630, guid: 4700db08618d7a442843777582f5f80c, type: 3}
+      propertyPath: enemyCountForBattle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7811267866769449630, guid: 4700db08618d7a442843777582f5f80c, type: 3}
       propertyPath: maxEnenemysInBattle
       value: 3
