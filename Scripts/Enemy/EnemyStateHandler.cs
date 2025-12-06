@@ -28,11 +28,13 @@ public class EnemyStateHandler : MonoBehaviour
             // Move toward the player
             manager.agent.SetDestination(manager.target.position);
             manager.agent.isStopped = false;
+            manager.isMoving = true;
         }
         else
         {
             // Stop when close enough
             manager.agent.isStopped = true;
+            manager.isMoving = false;
             manager.agent.ResetPath();
         }
     }

@@ -203,6 +203,7 @@ MonoBehaviour:
   enemyStats: {fileID: 876524487735583083}
   target: {fileID: 0}
   agent: {fileID: 3641205754172203823}
+  isMoving: 0
 --- !u!114 &5487039613388910660
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class EnemyManager : MonoBehaviour
     public Transform target;
     public NavMeshAgent agent;
 
+    public bool isMoving = false;
+
     private void Awake()
     {
         enemyStats = GetComponent<EnemyStats>();

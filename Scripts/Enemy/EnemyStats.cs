@@ -25,6 +25,8 @@ public class EnemyStats : Entity
 
     private void Die()
     {
+        GameManager.
+
         // Play death animation
         Destroy(gameObject);
     }
