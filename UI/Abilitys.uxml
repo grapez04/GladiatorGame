@@ -1,0 +1,40 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; opacity: 1; -unity-background-image-tint-color: rgba(255, 255, 255, 0); background-color: rgba(75, 75, 75, 0.82);">
+        <ui:Button text="" name="Ability0" style="visibility: visible; overflow: visible; display: flex; right: 1345px; left: 192px; position: absolute; top: 216px; bottom: 216px;">
+            <ui:Image tint-color="rgb(255, 0, 0)" source="project://database/Assets/NavMeshPlus-master/NavMeshPlus-master/Gizmos/NavMeshSurfaceGears%20Icon.png?fileID=21300000&amp;guid=e8142b1daeea8d3419cd0ffbd7b17a37&amp;type=3#NavMeshSurfaceGears Icon" name="Image" style="top: auto; bottom: auto;"/>
+            <ui:Label text="Ability 1" name="title" style="-unity-font-style: bold; font-size: 60px;"/>
+            <ui:GroupBox name="pros">
+                <ui:Label text="Speed + 1 " name="pro" style="-unity-text-align: middle-left; color: rgb(24, 255, 0); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre;"/>
+                <ui:Label text="Health + 1" name="pro" style="-unity-text-align: middle-left; color: rgb(24, 255, 0); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre-wrap;"/>
+            </ui:GroupBox>
+            <ui:GroupBox name="cons">
+                <ui:Label text="Attack Damage - 2" name="con" style="-unity-text-align: middle-left; color: rgb(255, 0, 11); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre;"/>
+                <ui:Label text="Age + 1" name="con" style="-unity-text-align: middle-left; color: rgb(255, 0, 11); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre-wrap;"/>
+            </ui:GroupBox>
+        </ui:Button>
+        <ui:Button text="" name="Ability1" style="visibility: visible; overflow: visible; display: flex; right: 40%; left: 40%; position: absolute; top: 20%; bottom: 20%;">
+            <ui:Image tint-color="rgb(255, 0, 0)" source="project://database/Assets/NavMeshPlus-master/NavMeshPlus-master/Gizmos/NavMeshSurface2d%20Icon.png?fileID=21300000&amp;guid=d5b0e13ebe59cd64e9f67284457c6868&amp;type=3#NavMeshSurface2d Icon" name="Image" style="top: auto; bottom: auto;"/>
+            <ui:Label text="Ability 2" name="title" style="-unity-font-style: bold; font-size: 60px;"/>
+            <ui:GroupBox name="pros">
+                <ui:Label text="Attack Damage + 1 " name="pro" style="-unity-text-align: middle-left; color: rgb(24, 255, 0); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre;"/>
+                <ui:Label text="Health + 1" name="pro" style="-unity-text-align: middle-left; color: rgb(24, 255, 0); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre-wrap;"/>
+            </ui:GroupBox>
+            <ui:GroupBox name="cons">
+                <ui:Label text="Speed - 2" name="con" style="-unity-text-align: middle-left; color: rgb(255, 0, 11); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre;"/>
+                <ui:Label text="Age + 1" name="con" style="-unity-text-align: middle-left; color: rgb(255, 0, 11); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre-wrap;"/>
+            </ui:GroupBox>
+        </ui:Button>
+        <ui:Button text="" name="Ability2" style="visibility: visible; overflow: visible; display: flex; right: 10%; left: 70%; position: absolute; top: 20%; bottom: 20%;">
+            <ui:Image tint-color="rgb(255, 0, 0)" source="project://database/Assets/NavMeshPlus-master/NavMeshPlus-master/Gizmos/NavMeshSurface%20Icon.png?fileID=21300000&amp;guid=444810ca896903c41adf617b35274dc4&amp;type=3#NavMeshSurface Icon" name="Image" style="top: auto; bottom: auto;"/>
+            <ui:Label text="Ability 3 " name="title" style="-unity-font-style: bold; font-size: 60px;"/>
+            <ui:GroupBox name="pros">
+                <ui:Label text="Attack Damage + 1" name="pro" style="-unity-text-align: middle-left; color: rgb(24, 255, 0); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre-wrap;"/>
+                <ui:Label text="Speed + 1 " name="pro" style="-unity-text-align: middle-left; color: rgb(24, 255, 0); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre;"/>
+            </ui:GroupBox>
+            <ui:GroupBox name="cons">
+                <ui:Label text="Health - 2" name="con" style="-unity-text-align: middle-left; color: rgb(255, 0, 11); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre;"/>
+                <ui:Label text="Age + 1" name="con" style="-unity-text-align: middle-left; color: rgb(255, 0, 11); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; font-size: 30px; white-space: pre-wrap;"/>
+            </ui:GroupBox>
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>
