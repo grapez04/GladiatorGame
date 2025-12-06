@@ -1,15 +1,17 @@
 using System.Collections;
 using UnityEngine;
+using LINQ;
 
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Eksternal refrences")]
     public GameObject enemyPrefab;
+    public Enemy[] enemies;
     public Transform[] spawnPositions;
 
     [Header("Spawner settings")]
     public float spawnRate = 1.0f;
-    public int enemyCountForBattle = 100;
+    public int enemyCountsForBattle[];
     public int maxEnenemysInBattle = 20;
     [Space]
     public int enemysInBattle = 0;
@@ -34,18 +36,22 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        GameObject enemy = Instantiate(enemyPrefab);
-        enemy.transform.position = spawnPositions[Random.Range(0, spawnPositions.Length - 1)].position;
-        enemy.SetActive(true);
+        int enemyIndex = Random.Range(0, enemies.length - 1);
+        GameObject enemyClone = Instantiate(enemyPrefab);
+        enemyClone.transform.position = spawnPositions[Random.Range(0, spawnPositions.Length - 1)].position;
+        EnemyManager enemyManager = enemyClone.GetComponent<EnemyManager>();
+        enemyManager.currentEnemy = enemies[enemyIndex];
+        enemyManager.SetStats();
+        enemyClone.SetActive(true);
 
-        enemyCountForBattle--;
+        enemyCountsForBattle[enemyIndex]--;
         enemysInBattle++;
     }
 
     public void EnemyDied()
     {
         enemysInBattle--;
-        if (enemyCountForBattle == 0 && enemysInBattle == 0)
+        if (enemyCountsForBattle.Sum() == 0 && enemysInBattle == 0)
         {
             GameManager.Upgrade();
         }
