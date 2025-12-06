@@ -4,11 +4,16 @@ public class EnemyAnimatorManager : MonoBehaviour
 {
     private EnemyManager manager;
 
-    [SerializeField] private Animator animator;
+    public Animator animator;
 
     private void Awake()
     {
         manager = GetComponent<EnemyManager>();
+    }
+
+    public void Initialize()
+    {
+        animator.Rebind();
     }
 
     private void Update()

@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using LINQ;
+using System.Linq;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
 
     [Header("Spawner settings")]
     public float spawnRate = 1.0f;
-    public int enemyCountsForBattle[];
+    public int[] enemyCountsForBattle;
     public int maxEnenemysInBattle = 20;
     [Space]
     public int enemysInBattle = 0;
@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
 
     public IEnumerator StartBattle()
     {
-        while (enemyCountForBattle != 0)
+        while (enemyCountsForBattle.Sum() != 0)
         {
             if (enemysInBattle < maxEnenemysInBattle)
             {
@@ -36,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        int enemyIndex = Random.Range(0, enemies.length - 1);
+        int enemyIndex = Random.Range(0, enemies.Length - 1);
         GameObject enemyClone = Instantiate(enemyPrefab);
         enemyClone.transform.position = spawnPositions[Random.Range(0, spawnPositions.Length - 1)].position;
         EnemyManager enemyManager = enemyClone.GetComponent<EnemyManager>();

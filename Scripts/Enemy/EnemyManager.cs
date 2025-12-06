@@ -3,6 +3,10 @@ using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour
 {
+    public Enemy currentEnemy; // WHAT ENEMY THIS IS
+
+    [Space]
+
     public EnemyStats enemyStats;
     public EnemyAnimatorManager enemyAnimator;
     public EnemyAttackHandler enemyAttackHandler;
@@ -20,12 +24,16 @@ public class EnemyManager : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
-        SetStats();
     }
 
-    private void SetStats()
+    public void SetStats()
     {
-        //enemyAttackHandler.radius = stats.defaultAttackRange;
+        spriteRenderer.sprite = currentEnemy.sprite;
+        enemyAnimator.animator.runtimeAnimatorController = currentEnemy.controller;
+        enemyAnimator.Initialize();
+
+        // enemy specific stats
+        enemyAttackHandler.attackDamage = currentEnemy.attackDamage;
+        agent.speed = currentEnemy.speed;
     }
 }
