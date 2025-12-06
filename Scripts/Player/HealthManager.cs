@@ -1,19 +1,14 @@
 using UnityEngine;
 
-public class EnemyStats : Entity
+public class HealthManager : MonoBehaviour
 {
-    [Header("Enemy Health")]
+    [Header("Player Health")]
     public float maxHealth = 2f;
     [SerializeField] private float currentHealth;
 
-    private void Awake()
-    {
-        currentHealth = maxHealth;
-    }
-
     public void TakeDamage(int damage)
     {
-        Debug.Log("Ouch");
+        Debug.Log("Player was hurt");
 
         currentHealth -= damage;
 
@@ -25,12 +20,6 @@ public class EnemyStats : Entity
 
     private void Die()
     {
-        // Play death animation
-        Destroy(gameObject);
-    }
-
-    public void ResetHealth()
-    {
-        currentHealth = maxHealth;
+        GameManager.Restart();
     }
 }

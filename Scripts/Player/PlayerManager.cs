@@ -22,4 +22,9 @@ public class PlayerManager : MonoBehaviour
         //attackHandler.attackDamager = stats.attackDamage;
         attackHandler.radius = stats.defaultAttackRange;
     }
+
+    public void StartBattle()
+    {
+
+    }
 }
