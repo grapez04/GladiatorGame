@@ -25,7 +25,7 @@ public class EnemyStats : Entity
 
     private void Die()
     {
-        GameManager.
+        GameManager.enemyDied.Invoke();
 
         // Play death animation
         Destroy(gameObject);

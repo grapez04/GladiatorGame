@@ -11,12 +11,22 @@ public class EnemyAnimatorManager : MonoBehaviour
         manager = GetComponent<EnemyManager>();
     }
 
-    public void AnimateMovement()
+    private void Update()
+    {
+        AnimateMovement();
+    }
+
+    private void AnimateMovement()
     {
         if (manager.isMoving)
         {
             animator.SetBool("Move", true);
         }
         else animator.SetBool("Move", false);
+    }
+
+    public void PlayTargetAnim(string anim)
+    {
+        animator.Play(anim);
     }
 }

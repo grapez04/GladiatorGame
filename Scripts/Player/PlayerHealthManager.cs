@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class HealthManager : MonoBehaviour
+public class PlayerHealthManager : MonoBehaviour
 {
     [Header("Player Health")]
-    public float maxHealth = 2f;
+    public float maxHealth = 1f;
     [SerializeField] private float currentHealth;
 
     public void TakeDamage(int damage)
@@ -20,6 +20,6 @@ public class HealthManager : MonoBehaviour
 
     private void Die()
     {
-        //GameManager.RestartGame();
+        GameManager.RestartGame();
     }
 }

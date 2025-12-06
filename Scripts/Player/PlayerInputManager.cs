@@ -38,7 +38,7 @@ public class PlayerInputManager : MonoBehaviour
     private void OnMovement()
     {
         manager.movement.move = moveInput;
-        manager.animator.AnimateMovement(moveInput);
+        manager.playerAnimator.AnimateMovement(moveInput);
     }
 
     private void OnMousePos(InputAction.CallbackContext context)
@@ -49,6 +49,6 @@ public class PlayerInputManager : MonoBehaviour
     private void OnAttack(InputAction.CallbackContext context)
     {
         manager.attackHandler.Attack();
-        manager.animator.PlayTargetAnim("Attack");
+        manager.playerAnimator.PlayTargetAnim("Attack");
     }
 }

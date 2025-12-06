@@ -44,3 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf8cce8470f97c48aca3fa19d0bf74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  enemyPrefab: {fileID: 5307606281017908436, guid: 07760eba49bd01e46bfa78dda9484690, type: 3}
+  spawnPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  spawnRate: 1
+  enemyCountForBattle: 100
+  maxEnenemysInBattle: 3
+  enemysInBattle: 0

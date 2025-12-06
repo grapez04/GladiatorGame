@@ -1,19 +1,21 @@
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour
 {
     public EnemyStats enemyStats;
-
-    public Transform target;
+    public EnemyAnimatorManager enemyAnimator;
+    public EnemyAttackHandler enemyAttackHandler;
     public NavMeshAgent agent;
+    public SpriteRenderer spriteRenderer;
 
-    public bool isMoving = false;
+    public bool isMoving;
+
+    public PlayerManager target;
 
     private void Awake()
     {
-        enemyStats = GetComponent<EnemyStats>();
+        target = FindAnyObjectByType<PlayerManager>();
 
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;

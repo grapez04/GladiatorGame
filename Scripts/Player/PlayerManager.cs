@@ -4,7 +4,8 @@ public class PlayerManager : MonoBehaviour
 {
     public PlayerStats stats;
     public PlayerMovement movement;
-    public PlayerAnimatorManager animator;
+    public PlayerAnimatorManager playerAnimator;
+    public PlayerHealthManager healthManager;
     public PlayerAttackHandler attackHandler;
     public MouseHandler mouseHandler;
 
