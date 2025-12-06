@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float movespeed = 5f;
-    [SerializeField] private float rotationSpeed = 10f;
+    [HideInInspector] public MouseHandler mouseHandler;
     [SerializeField] private Transform aim;
 
     private Rigidbody2D rb;
     public Vector2 move;
 
-    private Camera mainCamera;
-    public Vector2 mousePos;
+    [HideInInspector] public float movespeed = 5f;
+
+    public Vector2 aimDirection;
 
     private void Awake()
     {
-        mainCamera = Camera.main;
         rb = GetComponent<Rigidbody2D>();
+        mouseHandler = GetComponent<MouseHandler>();
     }
 
     private void Update()
@@ -35,11 +35,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void RotateAim()
     {
-        Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, mainCamera.nearClipPlane));
-        Vector3 rotateDirection = (worldPosition - transform.position).normalized;
-        rotateDirection.z = 0;
+        Vector3 mouseWorldPos = mouseHandler.cursor.position;
 
-        float angle = Mathf.Atan2(rotateDirection.y, rotateDirection.x) * Mathf.Rad2Deg;
-        aim.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        aimDirection = (mouseWorldPos - aim.position).normalized;
+        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+
+        aim.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 }

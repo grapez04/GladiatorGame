@@ -40,6 +40,6 @@ public class PlayerInputManager : MonoBehaviour
 
     private void OnMousePos(InputAction.CallbackContext context)
     {
-        movement.mousePos = context.ReadValue<Vector2>();
+        movement.mouseHandler.mousePos = context.ReadValue<Vector2>();
     }
 }

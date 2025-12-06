@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class MouseHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Transform cursor;
+    public Vector2 mousePos;
+    private Camera mainCamera;
+
+    public Transform interactPoint;
+
+    private void Awake()
     {
-        
+        mainCamera = Camera.main;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, mainCamera.nearClipPlane));
+
+        cursor.position = worldPosition;
     }
 }
