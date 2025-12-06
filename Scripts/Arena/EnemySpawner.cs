@@ -47,8 +47,7 @@ public class EnemySpawner : MonoBehaviour
         enemysInBattle--;
         if (enemyCountForBattle == 0 && enemysInBattle == 0)
         {
-            Debug.LogWarning("No win condition made: Restarting game");
-            GameManager.RestartGame();
+            GameManager.Upgrade();
         }
     }
 }

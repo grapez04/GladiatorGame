@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //RestartGame();
+        //StartGame();
     }
 
     public static void StartGame()
@@ -48,8 +48,12 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("Gamemanager_playerHealth", playerHealth);
         PlayerPrefs.SetFloat("Gamemanager_playerRange", playerRange);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("01Battle");
 
         StartGame();
+    }
+    public static void Upgrade()
+    {
+        SceneManager.LoadScene("02Upgrades");
     }
 }

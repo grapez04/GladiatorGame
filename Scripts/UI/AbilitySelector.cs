@@ -4,14 +4,8 @@ using UnityEngine.UIElements;
 
 public class AbilitySelector : MonoBehaviour
 {
-    public Abillity a;
 
     Abillity[] abillities;
-
-    private void Update()
-    {
-        Debug.Log($"playerSpeed: {GameManager.playerSpeed}\nplayerDamage: {GameManager.playerDamage}\nplayerHealth: {GameManager.playerHealth}");
-    }
 
     private void Start()
     {
@@ -53,6 +47,8 @@ public class AbilitySelector : MonoBehaviour
         }
 
         gameObject.SetActive(false);
+
+        GameManager.RestartGame();
     }
 
     public void RenderAbilities(Abillity[] renderAbillities = null)
