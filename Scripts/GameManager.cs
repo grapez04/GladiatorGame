@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public delegate void EnemyDied();
+    public EnemyDied enemyDied;
+
     [Header("Player stats")]
     public static float playerSpeed = 3f;
     public static float playerDamage = 1f;
