@@ -14,13 +14,14 @@ public class AbilitySelector : MonoBehaviour
 
     private void Start()
     {
-        Texture2D testAbillity1Texture = Texture2D.blackTexture;
-        Texture2D testAbillity2Texture = Texture2D.grayTexture;
-        Texture2D testAbillity3Texture = Texture2D.whiteTexture;
-
-        testAbillity1Texture.Reinitialize(100, 100);
-        testAbillity2Texture.Reinitialize(100, 100);
-        testAbillity3Texture.Reinitialize(100, 100);
+        Texture2D testAbillity1Texture = (Texture2D)Resources.Load("Ability1");
+        Texture2D testAbillity2Texture = (Texture2D)Resources.Load("Ability2");
+        Texture2D testAbillity3Texture = (Texture2D)Resources.Load("Ability3");
+        /*
+        testAbillity1Texture.Reinitialize(400, 400);
+        testAbillity2Texture.Reinitialize(400, 400);
+        testAbillity3Texture.Reinitialize(400, 400);
+        */
 
         RenderAbilities(new Abillity[]{
             new Abillity("TestAbility1", Sprite.Create(testAbillity1Texture, new Rect(0,0,testAbillity1Texture.width, testAbillity1Texture.height), Vector2.zero), new Abillity.Attribute[]{
@@ -102,11 +103,11 @@ public class AbilitySelector : MonoBehaviour
                 switch (attribute.type)
                 {
                     case Abillity.Attribute.Type.Pro:
-                        ((Label)pros.ElementAt(proIndex)).text = attribute.name;
+                        ((Label)pros.ElementAt(proIndex)).text = $"{attribute.name} {(attribute.modifier >= 0 ? '+' : '-')} {Mathf.Abs(attribute.modifier)}";
                         proIndex++;
                         break;
                     case Abillity.Attribute.Type.Con:
-                        ((Label)cons.ElementAt(conIndex)).text = attribute.name;
+                        ((Label)cons.ElementAt(conIndex)).text = $"{attribute.name} {(attribute.modifier >= 0 ? '+' : '-')} {Mathf.Abs(attribute.modifier)}";
                         conIndex++;
                         break;
                 }

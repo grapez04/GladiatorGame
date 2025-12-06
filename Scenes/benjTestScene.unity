@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 1185332817}
   - component: {fileID: 1185332819}
   m_Layer: 5
-  m_Name: Abiilitys
+  m_Name: Abiilities
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
