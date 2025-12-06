@@ -22,11 +22,14 @@ public class EnemySpawner : MonoBehaviour
 
     public IEnumerator StartBattle()
     {
-        if (enemysInBattle < maxEnenemysInBattle)
+        while (enemyCountForBattle != 0)
         {
-            SpawnEnemy();
+            if (enemysInBattle < maxEnenemysInBattle)
+            {
+                SpawnEnemy();
+            }
+            yield return new WaitForSeconds(spawnRate);
         }
-        yield return new WaitForSeconds(spawnRate);
     }
 
     private void SpawnEnemy()
