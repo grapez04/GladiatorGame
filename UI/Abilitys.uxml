@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:VisualElement style="flex-grow: 1; opacity: 1; -unity-background-image-tint-color: rgba(255, 255, 255, 0); background-color: rgba(75, 75, 75, 0.82);">
-        <ui:Button text="" name="Ability0" style="visibility: visible; overflow: visible; display: flex; right: 1345px; left: 192px; position: absolute; top: 216px; bottom: 216px;">
+        <ui:Button text="" name="Ability0" style="visibility: visible; overflow: visible; display: flex; right: 70%; left: 10%; position: absolute; top: 20%; bottom: 20%;">
             <ui:Image tint-color="rgb(255, 0, 0)" source="project://database/Assets/NavMeshPlus-master/NavMeshPlus-master/Gizmos/NavMeshSurfaceGears%20Icon.png?fileID=21300000&amp;guid=e8142b1daeea8d3419cd0ffbd7b17a37&amp;type=3#NavMeshSurfaceGears Icon" name="Image" style="top: auto; bottom: auto;"/>
             <ui:Label text="Ability 1" name="title" style="-unity-font-style: bold; font-size: 60px;"/>
             <ui:GroupBox name="pros">
