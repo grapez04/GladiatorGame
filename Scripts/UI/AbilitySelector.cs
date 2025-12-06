@@ -1,4 +1,3 @@
-
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -151,11 +150,4 @@ public class Abillity
             type = _type;
         }
     }
-}
-
-public class GameManager : MonoBehaviour
-{
-    public static float playerSpeed = 1f;
-    public static float playerDamage = 1f;
-    public static float playerHealth = 1f;
 }
