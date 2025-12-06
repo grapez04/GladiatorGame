@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static delegate void EnemyDied();
+    public delegate void EnemyDied();
     public static EnemyDied enemyDied;
 
     [Header("Player stats")]

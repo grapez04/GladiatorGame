@@ -1,16 +1,51 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Eksternal refrences")]
+    public GameObject enemyPrefab;
+    public Transform[] spawnPositions;
+
+    [Header("Spawner settings")]
+    public float spawnRate = 1.0f;
+    public int enemyCountForBattle = 100;
+    public int maxEnenemysInBattle = 20;
+    [Space]
+    public int enemysInBattle = 0;
+
     void Start()
     {
-        
+        GameManager.enemyDied += EnemyDied;
+        StartCoroutine(StartBattle());
     }
 
-    // Update is called once per frame
-    void Update()
+    public IEnumerator StartBattle()
     {
-        
+        if (enemysInBattle < maxEnenemysInBattle)
+        {
+            SpawnEnemy();
+        }
+        yield return new WaitForSeconds(spawnRate);
+    }
+
+    private void SpawnEnemy()
+    {
+        GameObject enemy = Instantiate(enemyPrefab);
+        enemy.transform.position = spawnPositions[Random.Range(0, spawnPositions.Length - 1)].position;
+        enemy.SetActive(true);
+
+        enemyCountForBattle--;
+        enemysInBattle++;
+    }
+
+    public void EnemyDied()
+    {
+        enemysInBattle--;
+        if (enemyCountForBattle == 0 && enemysInBattle == 0)
+        {
+            Debug.LogWarning("No win condition made: Restarting game");
+            GameManager.RestartGame();
+        }
     }
 }
