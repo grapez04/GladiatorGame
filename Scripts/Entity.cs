@@ -6,8 +6,10 @@ public class Entity : MonoBehaviour
     public float attackDamage = 1f;
     public float speed = 1f;
 
-    public void Attack()
+    public Entity(float _health = 1f, float _attackDamage = 1f, float _speed = 1f)
     {
-
+        health = _health;
+        attackDamage = _attackDamage;
+        speed = _speed;
     }
 }
