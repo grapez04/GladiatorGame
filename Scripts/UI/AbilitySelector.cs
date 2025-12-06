@@ -15,34 +15,11 @@ public class AbilitySelector : MonoBehaviour
 
     private void Start()
     {
-        Texture2D testAbillity1Texture = (Texture2D)Resources.Load("Ability1");
-        Texture2D testAbillity2Texture = (Texture2D)Resources.Load("Ability2");
-        Texture2D testAbillity3Texture = (Texture2D)Resources.Load("Ability3");
-        /*
-        testAbillity1Texture.Reinitialize(400, 400);
-        testAbillity2Texture.Reinitialize(400, 400);
-        testAbillity3Texture.Reinitialize(400, 400);
-        */
 
         RenderAbilities(new Abillity[]{
-            new Abillity("TestAbility1", Sprite.Create(testAbillity1Texture, new Rect(0,0,testAbillity1Texture.width, testAbillity1Texture.height), Vector2.zero), new Abillity.Attribute[]{
-                new Abillity.Attribute("Speed", +1, Abillity.Attribute.Type.Pro),
-                new Abillity.Attribute("Damage", +1, Abillity.Attribute.Type.Pro),
-                new Abillity.Attribute("Health", -1, Abillity.Attribute.Type.Con),
-                new Abillity.Attribute("Speed", -1, Abillity.Attribute.Type.Con),
-            }),
-            new Abillity("TestAbility2", Sprite.Create(testAbillity2Texture, new Rect(0,0,testAbillity2Texture.width, testAbillity2Texture.height), Vector2.zero), new Abillity.Attribute[]{
-                new Abillity.Attribute("Speed", +2, Abillity.Attribute.Type.Pro),
-                new Abillity.Attribute("Damage", +2, Abillity.Attribute.Type.Pro),
-                new Abillity.Attribute("Health", -2, Abillity.Attribute.Type.Con),
-                new Abillity.Attribute("Speed", -2, Abillity.Attribute.Type.Con),
-            }),
-            new Abillity("TestAbility3", Sprite.Create(testAbillity3Texture, new Rect(0,0,testAbillity3Texture.width, testAbillity3Texture.height), Vector2.zero), new Abillity.Attribute[]{
-                new Abillity.Attribute("Speed", +3, Abillity.Attribute.Type.Pro),
-                new Abillity.Attribute("Damage", +3, Abillity.Attribute.Type.Pro),
-                new Abillity.Attribute("Health", -3, Abillity.Attribute.Type.Con),
-                new Abillity.Attribute("Speed", -3, Abillity.Attribute.Type.Con),
-            }),
+            GameManager.abilities.abillities[Random.Range(0,GameManager.abilities.abillities.Count - 1)],
+            GameManager.abilities.abillities[Random.Range(0,GameManager.abilities.abillities.Count - 1)],
+            GameManager.abilities.abillities[Random.Range(0,GameManager.abilities.abillities.Count - 1)],
         });
     }
 
@@ -90,7 +67,13 @@ public class AbilitySelector : MonoBehaviour
             VisualElement element = GetComponent<UIDocument>().rootVisualElement.Children().First().ElementAt(i);
             Abillity abillity = abillities[i];
 
-            element.Q<Image>("Image").sprite = abillity.image;
+
+            Image img = element.Q<Image>("Image");
+            img.sprite = abillity.image;
+            img.style.width = 200;
+            img.style.height = 200;
+            img.scaleMode = ScaleMode.ScaleToFit;
+
             element.Q<Label>("title").text = abillity.name;
 
             GroupBox pros = element.Q<GroupBox>("pros");
@@ -119,7 +102,7 @@ public class AbilitySelector : MonoBehaviour
     }
 }
 
-
+[System.Serializable]
 public class Abillity
 {
     public string name;
@@ -133,6 +116,7 @@ public class Abillity
         attributes = _attributes;
     }
 
+    [System.Serializable]
     public class Attribute
     {
         public string name;

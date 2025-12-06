@@ -1,55 +1,93 @@
 using UnityEditor;
-using UnityEditor.UIElements;
+using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.UIElements;
-using System.Collections.Generic;
 
 [CustomEditor(typeof(Abilities))]
 public class AbilityEditor : Editor
 {
-    public override void OnInspectorGUI()
+    private SerializedProperty abilitiesProp;
+    private ReorderableList list;
+
+    private void OnEnable()
     {
-        Abilities ab = (Abilities)target;
-        ab.abillities ??= new List<Abillity>();
+        abilitiesProp = serializedObject.FindProperty("abillities");
 
-        int numAbillities = ab.abillities.Count;
-        for (int i = 0; i < numAbillities; i++)
+        list = new ReorderableList(serializedObject, abilitiesProp, true, true, true, true);
+
+        list.drawHeaderCallback = (Rect rect) =>
         {
-            Abillity abillity = ab.abillities[i];
+            EditorGUI.LabelField(rect, "Abilities");
+        };
 
-            abillity.name = EditorGUILayout.TextField("Abillity name: ", abillity?.name ?? "");
-            EditorGUILayout.LabelField("Abillity image: ");
-            abillity.image = (Sprite)EditorGUILayout.ObjectField(abillity?.image ?? null, typeof(Sprite), false, GUILayout.Width(64), GUILayout.Height(64));
-            GUILayout.Space(16);
-            EditorGUILayout.LabelField("Attributes: ");
-            abillity.attributes[0].name = EditorGUILayout.TextField("1 name: ", abillity?.attributes[0].name ?? "");
-            abillity.attributes[0].modifier = EditorGUILayout.FloatField("1 modifier: ", abillity?.attributes[0].modifier ?? 0);
-            abillity.attributes[0].type = (Abillity.Attribute.Type)EditorGUILayout.EnumPopup("1 type: ", abillity.attributes[0].type);
-
-            abillity.attributes[1].name = EditorGUILayout.TextField("2 name: ", abillity?.attributes[1].name ?? "");
-            abillity.attributes[1].modifier = EditorGUILayout.FloatField("2 modifier: ", abillity?.attributes[1].modifier ?? 0);
-            abillity.attributes[1].type = (Abillity.Attribute.Type)EditorGUILayout.EnumPopup("2 type: ", abillity.attributes[1].type);
-
-            abillity.attributes[2].name = EditorGUILayout.TextField("3 name: ", abillity?.attributes[2].name ?? "");
-            abillity.attributes[2].modifier = EditorGUILayout.FloatField("3 modifier: ", abillity?.attributes[2].modifier ?? 0);
-            abillity.attributes[2].type = (Abillity.Attribute.Type)EditorGUILayout.EnumPopup("3 type: ", abillity.attributes[2].type);
-
-            abillity.attributes[3].name = EditorGUILayout.TextField("4 name: ", abillity?.attributes[3].name ?? "");
-            abillity.attributes[3].modifier = EditorGUILayout.FloatField("4 modifier: ", abillity?.attributes[3].modifier ?? 0);
-            abillity.attributes[3].type = (Abillity.Attribute.Type)EditorGUILayout.EnumPopup("4 type: ", abillity.attributes[3].type);
-
-            GUILayout.Space(64);
-
-            ab.abillities[i] = abillity;
-        }
-        if (GUILayout.Button("Add Abillity"))
+        list.onAddCallback = (ReorderableList l) =>
         {
-            ab.abillities.Add(new Abillity("", null, new Abillity.Attribute[] { new Abillity.Attribute("", 0, Abillity.Attribute.Type.Pro), new Abillity.Attribute("", 0, Abillity.Attribute.Type.Pro), new Abillity.Attribute("", 0, Abillity.Attribute.Type.Con), new Abillity.Attribute("", 0, Abillity.Attribute.Type.Con) }));
-        }
-        if (GUILayout.Button("Remove Abillity"))
+            int index = l.serializedProperty.arraySize;
+            l.serializedProperty.arraySize++;
+            SerializedProperty newElement = l.serializedProperty.GetArrayElementAtIndex(index);
+
+            newElement.FindPropertyRelative("name").stringValue = "";
+            newElement.FindPropertyRelative("image").objectReferenceValue = null;
+
+            SerializedProperty attributes = newElement.FindPropertyRelative("attributes");
+            attributes.arraySize = 4;
+
+            for (int i = 0; i < 4; i++)
+            {
+                SerializedProperty att = attributes.GetArrayElementAtIndex(i);
+                att.FindPropertyRelative("name").stringValue = "";
+                att.FindPropertyRelative("modifier").floatValue = 0f;
+                att.FindPropertyRelative("type").enumValueIndex = i < 2 ? 0 : 1;
+            }
+
+            serializedObject.ApplyModifiedProperties();
+        };
+
+        list.elementHeightCallback = (int index) =>
         {
-            ab.abillities.RemoveAt(numAbillities - 1);
-        }
+            SerializedProperty element = abilitiesProp.GetArrayElementAtIndex(index);
+            SerializedProperty attributes = element.FindPropertyRelative("attributes");
+            float h = EditorGUIUtility.singleLineHeight * (4 + attributes.arraySize) + 20;
+            return h;
+        };
+
+        list.drawElementCallback = (Rect rect, int index, bool isActive, bool isFocused) =>
+        {
+            SerializedProperty element = abilitiesProp.GetArrayElementAtIndex(index);
+
+            SerializedProperty nameProp = element.FindPropertyRelative("name");
+            SerializedProperty imageProp = element.FindPropertyRelative("image");
+            SerializedProperty attributesProp = element.FindPropertyRelative("attributes");
+
+            float y = rect.y + 2;
+            float lh = EditorGUIUtility.singleLineHeight;
+
+            EditorGUI.PropertyField(new Rect(rect.x, y, rect.width, lh), nameProp);
+            y += lh + 3;
+
+            EditorGUI.PropertyField(new Rect(rect.x, y, rect.width, lh), imageProp);
+            y += lh + 6;
+
+            EditorGUI.LabelField(new Rect(rect.x, y, rect.width, lh), "Attributes:");
+            y += lh + 3;
+
+            for (int i = 0; i < attributesProp.arraySize; i++)
+            {
+                SerializedProperty att = attributesProp.GetArrayElementAtIndex(i);
+                float col = rect.width / 3f;
+
+                EditorGUI.PropertyField(new Rect(rect.x, y, col, lh), att.FindPropertyRelative("name"), GUIContent.none);
+                EditorGUI.PropertyField(new Rect(rect.x + col + 4, y, col, lh), att.FindPropertyRelative("modifier"), GUIContent.none);
+                EditorGUI.PropertyField(new Rect(rect.x + col * 2 + 8, y, col - 8, lh), att.FindPropertyRelative("type"), GUIContent.none);
+
+                y += lh + 3;
+            }
+        };
     }
 
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+        list.DoLayoutList();
+        serializedObject.ApplyModifiedProperties();
+    }
 }

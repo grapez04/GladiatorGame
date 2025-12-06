@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+[RequireComponent(typeof(Abilities))]
 public class GameManager : MonoBehaviour
 {
     public delegate void EnemyDied();
     public static EnemyDied enemyDied;
+
+    public static Abilities abilities;
 
     [Header("Player stats")]
     public static float playerSpeed = 3f;
@@ -12,9 +16,14 @@ public class GameManager : MonoBehaviour
     public static float playerHealth = 1f;
     public static float playerRange = 1f;
 
+    private void Awake()
+    {
+        abilities = GetComponent<Abilities>();
+    }
+
     private void Start()
     {
-        StartGame();
+        //RestartGame();
     }
 
     public static void StartGame()

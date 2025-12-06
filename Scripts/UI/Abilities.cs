@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class Abilities : MonoBehaviour
 {
-    public List<Abillity> abillities;
+    [SerializeField]public List<Abillity> abillities;
 }
