@@ -189,8 +189,9 @@ GameObject:
   - component: {fileID: 1185332818}
   - component: {fileID: 1185332817}
   - component: {fileID: 1185332819}
+  - component: {fileID: 1185332820}
   m_Layer: 5
-  m_Name: Abiilities
+  m_Name: name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,6 +247,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28ec7e498c5cbf428e4c72800f6089f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilitySelector
+--- !u!114 &1185332820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185332816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f3a236ced13b94bb40c2abbd81ffd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Abilities
 --- !u!1 &1334862977
 GameObject:
   m_ObjectHideFlags: 0

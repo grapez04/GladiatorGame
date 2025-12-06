@@ -4,6 +4,8 @@ using UnityEngine.UIElements;
 
 public class AbilitySelector : MonoBehaviour
 {
+    public Abillity a;
+
     Abillity[] abillities;
 
     private void Update()
