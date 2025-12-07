@@ -63,12 +63,12 @@ public class EnemyStateHandler : MonoBehaviour
         if (manager.target.transform.position.x < transform.position.x)
         {
             // Cursor is to the right -> not flipped
-            manager.spriteRenderer.flipX = false;
+            manager.spriteRenderer.flipX = true;
         }
         else
         {
             // Cursor is to the left -> flipped
-            manager.spriteRenderer.flipX = true;
+            manager.spriteRenderer.flipX = false;
         }
     }
 }
