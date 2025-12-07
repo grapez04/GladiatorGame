@@ -8,11 +8,12 @@ public class AbilitySelector : MonoBehaviour
 
     private void Start()
     {
-        RenderAbilities(new Abillity[]{
-            GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities[Random.Range(0,GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities.Count - 1)],
-            GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities[Random.Range(0,GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities.Count - 1)],
-            GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities[Random.Range(0,GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities.Count - 1)],
-        });
+        Level level = GameManager.levels.levels[GameManager.levels.currentLevel];
+        System.Random rnd = new System.Random();
+        Abillity[] _abillities = level.abilities.abillities.OrderBy(x => rnd.Next()).Take(3).ToArray();
+
+
+        RenderAbilities(_abillities);
     }
 
 
