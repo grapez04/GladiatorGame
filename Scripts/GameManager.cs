@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         levels = FindAnyObjectByType<Levels>();
+        level = levels.levels[levels.currentLevel];
         StartGame();
     }
 
@@ -35,7 +36,9 @@ public class GameManager : MonoBehaviour
         if (setPlayerStats)
         {
             PlayerStats playerStats = FindAnyObjectByType<PlayerStats>();
-            if (playerStats != null)
+            EnemySpawner enemySpawner = FindAnyObjectByType<EnemySpawner>();
+            PlayerManager playerManager = FindAnyObjectByType<PlayerManager>();
+            if (playerStats != null && enemySpawner != null && playerManager != null)
             {
                 setPlayerStats = false;
                 playerStats = FindAnyObjectByType<PlayerStats>();
@@ -43,13 +46,12 @@ public class GameManager : MonoBehaviour
                 playerStats.health = playerHealth;
                 playerStats.speed = playerSpeed;
 
-                EnemySpawner enemySpawner = FindAnyObjectByType<EnemySpawner>();
                 enemySpawner.spawnRate = level.enemySpawnRate;
                 enemySpawner.enemyCountsForBattle = (int[])level.enemyCountss.Clone();
                 enemySpawner.maxEnenemysInBattle = level.maxEnemysOnScreen;
                 enemySpawner.enemies = level.enemies;
 
-                FindAnyObjectByType<PlayerManager>().StartBattle();
+                playerManager.StartBattle();
                 StartCoroutine(enemySpawner.StartBattle());
             }
         }
@@ -96,6 +98,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("Gamemanager_playerHealth", playerHealth);
         PlayerPrefs.SetFloat("Gamemanager_playerRange", playerRange);
         PlayerPrefs.Save();
+        
 
         SceneManager.LoadScene("01Battle");
     }
