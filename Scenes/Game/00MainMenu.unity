@@ -168,20 +168,95 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   abillities:
-  - name: Test
-    image: {fileID: 21300000, guid: 1ce82a84690d24c4b989f2f0ab961174, type: 3}
+  - name: Bladed Rush
+    image: {fileID: 21300000, guid: 624e9bf275e5c6b4b9d647d5fd4d8dc3, type: 3}
+    attributes:
+    - name: Damage
+      modifier: 6
+      type: 0
+    - name: Speed
+      modifier: 3
+      type: 0
+    - name: Health
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Titanblood Strike
+    image: {fileID: 21300000, guid: 624e9bf275e5c6b4b9d647d5fd4d8dc3, type: 3}
+    attributes:
+    - name: Damage
+      modifier: 6
+      type: 0
+    - name: Health
+      modifier: 3
+      type: 0
+    - name: Speed
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Swift Reaper
+    image: {fileID: 21300000, guid: 175d92505404bda428eadd5c859761c1, type: 3}
     attributes:
     - name: Speed
-      modifier: 5
+      modifier: 6
+      type: 0
+    - name: Damage
+      modifier: 3
       type: 0
     - name: Health
-      modifier: 0
-      type: 0
-    - name: Health
-      modifier: 0
+      modifier: -3
       type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Fleetheart Guard
+    image: {fileID: 21300000, guid: 175d92505404bda428eadd5c859761c1, type: 3}
+    attributes:
+    - name: Speed
+      modifier: 6
+      type: 0
     - name: Health
-      modifier: 0
+      modifier: 3
+      type: 0
+    - name: Damage
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Bulwark Crush
+    image: {fileID: 21300000, guid: 9b9d0f9fe064ba14788d77dd12f4873d, type: 3}
+    attributes:
+    - name: Health
+      modifier: 6
+      type: 0
+    - name: Damage
+      modifier: 3
+      type: 0
+    - name: Speed
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Fleetheart Aegis
+    image: {fileID: 21300000, guid: 9b9d0f9fe064ba14788d77dd12f4873d, type: 3}
+    attributes:
+    - name: Health
+      modifier: 6
+      type: 0
+    - name: Speed
+      modifier: 3
+      type: 0
+    - name: Damage
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
       type: 1
 --- !u!4 &123033805
 Transform:
@@ -369,20 +444,95 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   abillities:
-  - name: test 2
-    image: {fileID: 21300000, guid: 74a650b1fac67a240b2da7730768de2f, type: 3}
+  - name: Bladed Rush
+    image: {fileID: 21300000, guid: 624e9bf275e5c6b4b9d647d5fd4d8dc3, type: 3}
+    attributes:
+    - name: Damage
+      modifier: 6
+      type: 0
+    - name: Speed
+      modifier: 3
+      type: 0
+    - name: Health
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Titanblood Strike
+    image: {fileID: 21300000, guid: 624e9bf275e5c6b4b9d647d5fd4d8dc3, type: 3}
+    attributes:
+    - name: Damage
+      modifier: 6
+      type: 0
+    - name: Health
+      modifier: 3
+      type: 0
+    - name: Speed
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Swift Reaper
+    image: {fileID: 21300000, guid: 175d92505404bda428eadd5c859761c1, type: 3}
     attributes:
     - name: Speed
-      modifier: 5
+      modifier: 6
+      type: 0
+    - name: Damage
+      modifier: 3
       type: 0
     - name: Health
-      modifier: 0
-      type: 0
-    - name: Health
-      modifier: 0
+      modifier: -3
       type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Fleetheart Guard
+    image: {fileID: 21300000, guid: 175d92505404bda428eadd5c859761c1, type: 3}
+    attributes:
+    - name: Speed
+      modifier: 6
+      type: 0
     - name: Health
-      modifier: 0
+      modifier: 3
+      type: 0
+    - name: Damage
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Bulwark Crush
+    image: {fileID: 21300000, guid: 9b9d0f9fe064ba14788d77dd12f4873d, type: 3}
+    attributes:
+    - name: Health
+      modifier: 6
+      type: 0
+    - name: Damage
+      modifier: 3
+      type: 0
+    - name: Speed
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Fleetheart Aegis
+    image: {fileID: 21300000, guid: 9b9d0f9fe064ba14788d77dd12f4873d, type: 3}
+    attributes:
+    - name: Health
+      modifier: 6
+      type: 0
+    - name: Speed
+      modifier: 3
+      type: 0
+    - name: Damage
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
       type: 1
 --- !u!4 &541843646
 Transform:
@@ -453,20 +603,95 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   abillities:
-  - name: test 2
-    image: {fileID: 21300000, guid: 74a650b1fac67a240b2da7730768de2f, type: 3}
+  - name: Bladed Rush
+    image: {fileID: 21300000, guid: 624e9bf275e5c6b4b9d647d5fd4d8dc3, type: 3}
+    attributes:
+    - name: Damage
+      modifier: 6
+      type: 0
+    - name: Speed
+      modifier: 3
+      type: 0
+    - name: Health
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Titanblood Strike
+    image: {fileID: 21300000, guid: 624e9bf275e5c6b4b9d647d5fd4d8dc3, type: 3}
+    attributes:
+    - name: Damage
+      modifier: 6
+      type: 0
+    - name: Health
+      modifier: 3
+      type: 0
+    - name: Speed
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Swift Reaper
+    image: {fileID: 21300000, guid: 175d92505404bda428eadd5c859761c1, type: 3}
     attributes:
     - name: Speed
-      modifier: 5
+      modifier: 6
+      type: 0
+    - name: Damage
+      modifier: 3
       type: 0
     - name: Health
-      modifier: 0
-      type: 0
-    - name: Health
-      modifier: 0
+      modifier: -3
       type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Fleetheart Guard
+    image: {fileID: 21300000, guid: 175d92505404bda428eadd5c859761c1, type: 3}
+    attributes:
+    - name: Speed
+      modifier: 6
+      type: 0
     - name: Health
-      modifier: 0
+      modifier: 3
+      type: 0
+    - name: Damage
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Bulwark Crush
+    image: {fileID: 21300000, guid: 9b9d0f9fe064ba14788d77dd12f4873d, type: 3}
+    attributes:
+    - name: Health
+      modifier: 6
+      type: 0
+    - name: Damage
+      modifier: 3
+      type: 0
+    - name: Speed
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
+      type: 1
+  - name: Fleetheart Aegis
+    image: {fileID: 21300000, guid: 9b9d0f9fe064ba14788d77dd12f4873d, type: 3}
+    attributes:
+    - name: Health
+      modifier: 6
+      type: 0
+    - name: Speed
+      modifier: 3
+      type: 0
+    - name: Damage
+      modifier: -3
+      type: 1
+    - name: Age
+      modifier: 1
       type: 1
 --- !u!4 &836833026
 Transform:
