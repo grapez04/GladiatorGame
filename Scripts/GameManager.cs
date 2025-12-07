@@ -75,10 +75,14 @@ public class GameManager : MonoBehaviour
     }
     public static void Upgrade()
     {
-        SceneManager.LoadScene("02Upgrades");
-    }
-    public static void Win()
-    {
-        SceneManager.LoadScene("03Ending");
+        levels.currentLevel += 1;
+        if (levels.levels.Length <= levels.currentLevel)
+        {
+            SceneManager.LoadScene("03Ending");
+        }
+        else
+        {
+            SceneManager.LoadScene("02Upgrades");
+        }
     }
 }

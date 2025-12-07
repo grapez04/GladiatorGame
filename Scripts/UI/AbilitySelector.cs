@@ -4,21 +4,14 @@ using UnityEngine.UIElements;
 
 public class AbilitySelector : MonoBehaviour
 {
-    [SerializeField] public Level level;
     Abillity[] abillities;
 
     private void Start()
     {
-        GameManager.levels.currentLevel += 1;
-        if (GameManager.levels.levels.Length <= GameManager.levels.currentLevel)
-        {
-            GameManager.Win();
-        }
-
         RenderAbilities(new Abillity[]{
-            GameManager.level.abilities.abillities[Random.Range(0,GameManager.level.abilities.abillities.Count - 1)],
-            GameManager.level.abilities.abillities[Random.Range(0,GameManager.level.abilities.abillities.Count - 1)],
-            GameManager.level.abilities.abillities[Random.Range(0,GameManager.level.abilities.abillities.Count - 1)],
+            GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities[Random.Range(0,GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities.Count - 1)],
+            GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities[Random.Range(0,GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities.Count - 1)],
+            GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities[Random.Range(0,GameManager.levels.levels[GameManager.levels.currentLevel].abilities.abillities.Count - 1)],
         });
     }
 

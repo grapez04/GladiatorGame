@@ -7,13 +7,19 @@ public class TitleScreenManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(levels);
+        if(FindObjectsByType<Levels>(FindObjectsSortMode.None).Length == 1)
+        {
+            DontDestroyOnLoad(levels);
+        }
     }
 
     public void StartGame()
     {
         PlayerPrefs.DeleteAll();
-        levels.currentLevel = 0;
+        foreach (Levels _levels in FindObjectsByType<Levels>(FindObjectsSortMode.None))
+        {
+            _levels.currentLevel = 0;
+        }
         SceneManager.LoadScene("01Battle");
     }
 }
