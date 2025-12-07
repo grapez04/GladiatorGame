@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         levels = FindAnyObjectByType<Levels>();
+        StartGame();
     }
 
     private void Update()
@@ -39,7 +41,7 @@ public class GameManager : MonoBehaviour
 
                 EnemySpawner enemySpawner = FindAnyObjectByType<EnemySpawner>();
                 enemySpawner.spawnRate = level.enemySpawnRate;
-                enemySpawner.enemyCountsForBattle = level.enemyCounts;
+                enemySpawner.enemyCountsForBattle = (int[])level.enemyCountss.Clone();
                 enemySpawner.maxEnenemysInBattle = level.maxEnemysOnScreen;
                 enemySpawner.enemies = level.enemies;
 
@@ -70,8 +72,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
 
         SceneManager.LoadScene("01Battle");
-
-        StartGame();
     }
     public static void Upgrade()
     {

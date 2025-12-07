@@ -16,15 +16,17 @@ public class EnemySpawner : MonoBehaviour
     [Space]
     public int enemysInBattle = 0;
 
+    private int[] _enemyCountsForBattle;
+
     void Start()
     {
         GameManager.enemyDied += EnemyDied;
-        StartCoroutine(StartBattle());
     }
 
     public IEnumerator StartBattle()
     {
-        while (enemyCountsForBattle.Sum() != 0)
+        _enemyCountsForBattle = enemyCountsForBattle;
+        while (_enemyCountsForBattle.Sum() != 0)
         {
             if (enemysInBattle < maxEnenemysInBattle)
             {
@@ -36,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Enemy[] spawnableEnemies = enemies.Where((x, i) => enemyCountsForBattle[i] != 0).ToArray();
+        Enemy[] spawnableEnemies = enemies.Where((x, i) => _enemyCountsForBattle[i] != 0).ToArray();
 
         int enemyIndex = Random.Range(0, spawnableEnemies.Length - 1);
         GameObject enemyClone = Instantiate(enemyPrefab);
@@ -46,14 +48,14 @@ public class EnemySpawner : MonoBehaviour
         enemyManager.SetEnemy();
         enemyClone.SetActive(true);
 
-        enemyCountsForBattle[System.Array.IndexOf(enemies, spawnableEnemies[enemyIndex])]--;
+        _enemyCountsForBattle[System.Array.IndexOf(enemies, spawnableEnemies[enemyIndex])]--;
         enemysInBattle++;
     }
 
     public void EnemyDied()
     {
         enemysInBattle--;
-        if (enemyCountsForBattle.Sum() == 0 && enemysInBattle == 0)
+        if (_enemyCountsForBattle.Sum() == 0 && enemysInBattle == 0)
         {
             GameManager.Upgrade();
         }

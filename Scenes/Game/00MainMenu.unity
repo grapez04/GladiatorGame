@@ -150,10 +150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Level
   abilities: {fileID: 123033804}
-  enemies: []
-  enemyCounts: 
-  maxEnemysOnScreen: 0
-  enemySpawnRate: 0
+  enemies:
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  enemyCountss: 05000000
+  maxEnemysOnScreen: 3
+  enemySpawnRate: 1
 --- !u!114 &123033804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,10 +346,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Level
   abilities: {fileID: 541843645}
-  enemies: []
-  enemyCounts: 
-  maxEnemysOnScreen: 0
-  enemySpawnRate: 0
+  enemies:
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  enemyCountss: 0500000003000000
+  maxEnemysOnScreen: 3
+  enemySpawnRate: 1
 --- !u!114 &541843645
 MonoBehaviour:
   m_ObjectHideFlags: 0
