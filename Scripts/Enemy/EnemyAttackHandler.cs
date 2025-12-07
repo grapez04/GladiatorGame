@@ -6,13 +6,13 @@ public class EnemyAttackHandler : MonoBehaviour
 
     public bool isAttacking = false;
     public bool isCharging = false;
+    public bool isOnCooldown = false; // NEW: cooldown motion freeze
 
     private bool hasAttacked = false;
 
-    [SerializeField] private float attackCooldown = 1f;
+    [SerializeField] private float attackCooldown = 3f;
     private float attackTimer = 0f;
 
-    [Space]
     public float attackDamage = 1;
 
     private void Awake()
@@ -22,38 +22,54 @@ public class EnemyAttackHandler : MonoBehaviour
 
     private void Update()
     {
-        // cooldown after attack
-        if (hasAttacked)
+        // Cooldown countdown
+        if (isOnCooldown)
         {
             attackTimer -= Time.deltaTime;
 
             if (attackTimer <= 0)
             {
-                // Reset attack state
+                // Cooldown finished
+                isOnCooldown = false;
+                hasAttacked = false;
                 isAttacking = false;
                 isCharging = false;
-                hasAttacked = false;
 
-                // Reset speed back to normal
+                // Restore normal speed
                 manager.stateHandler.SetSpeed(manager.currentEnemy.speed);
+                manager.agent.isStopped = false;
 
-                Debug.Log("Attack Reset");
+                Debug.Log("Cooldown finished ? movement restored");
             }
+
+            return; // STOP here: no other attacking logic during cooldown
         }
     }
 
     public void TryAttackOnce()
     {
-        if (!hasAttacked)
-        {
-            manager.agent.isStopped = true;
-            manager.isMoving = false;
+        // Don't attack if charging or cooling down
+        if (hasAttacked || isCharging || isOnCooldown)
+            return;
 
-            Attack();
+        manager.agent.isStopped = true;
+        manager.isMoving = false;
 
-            hasAttacked = true;
-            attackTimer = attackCooldown;
-        }
+        Attack();
+
+        hasAttacked = true;
+    }
+
+    private void StartCooldown()
+    {
+        isOnCooldown = true;
+        attackTimer = attackCooldown;
+
+        // Stop movement during cooldown
+        manager.agent.isStopped = true;
+        manager.isMoving = false;
+
+        Debug.Log("Entered cooldown (movement disabled)");
     }
 
     public void Attack()
@@ -63,11 +79,10 @@ public class EnemyAttackHandler : MonoBehaviour
     }
 
     // Called by animation event
-    public void DealDamage()
+    public void Charge()
     {
         Debug.Log("CHARGE!");
 
-        // Start charge
         isCharging = true;
 
         manager.agent.isStopped = false;
@@ -76,7 +91,22 @@ public class EnemyAttackHandler : MonoBehaviour
         // Set charge speed
         manager.stateHandler.SetSpeed(manager.stateHandler.chargeSpeed);
 
-        // Charge toward player's current position
+        // Charge toward player
         manager.agent.SetDestination(manager.target.transform.position);
+
+        // Once charge is done, we start cooldown (in EnemyStateHandler)
+    }
+
+    public void TryDealDamage()
+    {
+        Debug.Log("Damage");
+        manager.target.healthManager.TakeDamage(attackDamage);
+    }
+
+    public void FinishCharge()
+    {
+        // Called from StateHandler when charge ends
+        isCharging = false;
+        StartCooldown();
     }
 }

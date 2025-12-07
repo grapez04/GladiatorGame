@@ -6,6 +6,6 @@ public class EnemyAnimEventHandle : MonoBehaviour
 
     public void TryDealDamage()
     {
-        enemyManager.attackHandler.DealDamage();
+        enemyManager.attackHandler.Charge();
     }
 }

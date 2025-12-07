@@ -38,6 +38,7 @@ public class EnemyManager : MonoBehaviour
 
         enemyStats.attackDamage = currentEnemy.attackDamage;
         enemyStats.speed = currentEnemy.speed;
+        enemyStats.health = currentEnemy.health;
 
         ApplyStats();
     }

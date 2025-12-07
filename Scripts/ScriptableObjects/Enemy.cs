@@ -12,4 +12,5 @@ public class Enemy: ScriptableObject
     public float stopDistance = 1;
     public int attackDamage = 1;
     public float speed = 2;
+    public int health = 1;
 }
