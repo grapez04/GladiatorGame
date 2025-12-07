@@ -43,7 +43,7 @@ public class EnemySpawner : MonoBehaviour
         enemyClone.transform.position = spawnPositions[Random.Range(0, spawnPositions.Length - 1)].position;
         EnemyManager enemyManager = enemyClone.GetComponent<EnemyManager>();
         enemyManager.currentEnemy = spawnableEnemies[enemyIndex];
-        enemyManager.SetStats();
+        enemyManager.SetEnemy();
         enemyClone.SetActive(true);
 
         enemyCountsForBattle[System.Array.IndexOf(enemies, spawnableEnemies[enemyIndex])]--;

@@ -1,25 +1,34 @@
 fileFormatVersion: 2
-guid: 68d6ced728c2c7b4eb33b7e6633f0386
+guid: 09f4edbc0f3f9f1408e162cd1326a82d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7008412969330441016
-    second: Attack_0
+      213: -3363572712707339182
+    second: tjump_0
   - first:
-      213: -7763475090823894447
-    second: Attack_1
+      213: -8877679758241490129
+    second: tjump_1
   - first:
-      213: 302641331129538988
-    second: Attack_2
+      213: -3963419380275552263
+    second: tjump_2
   - first:
-      213: -6329420634031446844
-    second: Attack_3
+      213: 1987574008083266888
+    second: tjump_3
   - first:
-      213: -910092549403018386
-    second: Attack_4
+      213: -1903080834239679569
+    second: tjump_4
   - first:
-      213: 221524225039350300
-    second: Attack_5
+      213: 8930257437461295607
+    second: tjump_5
+  - first:
+      213: 3588131626956213170
+    second: tjump_6
+  - first:
+      213: -515538242853904184
+    second: tjump_7
+  - first:
+      213: -7000995266042251121
+    second: tjump_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,7 +137,95 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack_0
+      name: tjump_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25cc1e250703251d0800000000000000
+      internalID: -3363572712707339182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tjump_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b175cbb452cc480800000000000000
+      internalID: -8877679758241490129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tjump_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ffd6ce921b1ff8c0800000000000000
+      internalID: -3963419380275552263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tjump_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84d3a9c9708459b10800000000000000
+      internalID: 1987574008083266888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tjump_4
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c481db598d1dbe90800000000000000
-      internalID: -7008412969330441016
+      spriteID: fa33a407016e695e0800000000000000
+      internalID: -1903080834239679569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_1
+      name: tjump_5
       rect:
         serializedVersion: 2
         x: 32
@@ -165,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15a29dc9988924490800000000000000
-      internalID: -7763475090823894447
+      spriteID: 7f1bba823d5aeeb70800000000000000
+      internalID: 8930257437461295607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2
+      name: tjump_6
       rect:
         serializedVersion: 2
         x: 64
@@ -187,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca9d35cefa2333400800000000000000
-      internalID: 302641331129538988
+      spriteID: 2bbc11834ba9bc130800000000000000
+      internalID: 3588131626956213170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_3
+      name: tjump_7
       rect:
         serializedVersion: 2
         x: 96
@@ -209,14 +306,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c42782d7716928a0800000000000000
-      internalID: -6329420634031446844
+      spriteID: 8c0609613b078d8f0800000000000000
+      internalID: -515538242853904184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_4
+      name: tjump_8
       rect:
         serializedVersion: 2
         x: 0
@@ -231,30 +328,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e6b7a10f5a3be53f0800000000000000
-      internalID: -910092549403018386
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c1a3d96eb13031300800000000000000
-      internalID: 221524225039350300
+      spriteID: f883c5df5e777de90800000000000000
+      internalID: -7000995266042251121
       vertices: []
       indices: 
       edges: []
@@ -263,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d70f2bc8f17e5f64faca5bb66bf38807
+    spriteID: 73c2a6d51c7e1dc4eb94209d3e297811
     internalID: 0
     vertices: []
     indices: 
@@ -275,12 +350,15 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Attack_0: -7008412969330441016
-      Attack_1: -7763475090823894447
-      Attack_2: 302641331129538988
-      Attack_3: -6329420634031446844
-      Attack_4: -910092549403018386
-      Attack_5: 221524225039350300
+      tjump_0: -3363572712707339182
+      tjump_1: -8877679758241490129
+      tjump_2: -3963419380275552263
+      tjump_3: 1987574008083266888
+      tjump_4: -1903080834239679569
+      tjump_5: 8930257437461295607
+      tjump_6: 3588131626956213170
+      tjump_7: -515538242853904184
+      tjump_8: -7000995266042251121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

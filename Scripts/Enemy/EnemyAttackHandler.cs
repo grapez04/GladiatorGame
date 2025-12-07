@@ -10,7 +10,7 @@ public class EnemyAttackHandler : MonoBehaviour
     private float attackTimer = 0f;
 
     [Space]
-    public int attackDamage = 1;
+    public float attackDamage = 1;
 
     private void Awake()
     {

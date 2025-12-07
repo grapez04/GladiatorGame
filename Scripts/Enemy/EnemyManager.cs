@@ -8,6 +8,7 @@ public class EnemyManager : MonoBehaviour
     [Space]
 
     public EnemyStats enemyStats;
+    public EnemyStateHandler stateHandler;
     public EnemyAnimatorManager enemyAnimator;
     public EnemyAttackHandler enemyAttackHandler;
     public NavMeshAgent agent;
@@ -26,14 +27,24 @@ public class EnemyManager : MonoBehaviour
         agent.updateUpAxis = false;
     }
 
-    public void SetStats()
+    public void SetEnemy()
     {
         spriteRenderer.sprite = currentEnemy.sprite;
         enemyAnimator.animator.runtimeAnimatorController = currentEnemy.controller;
         enemyAnimator.Initialize();
 
         // enemy specific stats
-        enemyAttackHandler.attackDamage = currentEnemy.attackDamage;
-        agent.speed = currentEnemy.speed;
+        stateHandler.stopDistance = currentEnemy.stopDistance;
+
+        enemyStats.attackDamage = currentEnemy.attackDamage;
+        enemyStats.speed = currentEnemy.speed;
+
+        ApplyStats();
+    }
+
+    public void ApplyStats()
+    {
+        enemyAttackHandler.attackDamage = enemyStats.attackDamage;
+        agent.speed = enemyStats.speed;
     }
 }
