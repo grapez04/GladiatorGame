@@ -64,6 +64,10 @@ public class AbilitySelector : MonoBehaviour
         for (int i = 0; i < GetComponent<UIDocument>().rootVisualElement.Children().First().childCount; i++)
         {
             VisualElement element = GetComponent<UIDocument>().rootVisualElement.Children().First().ElementAt(i);
+            if (element.name[0] == '_')
+            {
+                continue;
+            }
             Abillity abillity = abillities[i];
 
 
