@@ -3,13 +3,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-[RequireComponent(typeof(Abilities))]
 public class GameManager : MonoBehaviour
 {
     public delegate void EnemyDied();
     public static EnemyDied enemyDied;
 
-    public static Abilities abilities;
+    public static Levels levels;
+    public static Level level;
 
     [Header("Player stats")]
     public static float playerSpeed = 3f;
@@ -21,12 +21,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        abilities = GetComponent<Abilities>();
-    }
-
-    private void Start()
-    {
-        //StartGame();
+        levels = FindAnyObjectByType<Levels>();
     }
 
     private void Update()
@@ -42,7 +37,14 @@ public class GameManager : MonoBehaviour
                 playerStats.health = playerHealth;
                 playerStats.speed = playerSpeed;
 
+                EnemySpawner enemySpawner = FindAnyObjectByType<EnemySpawner>();
+                enemySpawner.spawnRate = level.enemySpawnRate;
+                enemySpawner.enemyCountsForBattle = level.enemyCounts;
+                enemySpawner.maxEnenemysInBattle = level.maxEnemysOnScreen;
+                enemySpawner.enemies = level.enemies;
+
                 FindAnyObjectByType<PlayerManager>().StartBattle();
+                StartCoroutine(enemySpawner.StartBattle());
             }
         }
     }
@@ -53,6 +55,8 @@ public class GameManager : MonoBehaviour
         playerDamage = PlayerPrefs.GetFloat("Gamemanager_playerDamage", playerDamage);
         playerHealth = PlayerPrefs.GetFloat("Gamemanager_playerHealth", playerHealth);
         playerRange =  PlayerPrefs.GetFloat("Gamemanager_playerRange", playerRange);
+
+        level = levels.levels[levels.currentLevel];
 
         setPlayerStats = true;
 
@@ -72,5 +76,9 @@ public class GameManager : MonoBehaviour
     public static void Upgrade()
     {
         SceneManager.LoadScene("02Upgrades");
+    }
+    public static void Win()
+    {
+        SceneManager.LoadScene("03Ending");
     }
 }

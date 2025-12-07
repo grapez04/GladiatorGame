@@ -11,9 +11,9 @@ public class AbilitySelector : MonoBehaviour
     {
 
         RenderAbilities(new Abillity[]{
-            GameManager.abilities.abillities[Random.Range(0,GameManager.abilities.abillities.Count - 1)],
-            GameManager.abilities.abillities[Random.Range(0,GameManager.abilities.abillities.Count - 1)],
-            GameManager.abilities.abillities[Random.Range(0,GameManager.abilities.abillities.Count - 1)],
+            GameManager.level.abilities.abillities[Random.Range(0,GameManager.level.abilities.abillities.Count - 1)],
+            GameManager.level.abilities.abillities[Random.Range(0,GameManager.level.abilities.abillities.Count - 1)],
+            GameManager.level.abilities.abillities[Random.Range(0,GameManager.level.abilities.abillities.Count - 1)],
         });
     }
 
@@ -46,9 +46,18 @@ public class AbilitySelector : MonoBehaviour
             element.UnregisterCallback<ClickEvent>(OnAbilitySelected);
         }
 
+
         gameObject.SetActive(false);
 
-        GameManager.RestartGame();
+        GameManager.levels.currentLevel += 1;
+        if (GameManager.levels.levels.Length <= GameManager.levels.currentLevel)
+        {
+            GameManager.Win();
+        }
+        else
+        {
+            GameManager.RestartGame();
+        }
     }
 
     public void RenderAbilities(Abillity[] renderAbillities = null)

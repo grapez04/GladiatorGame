@@ -7,4 +7,5 @@ public class Level : MonoBehaviour
     [SerializeField] public Enemy[] enemies;
     [SerializeField] public int[] enemyCounts;
     [SerializeField] public int maxEnemysOnScreen;
+    [SerializeField] public int enemySpawnRate;
 }
