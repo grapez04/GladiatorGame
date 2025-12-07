@@ -9,6 +9,11 @@ public class AbilitySelector : MonoBehaviour
 
     private void Start()
     {
+        GameManager.levels.currentLevel += 1;
+        if (GameManager.levels.levels.Length <= GameManager.levels.currentLevel)
+        {
+            GameManager.Win();
+        }
 
         RenderAbilities(new Abillity[]{
             GameManager.level.abilities.abillities[Random.Range(0,GameManager.level.abilities.abillities.Count - 1)],
@@ -49,15 +54,7 @@ public class AbilitySelector : MonoBehaviour
 
         gameObject.SetActive(false);
 
-        GameManager.levels.currentLevel += 1;
-        if (GameManager.levels.levels.Length <= GameManager.levels.currentLevel)
-        {
-            GameManager.Win();
-        }
-        else
-        {
-            GameManager.RestartGame();
-        }
+        GameManager.RestartGame();
     }
 
     public void RenderAbilities(Abillity[] renderAbillities = null)
