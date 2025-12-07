@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStateHandler
   aim: {fileID: 8192391616906659934}
   stopDistance: 1
-  canDamage: 0
+  attackDistance: 1
   chargeSpeed: 20
 --- !u!114 &3227019153635715283
 MonoBehaviour:
@@ -322,6 +322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackHandler
   isAttacking: 0
+  isCharging: 0
+  isOnCooldown: 0
   attackCooldown: 1
   attackDamage: 1
 --- !u!114 &876524487735583083
@@ -341,6 +343,7 @@ MonoBehaviour:
   speed: 0.4
   maxHealth: 1
   currentHealth: 0
+  bloodSplat: {fileID: 692240328160846868, guid: 65ea485eae0c79f4faea132ee81870d2, type: 3}
 --- !u!1 &8775807199701735425
 GameObject:
   m_ObjectHideFlags: 0

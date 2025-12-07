@@ -47,5 +47,6 @@ public class EnemyManager : MonoBehaviour
     {
         attackHandler.attackDamage = enemyStats.attackDamage;
         stateHandler.SetSpeed(enemyStats.speed);
+        enemyStats.maxHealth = enemyStats.health; enemyStats.Init();
     }
 }

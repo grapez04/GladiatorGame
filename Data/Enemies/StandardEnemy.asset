@@ -17,3 +17,4 @@ MonoBehaviour:
   stopDistance: 2
   attackDamage: 1
   speed: 2
+  health: 1

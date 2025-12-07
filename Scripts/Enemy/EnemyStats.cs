@@ -6,13 +6,19 @@ public class EnemyStats : Entity
     public float maxHealth = 2f;
     [SerializeField] private float currentHealth;
 
-    private void Awake()
+
+    [Space]
+    [SerializeField] private GameObject bloodSplat;
+
+    public void Init()
     {
         currentHealth = maxHealth;
     }
 
     public void TakeDamage(int damage)
     {
+        Instantiate(bloodSplat, transform.position, Quaternion.identity);
+
         Debug.Log("Ouch");
 
         currentHealth -= damage;
