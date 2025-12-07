@@ -6,6 +6,12 @@ public class PlayerHealthManager : MonoBehaviour
     public float maxHealth = 1f;
     [SerializeField] private float currentHealth;
 
+    public void SetHealth(float newHealth)
+    {
+        maxHealth = newHealth;
+        currentHealth = maxHealth;
+    }
+
     public void TakeDamage(float damage)
     {
         Debug.Log("Player was hurt");
