@@ -2600,7 +2600,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.31
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2625,7 +2625,7 @@ Transform:
   m_GameObject: {fileID: 1961331027}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.64, y: 1.66, z: -10}
+  m_LocalPosition: {x: -1.84, y: 1.22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2863,6 +2863,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5307606281017908436, guid: 07760eba49bd01e46bfa78dda9484690, type: 3}
     - target: {fileID: 7811267866769449630, guid: 4700db08618d7a442843777582f5f80c, type: 3}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7811267866769449630, guid: 4700db08618d7a442843777582f5f80c, type: 3}
       propertyPath: enemyCountForBattle
       value: 3
       objectReference: {fileID: 0}
@@ -2870,6 +2874,14 @@ PrefabInstance:
       propertyPath: maxEnenemysInBattle
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7811267866769449630, guid: 4700db08618d7a442843777582f5f80c, type: 3}
+      propertyPath: 'enemies.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+    - target: {fileID: 7811267866769449630, guid: 4700db08618d7a442843777582f5f80c, type: 3}
+      propertyPath: 'enemies.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
     - target: {fileID: 7811267866769449630, guid: 4700db08618d7a442843777582f5f80c, type: 3}
       propertyPath: spawnPositions.Array.size
       value: 3
@@ -2886,6 +2898,18 @@ PrefabInstance:
       propertyPath: 'spawnPositions.Array.data[2]'
       value: 
       objectReference: {fileID: 1522732363}
+    - target: {fileID: 7811267866769449630, guid: 4700db08618d7a442843777582f5f80c, type: 3}
+      propertyPath: enemyCountsForBattle.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7811267866769449630, guid: 4700db08618d7a442843777582f5f80c, type: 3}
+      propertyPath: 'enemyCountsForBattle.Array.data[0]'
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7811267866769449630, guid: 4700db08618d7a442843777582f5f80c, type: 3}
+      propertyPath: 'enemyCountsForBattle.Array.data[1]'
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

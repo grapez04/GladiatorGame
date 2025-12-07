@@ -6,7 +6,7 @@ public class EnemyStateHandler : MonoBehaviour
     private EnemyManager manager;
 
     [SerializeField] private Transform aim;
-    [SerializeField] private float stopDistance;
+    public float stopDistance;
 
     private void Awake()
     {

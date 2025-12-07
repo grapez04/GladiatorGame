@@ -1,34 +1,25 @@
 fileFormatVersion: 2
-guid: 09f4edbc0f3f9f1408e162cd1326a82d
+guid: 20acf6aa01d7f434d9674bd4493c720b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3363572712707339182
-    second: tjump_0
+      213: 2420758245300138263
+    second: tiger_walk_0
   - first:
-      213: -8877679758241490129
-    second: tjump_1
+      213: 3033043364144671165
+    second: tiger_walk_1
   - first:
-      213: -3963419380275552263
-    second: tjump_2
+      213: -5836593515261621063
+    second: tiger_walk_2
   - first:
-      213: 1987574008083266888
-    second: tjump_3
+      213: -3492525493776571516
+    second: tiger_walk_3
   - first:
-      213: -1903080834239679569
-    second: tjump_4
+      213: -5426422358196914256
+    second: tiger_walk_4
   - first:
-      213: 8930257437461295607
-    second: tjump_5
-  - first:
-      213: 3588131626956213170
-    second: tjump_6
-  - first:
-      213: -515538242853904184
-    second: tjump_7
-  - first:
-      213: -7000995266042251121
-    second: tjump_8
+      213: 6481805227265003067
+    second: tiger_walk_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -137,199 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tjump_0
+      name: tiger_walk_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 63
-        width: 26
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25cc1e250703251d0800000000000000
-      internalID: -3363572712707339182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tjump_1
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 63
-        width: 27
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f2b175cbb452cc480800000000000000
-      internalID: -8877679758241490129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tjump_2
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 63
-        width: 27
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9ffd6ce921b1ff8c0800000000000000
-      internalID: -3963419380275552263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tjump_3
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 63
-        width: 27
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 84d3a9c9708459b10800000000000000
-      internalID: 1987574008083266888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tjump_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 35
+        y: 32
         width: 32
-        height: 11
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa33a407016e695e0800000000000000
-      internalID: -1903080834239679569
+      spriteID: 71176326cc2489120800000000000000
+      internalID: 2420758245300138263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tjump_5
+      name: tiger_walk_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 35
+        y: 32
         width: 32
-        height: 11
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f1bba823d5aeeb70800000000000000
-      internalID: 8930257437461295607
+      spriteID: db9e234bed8871a20800000000000000
+      internalID: 3033043364144671165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tjump_6
+      name: tiger_walk_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 35
-        width: 32
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2bbc11834ba9bc130800000000000000
-      internalID: 3588131626956213170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tjump_7
-      rect:
-        serializedVersion: 2
-        x: 95
         y: 32
         width: 32
-        height: 11
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c0609613b078d8f0800000000000000
-      internalID: -515538242853904184
+      spriteID: 9bc8b781f11400fa0800000000000000
+      internalID: -5836593515261621063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tjump_8
+      name: tiger_walk_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483a37e419e088fc0800000000000000
+      internalID: -3492525493776571516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiger_walk_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 31
-        height: 11
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f883c5df5e777de90800000000000000
-      internalID: -7000995266042251121
+      spriteID: 0b77f6a9d9971b4b0800000000000000
+      internalID: -5426422358196914256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiger_walk_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e866a138ff3f950800000000000000
+      internalID: 6481805227265003067
       vertices: []
       indices: 
       edges: []
@@ -338,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e6f59f827b89d3c458ed7057ccb4aa61
     internalID: 0
     vertices: []
     indices: 
@@ -346,17 +271,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      tjump_0: -3363572712707339182
-      tjump_1: -8877679758241490129
-      tjump_2: -3963419380275552263
-      tjump_3: 1987574008083266888
-      tjump_4: -1903080834239679569
-      tjump_5: 8930257437461295607
-      tjump_6: 3588131626956213170
-      tjump_7: -515538242853904184
-      tjump_8: -7000995266042251121
+      tiger_walk_0: 2420758245300138263
+      tiger_walk_1: 3033043364144671165
+      tiger_walk_2: -5836593515261621063
+      tiger_walk_3: -3492525493776571516
+      tiger_walk_4: -5426422358196914256
+      tiger_walk_5: 6481805227265003067
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
