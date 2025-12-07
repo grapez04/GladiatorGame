@@ -152,7 +152,7 @@ MonoBehaviour:
   abilities: {fileID: 123033804}
   enemies:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
-  enemyCountss: 05000000
+  enemyCountss: 0f000000
   maxEnemysOnScreen: 3
   enemySpawnRate: 1
 --- !u!114 &123033804
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   abillities:
   - name: Test
-    image: {fileID: 21300000, guid: 74a650b1fac67a240b2da7730768de2f, type: 3}
+    image: {fileID: 21300000, guid: 1ce82a84690d24c4b989f2f0ab961174, type: 3}
     attributes:
     - name: Speed
       modifier: 5
@@ -349,8 +349,12 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
-  enemyCountss: 0500000003000000
-  maxEnemysOnScreen: 3
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  enemyCountss: 050000000100000005000000010000000500000001000000
+  maxEnemysOnScreen: 4
   enemySpawnRate: 1
 --- !u!114 &541843645
 MonoBehaviour:
@@ -387,6 +391,90 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541843643}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.14704, y: -9.03876, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1406509968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &836833023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 836833026}
+  - component: {fileID: 836833024}
+  - component: {fileID: 836833025}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &836833024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836833023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91168e94d1456f4b8a9bdde2f3fd82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level
+  abilities: {fileID: 836833025}
+  enemies:
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  enemyCountss: 070000000300000007000000030000000700000003000000
+  maxEnemysOnScreen: 6
+  enemySpawnRate: 0.5
+--- !u!114 &836833025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836833023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f3a236ced13b94bb40c2abbd81ffd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Abilities
+  abillities:
+  - name: test 2
+    image: {fileID: 21300000, guid: 74a650b1fac67a240b2da7730768de2f, type: 3}
+    attributes:
+    - name: Speed
+      modifier: 5
+      type: 0
+    - name: Health
+      modifier: 0
+      type: 0
+    - name: Health
+      modifier: 0
+      type: 1
+    - name: Health
+      modifier: 0
+      type: 1
+--- !u!4 &836833026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836833023}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.14704, y: -9.03876, z: 0}
@@ -915,9 +1003,8 @@ MonoBehaviour:
   currentLevel: 0
   levels:
   - {fileID: 123033803}
-  - {fileID: 123033803}
   - {fileID: 541843644}
-  - {fileID: 541843644}
+  - {fileID: 836833024}
 --- !u!4 &1406509968
 Transform:
   m_ObjectHideFlags: 0
@@ -933,6 +1020,7 @@ Transform:
   m_Children:
   - {fileID: 123033805}
   - {fileID: 541843646}
+  - {fileID: 836833026}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1611517243
