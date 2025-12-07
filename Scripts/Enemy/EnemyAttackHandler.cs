@@ -5,7 +5,10 @@ public class EnemyAttackHandler : MonoBehaviour
     private EnemyManager manager;
 
     public bool isAttacking = false;
-    private bool hasAttacked = false; // prevents multiple attacks
+    public bool isCharging = false;
+
+    private bool hasAttacked = false;
+
     [SerializeField] private float attackCooldown = 1f;
     private float attackTimer = 0f;
 
@@ -19,13 +22,22 @@ public class EnemyAttackHandler : MonoBehaviour
 
     private void Update()
     {
+        // cooldown after attack
         if (hasAttacked)
         {
             attackTimer -= Time.deltaTime;
+
             if (attackTimer <= 0)
             {
+                // Reset attack state
                 isAttacking = false;
-                hasAttacked = false; // Enemy can attack again
+                isCharging = false;
+                hasAttacked = false;
+
+                // Reset speed back to normal
+                manager.stateHandler.SetSpeed(manager.currentEnemy.speed);
+
+                Debug.Log("Attack Reset");
             }
         }
     }
@@ -34,7 +46,11 @@ public class EnemyAttackHandler : MonoBehaviour
     {
         if (!hasAttacked)
         {
+            manager.agent.isStopped = true;
+            manager.isMoving = false;
+
             Attack();
+
             hasAttacked = true;
             attackTimer = attackCooldown;
         }
@@ -44,11 +60,23 @@ public class EnemyAttackHandler : MonoBehaviour
     {
         isAttacking = true;
         manager.enemyAnimator.PlayTargetAnim("Attack");
-        DealDamage();
     }
 
+    // Called by animation event
     public void DealDamage()
     {
-        manager.target.healthManager.TakeDamage(attackDamage); // Deal damage to player
+        Debug.Log("CHARGE!");
+
+        // Start charge
+        isCharging = true;
+
+        manager.agent.isStopped = false;
+        manager.isMoving = true;
+
+        // Set charge speed
+        manager.stateHandler.SetSpeed(manager.stateHandler.chargeSpeed);
+
+        // Charge toward player's current position
+        manager.agent.SetDestination(manager.target.transform.position);
     }
 }

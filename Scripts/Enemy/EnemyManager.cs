@@ -10,7 +10,7 @@ public class EnemyManager : MonoBehaviour
     public EnemyStats enemyStats;
     public EnemyStateHandler stateHandler;
     public EnemyAnimatorManager enemyAnimator;
-    public EnemyAttackHandler enemyAttackHandler;
+    public EnemyAttackHandler attackHandler;
     public NavMeshAgent agent;
     public SpriteRenderer spriteRenderer;
 
@@ -44,7 +44,7 @@ public class EnemyManager : MonoBehaviour
 
     public void ApplyStats()
     {
-        enemyAttackHandler.attackDamage = enemyStats.attackDamage;
-        agent.speed = enemyStats.speed;
+        attackHandler.attackDamage = enemyStats.attackDamage;
+        stateHandler.SetSpeed(enemyStats.speed);
     }
 }

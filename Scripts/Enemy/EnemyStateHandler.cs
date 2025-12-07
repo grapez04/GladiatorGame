@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class EnemyStateHandler : MonoBehaviour
 {
@@ -7,6 +6,8 @@ public class EnemyStateHandler : MonoBehaviour
 
     [SerializeField] private Transform aim;
     public float stopDistance;
+
+    public float chargeSpeed = 20f;
 
     private void Awake()
     {
@@ -24,29 +25,37 @@ public class EnemyStateHandler : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, manager.target.transform.position);
 
-        if (manager.enemyAttackHandler.isAttacking)
+        // If charging ? DO NOT OVERRIDE the charge movement
+        if (manager.attackHandler.isCharging)
         {
-            manager.agent.isStopped = true;
-            manager.isMoving = false;
-            manager.agent.ResetPath();
-            return; // exit early
+            manager.agent.SetDestination(manager.target.transform.position);
+            return;
         }
 
+        // If in attack animation (before charge)
+        if (manager.attackHandler.isAttacking)
+        {
+            manager.agent.isStopped = true;
+            manager.agent.ResetPath();
+            manager.isMoving = false;
+            return;
+        }
+
+        // Normal chasing behavior
         if (distance > stopDistance)
         {
-            // Move toward the player
             manager.agent.SetDestination(manager.target.transform.position);
             manager.agent.isStopped = false;
             manager.isMoving = true;
         }
         else
         {
-            // Stop when close enough
+            // Stop and initiate attack
+            manager.agent.ResetPath();
             manager.agent.isStopped = true;
             manager.isMoving = false;
-            manager.agent.ResetPath();
 
-            manager.enemyAttackHandler.TryAttackOnce();
+            manager.attackHandler.TryAttackOnce();
         }
     }
 
@@ -61,14 +70,13 @@ public class EnemyStateHandler : MonoBehaviour
     private void Flip()
     {
         if (manager.target.transform.position.x < transform.position.x)
-        {
-            // Cursor is to the right -> not flipped
             manager.spriteRenderer.flipX = true;
-        }
         else
-        {
-            // Cursor is to the left -> flipped
             manager.spriteRenderer.flipX = false;
-        }
+    }
+
+    public void SetSpeed(float _speed)
+    {
+        manager.agent.speed = _speed;
     }
 }

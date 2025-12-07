@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8906005618303851880}
   - component: {fileID: 4066724056468146425}
-  - component: {fileID: 1807842461594417268}
+  - component: {fileID: 5426715801290498515}
+  - component: {fileID: 9196703512035763475}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -92,7 +93,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!95 &1807842461594417268
+--- !u!95 &5426715801290498515
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -114,6 +115,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9196703512035763475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88091193457217408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1617b31e90d59af4a89d924cf25726ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  enemyManager: {fileID: 6745969903701108032}
 --- !u!1 &2822797487855852333
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +192,7 @@ Transform:
   m_GameObject: {fileID: 5307606281017908436}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.19, y: 1.12, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -197,9 +211,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 2
-  m_Acceleration: 8
+  m_Acceleration: 500
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 0
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -261,7 +275,7 @@ MonoBehaviour:
   enemyStats: {fileID: 876524487735583083}
   stateHandler: {fileID: 5487039613388910660}
   enemyAnimator: {fileID: -6925164399152535607}
-  enemyAttackHandler: {fileID: 3227019153635715283}
+  attackHandler: {fileID: 3227019153635715283}
   agent: {fileID: 3641205754172203823}
   spriteRenderer: {fileID: 4066724056468146425}
   isMoving: 0
@@ -278,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9997aa98b6aaca4ebbfcabc35f5bec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAnimatorManager
-  animator: {fileID: 1807842461594417268}
+  animator: {fileID: 5426715801290498515}
 --- !u!114 &5487039613388910660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +307,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStateHandler
   aim: {fileID: 8192391616906659934}
   stopDistance: 1
+  canDamage: 0
+  chargeSpeed: 20
 --- !u!114 &3227019153635715283
 MonoBehaviour:
   m_ObjectHideFlags: 0
