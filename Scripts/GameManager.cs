@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private float sceneLoadWaitTime = 1f;
+
     public delegate void EnemyDied();
     public static EnemyDied enemyDied;
 
@@ -19,6 +21,8 @@ public class GameManager : MonoBehaviour
     public static float playerRange = 1f;
 
     private static bool setPlayerStats = false;
+    private static bool loadUpgrade = false;
+    private static float loadUpgradeTime = 0f;
 
     private void Awake()
     {
@@ -49,6 +53,28 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(enemySpawner.StartBattle());
             }
         }
+
+        if (loadUpgrade)
+        {
+            if (loadUpgradeTime >= sceneLoadWaitTime)
+            {
+                loadUpgrade = false;
+                loadUpgradeTime = 0;
+                levels.currentLevel += 1;
+                if (levels.levels.Length <= levels.currentLevel)
+                {
+                    SceneManager.LoadScene("03Ending");
+                }
+                else
+                {
+                    SceneManager.LoadScene("02Upgrades");
+                }
+            }
+            else
+            {
+                loadUpgradeTime += Time.deltaTime;
+            }
+        }
     }
 
     public static void StartGame()
@@ -75,14 +101,6 @@ public class GameManager : MonoBehaviour
     }
     public static void Upgrade()
     {
-        levels.currentLevel += 1;
-        if (levels.levels.Length <= levels.currentLevel)
-        {
-            SceneManager.LoadScene("03Ending");
-        }
-        else
-        {
-            SceneManager.LoadScene("02Upgrades");
-        }
+        loadUpgrade = true;
     }
 }
