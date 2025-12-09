@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 752fef4131bde34459f17a6c5e6f2d18
+guid: c1e7389ae05b7214fb52c7dba63ccd76
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3456532010920386237
-    second: Merchant_0
+      213: -6080815966293268405
+    second: mawalk_0
+  - first:
+      213: 6629042696687431280
+    second: mawalk_1
+  - first:
+      213: -3589635847190333157
+    second: mawalk_2
+  - first:
+      213: 1737766786240606543
+    second: mawalk_3
+  - first:
+      213: -1669360900347636754
+    second: mawalk_4
+  - first:
+      213: -3182392651449129895
+    second: mawalk_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Merchant_0
+      name: mawalk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 82
-        height: 112
+        x: 7
+        y: 31
+        width: 19
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +143,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 341e256137ee700d0800000000000000
-      internalID: -3456532010920386237
+      spriteID: b48e090a81a9c9ba0800000000000000
+      internalID: -6080815966293268405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mawalk_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 31
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ea3f0e5371ffb50800000000000000
+      internalID: 6629042696687431280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mawalk_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 31
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b193637373d0f2ec0800000000000000
+      internalID: -3589635847190333157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mawalk_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 31
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41f75c5fa9cd1810800000000000000
+      internalID: 1737766786240606543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mawalk_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee35ad41b1d35d8e0800000000000000
+      internalID: -1669360900347636754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mawalk_5
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 0
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 954af8a9ebed5d3d0800000000000000
+      internalID: -3182392651449129895
       vertices: []
       indices: 
       edges: []
@@ -148,7 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Merchant_0: -3456532010920386237
+      mawalk_0: -6080815966293268405
+      mawalk_1: 6629042696687431280
+      mawalk_2: -3589635847190333157
+      mawalk_3: 1737766786240606543
+      mawalk_4: -1669360900347636754
+      mawalk_5: -3182392651449129895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
