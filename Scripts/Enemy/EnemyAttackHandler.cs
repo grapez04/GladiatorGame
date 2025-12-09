@@ -9,11 +9,14 @@ public class EnemyAttackHandler : MonoBehaviour
     public bool isOnCooldown = false; // NEW: cooldown motion freeze
 
     private bool hasAttacked = false;
-
-    [SerializeField] private float attackCooldown = 3f;
     private float attackTimer = 0f;
 
+    [Space]
+    [Header("Enemy Combat")]
+    private float attackCooldown = 0.5f;
     public float attackDamage = 1;
+    public float chargeSpeed = 10f;
+    public Vector3 attackSnapshotPos;
 
     private void Awake()
     {
@@ -34,6 +37,10 @@ public class EnemyAttackHandler : MonoBehaviour
                 hasAttacked = false;
                 isAttacking = false;
                 isCharging = false;
+
+                // Reset target
+                attackSnapshotPos = Vector3.zero;
+
 
                 // Restore normal speed
                 manager.stateHandler.SetSpeed(manager.currentEnemy.speed);
@@ -83,16 +90,16 @@ public class EnemyAttackHandler : MonoBehaviour
     {
         Debug.Log("CHARGE!");
 
+        // Charge toward player
+        attackSnapshotPos = manager.player.transform.position;
+
         isCharging = true;
 
         manager.agent.isStopped = false;
         manager.isMoving = true;
 
         // Set charge speed
-        manager.stateHandler.SetSpeed(manager.stateHandler.chargeSpeed);
-
-        // Charge toward player
-        manager.agent.SetDestination(manager.target.transform.position);
+        manager.stateHandler.SetSpeed(chargeSpeed);
 
         // Once charge is done, we start cooldown (in EnemyStateHandler)
     }
@@ -100,7 +107,7 @@ public class EnemyAttackHandler : MonoBehaviour
     public void TryDealDamage()
     {
         Debug.Log("Damage");
-        manager.target.healthManager.TakeDamage(attackDamage);
+        manager.player.healthManager.TakeDamage(attackDamage);
     }
 
     public void FinishCharge()

@@ -5,10 +5,9 @@ public class EnemyStateHandler : MonoBehaviour
     private EnemyManager manager;
 
     [SerializeField] private Transform aim;
+    private float attackDistance = 1.2f; // Hit range
     public float stopDistance;
-    public float attackDistance = 1.0f;
-
-    public float chargeSpeed = 15f;
+    private float snapShotOffset = 0.2f;
 
     private void Awake()
     {
@@ -24,7 +23,7 @@ public class EnemyStateHandler : MonoBehaviour
 
     private void DistanceFromPlayer()
     {
-        float distance = Vector3.Distance(transform.position, manager.target.transform.position);
+        float distance = Vector3.Distance(transform.position, manager.player.transform.position);
 
         // STOP EVERYTHING DURING COOLDOWN
         if (manager.attackHandler.isOnCooldown)
@@ -37,19 +36,26 @@ public class EnemyStateHandler : MonoBehaviour
         // CHARGING STATE
         if (manager.attackHandler.isCharging)
         {
-            //manager.attackHandler.TryDealDamage();
-
-            Vector3 targetPos = manager.target.transform.position;
+            Vector3 targetPos = manager.attackHandler.attackSnapshotPos;
             Vector3 dir = (targetPos - transform.position).normalized;
-            Vector3 chargeTarget = targetPos - dir * attackDistance;
+            Vector3 chargeTarget = targetPos - dir;
 
             manager.agent.SetDestination(chargeTarget);
 
-            // End charge when close enough
-            if (distance <= attackDistance + 0.2f)
+            // Determines when the charge movement ends
+            float distanceCharge = Vector3.Distance(transform.position, chargeTarget);
+
+            if (distanceCharge <= 0.2f)
             {
+                // Checks whether the player is actually close to the enemy at impact time
+                float hitDistance = Vector3.Distance(manager.player.transform.position, transform.position);
+
+                if (Vector3.Distance(transform.position, manager.player.transform.position) <= attackDistance)
+                {
+                    manager.attackHandler.TryDealDamage();
+                }
+
                 manager.agent.ResetPath();
-                manager.attackHandler.TryDealDamage();
                 manager.attackHandler.FinishCharge();
             }
 
@@ -61,7 +67,7 @@ public class EnemyStateHandler : MonoBehaviour
         {
             if (distance > stopDistance)
             {
-                manager.agent.SetDestination(manager.target.transform.position);
+                manager.agent.SetDestination(manager.player.transform.position);
                 manager.agent.isStopped = false;
                 manager.isMoving = true;
             }
@@ -78,18 +84,36 @@ public class EnemyStateHandler : MonoBehaviour
 
     private void RotateAim()
     {
-        Vector3 direction = (manager.target.transform.position - aim.position).normalized;
+        Vector3 direction = (manager.player.transform.position - aim.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         aim.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
     private void Flip()
     {
-        manager.spriteRenderer.flipX = manager.target.transform.position.x < transform.position.x;
+        manager.spriteRenderer.flipX = manager.player.transform.position.x < transform.position.x;
     }
 
     public void SetSpeed(float _speed)
     {
         manager.agent.speed = _speed;
+    }
+
+    private void OnDrawGizmos()
+    {
+        // Draw attack distance around the enemy
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, attackDistance);
+
+        // Draw stop distance
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, stopDistance);
+
+        // Draw the snapshot position if charging
+        if (manager != null && manager.attackHandler != null && manager.attackHandler.isCharging)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(manager.attackHandler.attackSnapshotPos, 0.2f); // small debug sphere
+        }
     }
 }

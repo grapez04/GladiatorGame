@@ -279,7 +279,8 @@ MonoBehaviour:
   agent: {fileID: 3641205754172203823}
   spriteRenderer: {fileID: 4066724056468146425}
   isMoving: 0
-  target: {fileID: 0}
+  player: {fileID: 0}
+  currentTarget: {fileID: 0}
 --- !u!114 &-6925164399152535607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,9 +307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStateHandler
   aim: {fileID: 8192391616906659934}
-  stopDistance: 1
   attackDistance: 1
-  chargeSpeed: 20
+  stopDistance: 2
 --- !u!114 &3227019153635715283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,6 +326,8 @@ MonoBehaviour:
   isOnCooldown: 0
   attackCooldown: 1
   attackDamage: 1
+  chargeSpeed: 10
+  attackSnapshotPos: {x: 0, y: 0, z: 0}
 --- !u!114 &876524487735583083
 MonoBehaviour:
   m_ObjectHideFlags: 0

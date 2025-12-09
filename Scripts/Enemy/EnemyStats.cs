@@ -15,7 +15,7 @@ public class EnemyStats : Entity
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         Instantiate(bloodSplat, transform.position, Quaternion.identity);
 

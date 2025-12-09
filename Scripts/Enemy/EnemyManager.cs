@@ -16,11 +16,12 @@ public class EnemyManager : MonoBehaviour
 
     public bool isMoving;
 
-    public PlayerManager target;
+    public PlayerManager player;
+    public Transform currentTarget;
 
     private void Awake()
     {
-        target = FindAnyObjectByType<PlayerManager>();
+        player = FindAnyObjectByType<PlayerManager>();
 
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;

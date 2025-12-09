@@ -193,7 +193,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Speed
-      modifier: -1
+      modifier: 0
       type: 1
     - name: Age
       modifier: 20
@@ -208,7 +208,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Health
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 5
@@ -223,7 +223,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Damage
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 3
@@ -238,7 +238,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Speed
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 2
@@ -253,7 +253,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Damage
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 7
@@ -529,7 +529,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Health
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 1
@@ -544,7 +544,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Speed
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 1
@@ -559,7 +559,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Health
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 1
@@ -589,7 +589,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Speed
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 1
@@ -688,7 +688,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Health
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 1
@@ -703,7 +703,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Speed
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 1
@@ -718,7 +718,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Health
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 1
@@ -733,7 +733,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Damage
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 1
@@ -748,7 +748,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Speed
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 1
@@ -763,7 +763,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Damage
-      modifier: -3
+      modifier: 0
       type: 1
     - name: Age
       modifier: 1

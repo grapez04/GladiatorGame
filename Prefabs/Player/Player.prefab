@@ -452,7 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
   stats: {fileID: 72257408100259345}
   movement: {fileID: 8403256235563523555}
-  playerAnimator: {fileID: 279724892914748951}
+  animatorManager: {fileID: 279724892914748951}
   healthManager: {fileID: 6423923090088135667}
   attackHandler: {fileID: 4244306661190271864}
   mouseHandler: {fileID: 8059155061369008200}

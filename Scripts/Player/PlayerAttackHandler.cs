@@ -10,13 +10,13 @@ public class PlayerAttackHandler : MonoBehaviour
 
     [Header("Detection Angle Radius")]
     private float detectionAngle = 120f;
-    [SerializeField] private float detectionRadius = 1.7f;
+    private float detectionRadius = 1.2f;
 
     [Space]
     [SerializeField] private Collider2D[] hitColliders;
 
     [Header("DamageValues")]
-    public int attackDamage = 1;
+    public float attackDamage = 1f;
 
     private void Awake()
     {

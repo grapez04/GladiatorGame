@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip()
     {
-        if (mouseWorldPos.x < transform.position.x)
+        if (mouseWorldPos.x > transform.position.x)
         {
             // Cursor is to the right -> not flipped
             manager.spriteRenderer.flipX = false;
