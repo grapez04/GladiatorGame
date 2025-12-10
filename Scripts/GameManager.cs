@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
                 playerStats.attackDamage = playerDamage;
                 playerStats.health = playerHealth;
                 playerStats.speed = playerSpeed;
+                playerStats.age = playerAge;
 
                 enemySpawner.spawnRate = level.enemySpawnRate;
                 enemySpawner.enemyCountsForBattle = (int[])level.enemyCountss.Clone();

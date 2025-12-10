@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
-    public int currentAge;
+    public float currentAge;
 
     //public AgeLevel[] ageLevel;
 
