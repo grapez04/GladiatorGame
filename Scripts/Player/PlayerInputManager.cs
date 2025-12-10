@@ -28,11 +28,16 @@ public class PlayerInputManager : MonoBehaviour
             playerControls.Player.Move.canceled += i => moveInput = Vector2.zero;
 
             playerControls.Player.Aim.performed += OnMousePos;
-
-            playerControls.Player.Attack.performed += OnAttack;
         }
 
+        playerControls.Player.Attack.performed += HandleAttack;
         playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playerControls.Player.Attack.performed -= HandleAttack;
+        playerControls.Disable();
     }
 
     private void OnMovement()
@@ -46,7 +51,7 @@ public class PlayerInputManager : MonoBehaviour
         manager.movement.mouseHandler.mousePos = context.ReadValue<Vector2>();
     }
 
-    private void OnAttack(InputAction.CallbackContext context)
+    private void HandleAttack(InputAction.CallbackContext context)
     {
         manager.attackHandler.Attack();
         manager.animatorManager.PlayTargetAnim("Attack");

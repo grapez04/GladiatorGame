@@ -42,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
 
         int enemyIndex = Random.Range(0, spawnableEnemies.Length - 1);
         GameObject enemyClone = Instantiate(enemyPrefab);
-        enemyClone.transform.position = spawnPositions[Random.Range(0, spawnPositions.Length - 1)].position;
+        enemyClone.transform.position = spawnPositions[Random.Range(0, spawnPositions.Length)].position;
         EnemyManager enemyManager = enemyClone.GetComponent<EnemyManager>();
         enemyManager.currentEnemy = spawnableEnemies[enemyIndex];
         enemyManager.SetEnemy();

@@ -80,14 +80,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: b021c484879924d42abf5e7d0dedd5ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2b87120e97d6f340b70687f1b2d0210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  manager: {fileID: 0}
+  manager: {fileID: 523705622815768941}
   mouseHandler: {fileID: 0}
   aim: {fileID: 7288258538633604737}
   move: {x: 0, y: 0}
@@ -437,6 +437,7 @@ MonoBehaviour:
   health: 1
   attackDamage: 1
   speed: 1
+  age: 0
   attackRange: 0
 --- !u!114 &523705622815768941
 MonoBehaviour:
@@ -457,6 +458,7 @@ MonoBehaviour:
   attackHandler: {fileID: 4244306661190271864}
   mouseHandler: {fileID: 8059155061369008200}
   spriteRenderer: {fileID: 7297986296610347129}
+  currentAge: 0
 --- !u!114 &4244306661190271864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,7 +475,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   radius: 0
-  detectionRadius: 1
   hitColliders: []
   attackDamage: 1
 --- !u!114 &279724892914748951

@@ -7,7 +7,6 @@ public class EnemyStateHandler : MonoBehaviour
     [SerializeField] private Transform aim;
     private float attackDistance = 1.2f; // Hit range
     public float stopDistance;
-    private float snapShotOffset = 0.2f;
 
     private void Awake()
     {
@@ -102,11 +101,11 @@ public class EnemyStateHandler : MonoBehaviour
     private void OnDrawGizmos()
     {
         // Draw attack distance around the enemy
-        Gizmos.color = Color.cyan;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackDistance);
 
         // Draw stop distance
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, stopDistance);
 
         // Draw the snapshot position if charging

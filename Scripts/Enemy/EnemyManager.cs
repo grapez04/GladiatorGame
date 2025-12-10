@@ -37,17 +37,12 @@ public class EnemyManager : MonoBehaviour
         // enemy specific stats
         stateHandler.stopDistance = currentEnemy.stopDistance;
 
-        enemyStats.attackDamage = currentEnemy.attackDamage;
-        enemyStats.speed = currentEnemy.speed;
-        enemyStats.health = currentEnemy.health;
+        stateHandler.SetSpeed(currentEnemy.speed);
+        enemyStats.maxHealth = currentEnemy.health;
+        attackHandler.attackDamage = currentEnemy.attackDamage;
+        attackHandler.chargeSpeed = currentEnemy.chargeSpeed;
+        attackHandler.attackCooldown = currentEnemy.attackCooldown;
 
-        ApplyStats();
-    }
-
-    public void ApplyStats()
-    {
-        attackHandler.attackDamage = enemyStats.attackDamage;
-        stateHandler.SetSpeed(enemyStats.speed);
-        enemyStats.maxHealth = enemyStats.health; enemyStats.Init();
+        enemyStats.Init();
     }
 }

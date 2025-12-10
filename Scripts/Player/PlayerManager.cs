@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    public int currentAge;
+
     //public AgeLevel[] ageLevel;
 
     private void SetStats()
@@ -19,6 +21,7 @@ public class PlayerManager : MonoBehaviour
         movement.movespeed = stats.speed;
         attackHandler.attackDamage = stats.attackDamage;
         attackHandler.radius = stats.attackRange;
+        currentAge = stats.age;
     }
 
     public void StartBattle()

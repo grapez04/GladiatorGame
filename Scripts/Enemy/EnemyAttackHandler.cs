@@ -13,7 +13,7 @@ public class EnemyAttackHandler : MonoBehaviour
 
     [Space]
     [Header("Enemy Combat")]
-    private float attackCooldown = 0.5f;
+    public float attackCooldown = 0.5f;
     public float attackDamage = 1;
     public float chargeSpeed = 10f;
     public Vector3 attackSnapshotPos;

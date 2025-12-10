@@ -10,7 +10,7 @@ public class PlayerAttackHandler : MonoBehaviour
 
     [Header("Detection Angle Radius")]
     private float detectionAngle = 120f;
-    private float detectionRadius = 1.2f;
+    private float detectionRadius = 1.4f;
 
     [Space]
     [SerializeField] private Collider2D[] hitColliders;
@@ -57,7 +57,7 @@ public class PlayerAttackHandler : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
 
         if (manager != null)
@@ -71,7 +71,7 @@ public class PlayerAttackHandler : MonoBehaviour
             // Right boundary
             Vector3 rightDir = Quaternion.Euler(0, 0, -detectionAngle * 0.5f) * aimDir;
 
-            Gizmos.color = Color.green;
+            Gizmos.color = Color.white;
             Gizmos.DrawLine(origin, origin + leftDir * detectionRadius);
             Gizmos.DrawLine(origin, origin + rightDir * detectionRadius);
 

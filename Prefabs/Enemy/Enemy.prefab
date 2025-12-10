@@ -81,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 7677f2dc9d4d0294f875454de2273e82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -307,7 +307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStateHandler
   aim: {fileID: 8192391616906659934}
-  attackDistance: 1
   stopDistance: 2
 --- !u!114 &3227019153635715283
 MonoBehaviour:
@@ -343,6 +342,7 @@ MonoBehaviour:
   health: 1
   attackDamage: 1
   speed: 0.4
+  age: 20
   maxHealth: 1
   currentHealth: 0
   bloodSplat: {fileID: 692240328160846868, guid: 65ea485eae0c79f4faea132ee81870d2, type: 3}
