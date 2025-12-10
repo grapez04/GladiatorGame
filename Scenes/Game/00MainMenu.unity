@@ -541,7 +541,7 @@ MonoBehaviour:
       modifier: 0
       type: 0
     - name: Health
-      modifier: 3
+      modifier: 0
       type: 0
     - name: Speed
       modifier: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
       modifier: 0
       type: 0
     - name: Health
-      modifier: 3
+      modifier: 0
       type: 0
     - name: Damage
       modifier: 0
@@ -730,7 +730,7 @@ MonoBehaviour:
       modifier: 6
       type: 0
     - name: Health
-      modifier: 3
+      modifier: 0
       type: 0
     - name: Damage
       modifier: 0

@@ -10,7 +10,7 @@ public class PlayerAttackHandler : MonoBehaviour
 
     [Header("Detection Angle Radius")]
     private float detectionAngle = 120f;
-    private float detectionRadius = 1.4f;
+    private float detectionRadius = 1.2f;
 
     [Space]
     [SerializeField] private Collider2D[] hitColliders;
@@ -106,6 +106,8 @@ public class PlayerAttackHandler : MonoBehaviour
 
                 // Call Damage
                 enemyStats.TakeDamage(attackDamage);
+
+                manager.sFXHandler.PlaySFX(manager.sFXHandler.slashClip);
             }
         }
     }

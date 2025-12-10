@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: adultwalk_0
+      name: adult_walk_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 31
-        width: 19
-        height: 17
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0273705beffe19a00800000000000000
-      internalID: 761653689240205088
+      spriteID: 8aefd67b2892e1449989b9bc7cbe5cff
+      internalID: 294179864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adultwalk_1
+      name: adult_walk_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 31
-        width: 20
-        height: 16
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fa8f9900779442ef0800000000000000
-      internalID: -133901313454245713
+      spriteID: 44f24187845f58e448c75dffeef31181
+      internalID: 836486918
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adultwalk_2
+      name: adult_walk_2
       rect:
         serializedVersion: 2
-        x: 75
-        y: 31
-        width: 16
-        height: 18
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b6de2adbf02794820800000000000000
-      internalID: 2902976846748642667
+      spriteID: 9c05a8623895cd84c9b4f14439fbbfe0
+      internalID: 423567657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adultwalk_3
+      name: adult_walk_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 31
-        width: 15
-        height: 17
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e0ef02d88d5978590800000000000000
-      internalID: -7671998682889126386
+      spriteID: 7de59fa7c8b1e564c961fdb2531721d6
+      internalID: -1334735922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adultwalk_4
+      name: adult_walk_4
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 0
-        width: 11
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a3c85c925205160f0800000000000000
-      internalID: -1125530311321088966
+      spriteID: 68acbfc4601133549a7965c14d737953
+      internalID: -1868807463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adultwalk_5
+      name: adult_walk_5
       rect:
         serializedVersion: 2
-        x: 43
+        x: 32
         y: 0
-        width: 15
-        height: 17
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c950180b14fced6d0800000000000000
-      internalID: -2963703623722138212
+      spriteID: 0d9916f6b5fb25b4b8e8ad7b5e599a5a
+      internalID: -1833647983
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f259113822863f74da7e6a4001f93fb9
     internalID: 0
     vertices: []
     indices: 
@@ -271,14 +271,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      adultwalk_0: 761653689240205088
-      adultwalk_1: -133901313454245713
-      adultwalk_2: 2902976846748642667
-      adultwalk_3: -7671998682889126386
-      adultwalk_4: -1125530311321088966
-      adultwalk_5: -2963703623722138212
+      adult_walk_0: 294179864
+      adult_walk_1: 836486918
+      adult_walk_2: 423567657
+      adult_walk_3: -1334735922
+      adult_walk_4: -1868807463
+      adult_walk_5: -1833647983
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

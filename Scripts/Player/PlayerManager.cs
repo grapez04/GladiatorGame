@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     public PlayerHealthManager healthManager;
     public PlayerAttackHandler attackHandler;
     public MouseHandler mouseHandler;
+    public SFXHandler sFXHandler;
 
     public SpriteRenderer spriteRenderer;
 
@@ -22,6 +23,8 @@ public class PlayerManager : MonoBehaviour
         attackHandler.attackDamage = stats.attackDamage;
         attackHandler.radius = stats.attackRange;
         currentAge = stats.age;
+
+        //SetAge(null, null);
     }
 
     public void StartBattle()

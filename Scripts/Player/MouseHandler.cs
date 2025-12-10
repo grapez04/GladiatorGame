@@ -6,7 +6,8 @@ public class MouseHandler : MonoBehaviour
     public Vector2 mousePos;
     private Camera mainCamera;
 
-    public Transform interactPoint;
+    public Transform chPosition;
+    public Transform crosshair;
 
     private void Awake()
     {
@@ -18,5 +19,7 @@ public class MouseHandler : MonoBehaviour
         Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, mainCamera.nearClipPlane));
 
         cursor.position = worldPosition;
+
+        crosshair.position = chPosition.position;
     }
 }

@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mawalk_0
+      name: ma_walk_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 31
-        width: 19
-        height: 17
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b48e090a81a9c9ba0800000000000000
-      internalID: -6080815966293268405
+      spriteID: 9f41aea3b27256345821f44c080bc4b2
+      internalID: 734883735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mawalk_1
+      name: ma_walk_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 31
-        width: 20
-        height: 16
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 07ea3f0e5371ffb50800000000000000
-      internalID: 6629042696687431280
+      spriteID: 3d955794d5ef55345afbb407b942665e
+      internalID: -244075264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mawalk_2
+      name: ma_walk_2
       rect:
         serializedVersion: 2
-        x: 75
-        y: 31
-        width: 16
-        height: 18
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b193637373d0f2ec0800000000000000
-      internalID: -3589635847190333157
+      spriteID: 0aa34acc585b8ed4faa3923f89d42c43
+      internalID: -1267561106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mawalk_3
+      name: ma_walk_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 31
-        width: 15
-        height: 17
+        x: 96
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f41f75c5fa9cd1810800000000000000
-      internalID: 1737766786240606543
+      spriteID: 5409eea0c3c6f344a862ff2a223f43ed
+      internalID: 1947611989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mawalk_4
+      name: ma_walk_4
       rect:
         serializedVersion: 2
-        x: 10
+        x: 0
         y: 0
-        width: 11
-        height: 15
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ee35ad41b1d35d8e0800000000000000
-      internalID: -1669360900347636754
+      spriteID: 818d5de0b0704ce4f8d523d893332050
+      internalID: 188712065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mawalk_5
+      name: ma_walk_5
       rect:
         serializedVersion: 2
-        x: 43
+        x: 32
         y: 0
-        width: 15
-        height: 17
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 954af8a9ebed5d3d0800000000000000
-      internalID: -3182392651449129895
+      spriteID: bc6e9978d12de564b8d4a9b0fd8cdce9
+      internalID: -422334990
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4a4173bf895d3524d905463a2ca755cd
     internalID: 0
     vertices: []
     indices: 
@@ -271,14 +271,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      mawalk_0: -6080815966293268405
-      mawalk_1: 6629042696687431280
-      mawalk_2: -3589635847190333157
-      mawalk_3: 1737766786240606543
-      mawalk_4: -1669360900347636754
-      mawalk_5: -3182392651449129895
+      ma_walk_0: 734883735
+      ma_walk_1: -244075264
+      ma_walk_2: -1267561106
+      ma_walk_3: 1947611989
+      ma_walk_4: 188712065
+      ma_walk_5: -422334990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

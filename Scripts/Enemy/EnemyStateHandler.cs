@@ -5,7 +5,7 @@ public class EnemyStateHandler : MonoBehaviour
     private EnemyManager manager;
 
     [SerializeField] private Transform aim;
-    private float attackDistance = 1.2f; // Hit range
+    private float attackDistance = 1.3f; // Hit range
     public float stopDistance;
 
     private void Awake()
