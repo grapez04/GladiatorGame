@@ -37,7 +37,7 @@ public class AbilitySelector : MonoBehaviour
                     GameManager.playerHealth += attribute.modifier;
                     break;
                 case "Age":
-                    Debug.LogWarning("Age notimplemented");
+                    GameManager.playerAge += attribute.modifier;
                     break;
                 default:
                     throw new System.NotImplementedException();

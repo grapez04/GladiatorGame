@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public static float playerDamage = 1f;
     public static float playerHealth = 1f;
     public static float playerRange = 1f;
+    public static float playerAge = 20;
 
     private static bool setPlayerStats = false;
     private static bool loadUpgrade = false;
@@ -85,6 +86,7 @@ public class GameManager : MonoBehaviour
         playerDamage = PlayerPrefs.GetFloat("Gamemanager_playerDamage", playerDamage);
         playerHealth = PlayerPrefs.GetFloat("Gamemanager_playerHealth", playerHealth);
         playerRange =  PlayerPrefs.GetFloat("Gamemanager_playerRange", playerRange);
+        playerAge = PlayerPrefs.GetFloat("Gamemanager_playerAge", playerAge);
 
         level = levels.levels[levels.currentLevel];
 
@@ -97,6 +99,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("Gamemanager_playerDamage", playerDamage);
         PlayerPrefs.SetFloat("Gamemanager_playerHealth", playerHealth);
         PlayerPrefs.SetFloat("Gamemanager_playerRange", playerRange);
+        PlayerPrefs.SetFloat("Gamemanager_playerAge", playerAge);
         PlayerPrefs.Save();
         
 
