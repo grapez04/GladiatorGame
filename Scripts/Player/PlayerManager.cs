@@ -9,12 +9,11 @@ public class PlayerManager : MonoBehaviour
     public PlayerAttackHandler attackHandler;
     public MouseHandler mouseHandler;
     public SFXHandler sFXHandler;
-
     public SpriteRenderer spriteRenderer;
 
+    [Space]
+    public AgeLevel[] ageLevels;
     public float currentAge;
-
-    //public AgeLevel[] ageLevel;
 
     private void SetStats()
     {
@@ -23,8 +22,7 @@ public class PlayerManager : MonoBehaviour
         attackHandler.attackDamage = stats.attackDamage;
         attackHandler.radius = stats.attackRange;
         currentAge = stats.age;
-
-        //SetAge(null, null);
+        ApplyAgeLevel();
     }
 
     public void StartBattle()
@@ -32,9 +30,33 @@ public class PlayerManager : MonoBehaviour
         SetStats();
     }
 
-    private void SetAge(Sprite def, RuntimeAnimatorController controller)
+    private void ApplyAgeLevel()
     {
-        spriteRenderer.sprite = def;
-        animatorManager.Init(controller);
+        AgeLevel level = GetAgeLevelForAge(currentAge);
+        spriteRenderer.sprite = level.sprite;
+        animatorManager.Init(level.animator);
+        Debug.Log("Current age: " + level.name);
+    }
+
+    private AgeLevel GetAgeLevelForAge(float age)
+    {
+        foreach (var level in ageLevels)
+        {
+            if (age >= level.minAge && age <= level.maxAge)
+                return level;
+        }
+        return null;
+    }
+
+    [System.Serializable]
+    public class AgeLevel
+    {
+        public string name;
+
+        public float minAge;
+        public float maxAge;
+
+        public Sprite sprite;
+        public RuntimeAnimatorController animator;
     }
 }

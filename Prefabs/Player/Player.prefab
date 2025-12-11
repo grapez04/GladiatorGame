@@ -495,6 +495,22 @@ MonoBehaviour:
   mouseHandler: {fileID: 8059155061369008200}
   sFXHandler: {fileID: -4790769420912928797}
   spriteRenderer: {fileID: 7297986296610347129}
+  ageLevels:
+  - name: Adult
+    minAge: 20
+    maxAge: 39
+    sprite: {fileID: 21300000, guid: 769eee5fb23b38c4a8297d7dd85540df, type: 3}
+    animator: {fileID: 22100000, guid: ac3954f3581f4ba4095824f074fe711b, type: 2}
+  - name: MiddleAge
+    minAge: 40
+    maxAge: 59
+    sprite: {fileID: 21300000, guid: 290579077c9567e4ba02eb36d50cbc4f, type: 3}
+    animator: {fileID: 22100000, guid: ec1cf2e246cef5144b7e518e731c5b40, type: 2}
+  - name: Old
+    minAge: 60
+    maxAge: 120
+    sprite: {fileID: 21300000, guid: b021c484879924d42abf5e7d0dedd5ca, type: 3}
+    animator: {fileID: 22100000, guid: cdccb29f57bcedb4d8ee33f8691f2dd2, type: 2}
   currentAge: 0
 --- !u!114 &4244306661190271864
 MonoBehaviour:

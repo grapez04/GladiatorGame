@@ -7,6 +7,7 @@ public class PlayerAnimatorManager : MonoBehaviour
     public void Init(RuntimeAnimatorController newController)
     {
         animator.runtimeAnimatorController = newController;
+        animator.Rebind();
     }
 
     public void AnimateMovement(Vector2 move)

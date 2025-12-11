@@ -9,6 +9,6 @@ public class PlayerStats : Entity
         health = _health;
         attackDamage = _attackDamage;
         speed = _speed;
-        age = _age;
+        age += _age;
     }
 }
