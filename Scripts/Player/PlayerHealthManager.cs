@@ -1,7 +1,10 @@
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class PlayerHealthManager : MonoBehaviour
 {
+    [SerializeField] private PlayerManager manager;
+
     [Header("Player Health")]
     public float maxHealth = 1f;
     [SerializeField] private float currentHealth;
@@ -17,6 +20,10 @@ public class PlayerHealthManager : MonoBehaviour
         Debug.Log("Player was hurt");
 
         currentHealth -= damage;
+
+        // Update UI
+        manager.stats.health = currentHealth;
+        manager.playerUI.SetUI(manager.stats);
 
         if (currentHealth <= 0)
         {

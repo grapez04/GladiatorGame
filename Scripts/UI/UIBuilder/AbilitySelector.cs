@@ -16,44 +16,6 @@ public class AbilitySelector : MonoBehaviour
         RenderAbilities(_abillities);
     }
 
-
-    private void OnAbilitySelected(ClickEvent evt)
-    {
-        int abilityIndex = int.Parse($"{evt.target.ToString()[14]}");
-
-        Abillity abillity = abillities[abilityIndex];
-
-        foreach (Abillity.Attribute attribute in abillity.attributes)
-        {
-            switch (attribute.name)
-            {
-                case "Speed":
-                    GameManager.playerSpeed += attribute.modifier;
-                    break;
-                case "Damage":
-                    GameManager.playerDamage += attribute.modifier;
-                    break;
-                case "Health":
-                    GameManager.playerHealth += attribute.modifier;
-                    break;
-                case "Age":
-                    GameManager.playerAge += attribute.modifier;
-                    break;
-                default:
-                    throw new System.NotImplementedException();
-            }
-        }
-        foreach (VisualElement element in GetComponent<UIDocument>().rootVisualElement.Children().First().Children())
-        {
-            element.UnregisterCallback<ClickEvent>(OnAbilitySelected);
-        }
-
-
-        gameObject.SetActive(false);
-
-        GameManager.RestartGame();
-    }
-
     public void RenderAbilities(Abillity[] renderAbillities = null)
     {
         if (renderAbillities != null)
@@ -102,6 +64,43 @@ public class AbilitySelector : MonoBehaviour
 
             element.RegisterCallback<ClickEvent>(OnAbilitySelected);
         }
+    }
+
+    private void OnAbilitySelected(ClickEvent evt)
+    {
+        int abilityIndex = int.Parse($"{evt.target.ToString()[14]}");
+
+        Abillity abillity = abillities[abilityIndex];
+
+        foreach (Abillity.Attribute attribute in abillity.attributes)
+        {
+            switch (attribute.name)
+            {
+                case "Speed":
+                    GameManager.playerSpeed += attribute.modifier;
+                    break;
+                case "Damage":
+                    GameManager.playerDamage += attribute.modifier;
+                    break;
+                case "Health":
+                    GameManager.playerHealth += attribute.modifier;
+                    break;
+                case "Age":
+                    GameManager.playerAge += attribute.modifier;
+                    break;
+                default:
+                    throw new System.NotImplementedException();
+            }
+        }
+        foreach (VisualElement element in GetComponent<UIDocument>().rootVisualElement.Children().First().Children())
+        {
+            element.UnregisterCallback<ClickEvent>(OnAbilitySelected);
+        }
+
+
+        gameObject.SetActive(false);
+
+        GameManager.RestartGame();
     }
 }
 

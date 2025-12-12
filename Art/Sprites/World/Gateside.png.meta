@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 752fef4131bde34459f17a6c5e6f2d18
+guid: e41ce34a009af9c41b6b95a1a1462998
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3456532010920386237
-    second: Merchant_0
+      213: -5340140094794291700
+    second: Gateside_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Merchant_0
+      name: Gateside_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 82
-        height: 112
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 341e256137ee700d0800000000000000
-      internalID: -3456532010920386237
+      spriteID: c0627f680e204e5b0800000000000000
+      internalID: -5340140094794291700
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Merchant_0: -3456532010920386237
+      Gateside_0: -5340140094794291700
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

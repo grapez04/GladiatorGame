@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9b9d0f9fe064ba14788d77dd12f4873d
+guid: b7dac3e4d039cae4aba8b57cdb47b605
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4076249551127237528
-    second: HeartIcon_0
+      213: -6253549516363600717
+    second: ShieldIcon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HeartIcon_0
+      name: ShieldIcon_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 31
-        height: 29
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 893d8ceae5fb19830800000000000000
-      internalID: 4076249551127237528
+      spriteID: 3bce4dbf8dde639a0800000000000000
+      internalID: -6253549516363600717
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HeartIcon_0: 4076249551127237528
+      ShieldIcon_0: -6253549516363600717
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,6 +12,9 @@ public class PlayerManager : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     [Space]
+    public PlayerUI playerUI;
+
+    [Space]
     public AgeLevel[] ageLevels;
     public float currentAge;
 
@@ -28,6 +31,7 @@ public class PlayerManager : MonoBehaviour
     public void StartBattle()
     {
         SetStats();
+        playerUI.SetUI(stats);
     }
 
     private void ApplyAgeLevel()

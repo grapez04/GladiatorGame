@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 624e9bf275e5c6b4b9d647d5fd4d8dc3
+guid: e7d9d2c83ae9c074992f6df41c436166
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8086850440826228858
-    second: DamageIcon_0
-  - first:
-      213: 2547285768176825320
-    second: DamageIcon_1
+      213: 4076249551127237528
+    second: HeartIcon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DamageIcon_0
+      name: HeartIcon_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 16
-        height: 25
+        x: 7
+        y: 4
+        width: 27
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68f67dabe5cb5cf80800000000000000
-      internalID: -8086850440826228858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DamageIcon_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 9
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8e37699f8e6c95320800000000000000
-      internalID: 2547285768176825320
+      spriteID: 893d8ceae5fb19830800000000000000
+      internalID: 4076249551127237528
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DamageIcon_0: -8086850440826228858
-      DamageIcon_1: 2547285768176825320
+      HeartIcon_0: 4076249551127237528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

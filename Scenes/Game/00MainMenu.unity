@@ -171,13 +171,13 @@ MonoBehaviour:
   - name: SpeedBoost
     image: {fileID: 21300000, guid: 624e9bf275e5c6b4b9d647d5fd4d8dc3, type: 3}
     attributes:
-    - name: Damage
-      modifier: 6
+    - name: Health
+      modifier: 3
       type: 0
     - name: Speed
       modifier: 3
       type: 0
-    - name: Health
+    - name: Damage
       modifier: 0
       type: 1
     - name: Age
@@ -190,7 +190,7 @@ MonoBehaviour:
       modifier: 6
       type: 0
     - name: Health
-      modifier: 0
+      modifier: 2
       type: 0
     - name: Speed
       modifier: 1
@@ -208,7 +208,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Health
-      modifier: 0
+      modifier: 3
       type: 1
     - name: Age
       modifier: 15
@@ -484,7 +484,7 @@ MonoBehaviour:
       modifier: 3
       type: 0
     - name: Health
-      modifier: 0
+      modifier: 4
       type: 1
     - name: Age
       modifier: 5
@@ -496,7 +496,7 @@ MonoBehaviour:
       modifier: 0
       type: 0
     - name: Health
-      modifier: 0
+      modifier: 2
       type: 0
     - name: Speed
       modifier: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
       modifier: 0
       type: 0
     - name: Health
-      modifier: 0
+      modifier: 1
       type: 1
     - name: Age
       modifier: 15
