@@ -25,7 +25,8 @@ public class EnemySpawner : MonoBehaviour
 
     public IEnumerator StartBattle()
     {
-        _enemyCountsForBattle = enemyCountsForBattle;
+        _enemyCountsForBattle = (int[])enemyCountsForBattle.Clone();
+        enemysInBattle = 0;
         while (_enemyCountsForBattle.Sum() != 0)
         {
             if (enemysInBattle < maxEnenemysInBattle)
@@ -59,5 +60,10 @@ public class EnemySpawner : MonoBehaviour
         {
             GameManager.Upgrade();
         }
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.enemyDied -= EnemyDied;
     }
 }
