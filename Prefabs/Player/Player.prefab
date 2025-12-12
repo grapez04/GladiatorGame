@@ -111,7 +111,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1140235861
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 769eee5fb23b38c4a8297d7dd85540df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -224,7 +224,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1140235861
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: d287e51beb56fdb459474d72bfc56ef8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 4244306661190271864}
   - component: {fileID: 279724892914748951}
   - component: {fileID: 6423923090088135667}
+  - component: {fileID: 1810666206398678417}
   - component: {fileID: -4790769420912928797}
   - component: {fileID: 2903567935767451649}
   m_Layer: 6
@@ -493,8 +494,10 @@ MonoBehaviour:
   healthManager: {fileID: 6423923090088135667}
   attackHandler: {fileID: 4244306661190271864}
   mouseHandler: {fileID: 8059155061369008200}
+  vFXHandler: {fileID: 1810666206398678417}
   sFXHandler: {fileID: -4790769420912928797}
   spriteRenderer: {fileID: 7297986296610347129}
+  playerUI: {fileID: 0}
   ageLevels:
   - name: Adult
     minAge: 20
@@ -555,8 +558,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414cded62a3741447b3c334d0f48a0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthManager
+  manager: {fileID: 523705622815768941}
   maxHealth: 1
   currentHealth: 0
+--- !u!114 &1810666206398678417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8577339854686143012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc67c11cade109409a081a80fee7601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  sr: {fileID: 7297986296610347129}
+  onDamageMat: {fileID: 2100000, guid: e4679432f51ac3d439734401d24c5c97, type: 2}
+  onDamageVFXDuration: 0.15
+  bloodSplat: {fileID: 692240328160846868, guid: 65ea485eae0c79f4faea132ee81870d2, type: 3}
 --- !u!114 &-4790769420912928797
 MonoBehaviour:
   m_ObjectHideFlags: 0

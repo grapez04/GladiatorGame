@@ -418,7 +418,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
-  enemyCounts: 0500000003000000
+  enemyCounts: 0400000002000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
 --- !u!4 &541843646
@@ -716,8 +716,8 @@ MonoBehaviour:
     modifier: 2
     ageCost: 5
   - upgradeType: 1
-    modifier: 2
-    ageCost: 25
+    modifier: 1
+    ageCost: 15
   - upgradeType: 2
     modifier: 1
     ageCost: 5
@@ -737,7 +737,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
-  enemyCounts: 0100000001000000
+  enemyCounts: 050000000a000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
 --- !u!1 &1382321706
@@ -3130,7 +3130,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
-  enemyCounts: 0100000001000000
+  enemyCounts: 1400000014000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
 --- !u!1 &1925610579
@@ -3227,7 +3227,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
-  enemyCounts: 0100000001000000
+  enemyCounts: 0500000003000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
 --- !u!114 &1999186041

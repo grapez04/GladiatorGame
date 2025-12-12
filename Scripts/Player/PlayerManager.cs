@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     public PlayerHealthManager healthManager;
     public PlayerAttackHandler attackHandler;
     public MouseHandler mouseHandler;
+    public VFXHandler vFXHandler;
     public SFXHandler sFXHandler;
     public SpriteRenderer spriteRenderer;
 

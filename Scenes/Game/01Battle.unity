@@ -5482,21 +5482,17 @@ PrefabInstance:
       propertyPath: playerUI
       value: 
       objectReference: {fileID: 1810554047}
-    - target: {fileID: 1132869831145914573, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
+    - target: {fileID: 1810666206398678417, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
+      propertyPath: bloodSplat
+      value: 
+      objectReference: {fileID: 692240328160846868, guid: 65ea485eae0c79f4faea132ee81870d2, type: 3}
+    - target: {fileID: 2518139586023746782, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1132869831145914573, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518139586023746782, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.84
-      objectReference: {fileID: 0}
     - target: {fileID: 2518139586023746782, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2518139586023746782, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5530,22 +5526,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6423923090088135667, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
-      propertyPath: manager
-      value: 
-      objectReference: {fileID: 4613253800319173285}
-    - target: {fileID: 6664564909501441143, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7297986296610347129, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7297986296610347129, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8059155061369008200, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
       propertyPath: cursor
       value: 
@@ -5559,17 +5539,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
---- !u!114 &4613253800319173285 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 523705622815768941, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
-  m_PrefabInstance: {fileID: 4613253800319173284}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebb9361b7177e9e489a34a98d3556cfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
 --- !u!61 &6296146611520713853
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 5487039613388910660}
   - component: {fileID: 3227019153635715283}
   - component: {fileID: 876524487735583083}
+  - component: {fileID: -2463510466884305633}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -278,6 +279,7 @@ MonoBehaviour:
   enemyAnimator: {fileID: -6925164399152535607}
   attackHandler: {fileID: 3227019153635715283}
   agent: {fileID: 3641205754172203823}
+  vFXHandler: {fileID: -2463510466884305633}
   spriteRenderer: {fileID: 4066724056468146425}
   isMoving: 0
   player: {fileID: 0}
@@ -344,8 +346,24 @@ MonoBehaviour:
   attackDamage: 1
   speed: 0.4
   age: 20
+  manager: {fileID: 6745969903701108032}
   maxHealth: 1
   currentHealth: 0
+--- !u!114 &-2463510466884305633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5307606281017908436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc67c11cade109409a081a80fee7601, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VFXHandler
+  sr: {fileID: 4066724056468146425}
+  onDamageMat: {fileID: 2100000, guid: e4679432f51ac3d439734401d24c5c97, type: 2}
+  onDamageVFXDuration: 0.15
   bloodSplat: {fileID: 692240328160846868, guid: 65ea485eae0c79f4faea132ee81870d2, type: 3}
 --- !u!1 &8775807199701735425
 GameObject:

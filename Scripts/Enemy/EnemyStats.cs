@@ -2,13 +2,11 @@ using UnityEngine;
 
 public class EnemyStats : Entity
 {
+    [SerializeField] private EnemyManager manager;
+
     [Header("Enemy Health")]
     public float maxHealth = 2f;
     [SerializeField] private float currentHealth;
-
-
-    [Space]
-    [SerializeField] private GameObject bloodSplat;
 
     public void Init()
     {
@@ -17,7 +15,7 @@ public class EnemyStats : Entity
 
     public void TakeDamage(float damage)
     {
-        Instantiate(bloodSplat, transform.position, Quaternion.identity);
+        manager.vFXHandler.PlayOnDamageVFX();
 
         Debug.Log("Ouch");
 

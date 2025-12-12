@@ -12,17 +12,24 @@ public class UpgradeScreenHandler : MonoBehaviour
 
     [Space]
     [SerializeField] private TextMeshProUGUI ageDisplay;
-
+    [SerializeField] private Color normalColor = Color.white;
+    [SerializeField] private Color hoverColor = Color.red;
 
     private void Start()
     {
+        ageDisplay.text = GameManager.playerAge.ToString();
+
         // Get current level
-        Level level = GameManager.levels.levels[GameManager.levels.currentLevel -1];
+        Level level = GameManager.levels.levels[GameManager.levels.currentLevel - 1];
 
         // Get abilities from current level
         Upgrades cUpgrades = level.upgrades;
 
-        foreach (Upgrade upgrade in cUpgrades.upgrades)
+        // Shuffle the upgrades
+        Upgrade[] shuffledUpgrades = cUpgrades.upgrades.OrderBy(u => Random.value).ToArray();
+
+        // Instantiate entries in shuffled order
+        foreach (Upgrade upgrade in shuffledUpgrades)
         {
             AddEntry(upgrade);
         }
@@ -32,9 +39,19 @@ public class UpgradeScreenHandler : MonoBehaviour
     {
         GameObject newEntry = Instantiate(entryPrefab, upgradeHolder.transform);
         UpgradeEntry entry = newEntry.GetComponent<UpgradeEntry>();
+        entry.Setup(upgrade, OnUpgrade, OnHoverUpgrade, OnExitHover);
+    }
 
-        // Give it the upgrade and the callback
-        entry.Setup(upgrade, OnUpgrade);
+    private void OnHoverUpgrade(Upgrade upgrade)
+    {
+        ageDisplay.text = (GameManager.playerAge + upgrade.ageCost).ToString();
+        ageDisplay.color = hoverColor;
+    }
+
+    private void OnExitHover()
+    {
+        ageDisplay.text = GameManager.playerAge.ToString();
+        ageDisplay.color = normalColor;
     }
 
     private void OnUpgrade(Upgrade selected)
@@ -59,5 +76,6 @@ public class UpgradeScreenHandler : MonoBehaviour
         }
 
         GameManager.RestartGame();
+
     }
 }

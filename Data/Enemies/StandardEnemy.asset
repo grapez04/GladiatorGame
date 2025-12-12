@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   sprite: {fileID: 21300000, guid: b021c484879924d42abf5e7d0dedd5ca, type: 3}
   controller: {fileID: 22100000, guid: 5f338d39c1cb43f42841d540ec60f8f8, type: 2}
+  speed: 2
+  health: 2
   stopDistance: 2
   attackDamage: 1
-  speed: 2
-  health: 1
+  attackCooldown: 0.5
+  chargeSpeed: 10

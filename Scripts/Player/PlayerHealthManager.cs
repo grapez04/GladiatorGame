@@ -1,4 +1,3 @@
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class PlayerHealthManager : MonoBehaviour
@@ -17,6 +16,8 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        manager.vFXHandler.PlayOnDamageVFX();
+
         Debug.Log("Player was hurt");
 
         currentHealth -= damage;
