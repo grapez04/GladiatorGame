@@ -709,7 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
   upgrades:
   - upgradeType: 0
-    modifier: 2
+    modifier: 1
     ageCost: 7
   - upgradeType: 1
     modifier: 1
