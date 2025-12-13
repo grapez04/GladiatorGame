@@ -119,6 +119,80 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &120716687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 120716688}
+  - component: {fileID: 120716690}
+  - component: {fileID: 120716689}
+  m_Layer: 0
+  m_Name: 8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &120716688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120716687}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.14704, y: -9.03876, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1406509968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &120716689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120716687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ec5d1af30dc2e49af37d2ea8b72e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Upgrades
+  upgrades:
+  - upgradeType: 0
+    modifier: 1
+    ageCost: 7
+  - upgradeType: 1
+    modifier: 1
+    ageCost: 20
+  - upgradeType: 2
+    modifier: 1
+    ageCost: 10
+--- !u!114 &120716690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120716687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91168e94d1456f4b8a9bdde2f3fd82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level
+  upgrades: {fileID: 120716689}
+  enemies:
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  enemyCounts: 050000000a000000
+  maxEnemysOnScreen: 4
+  enemySpawnRate: 1
 --- !u!1 &123033802
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,14 +258,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
   upgrades:
   - upgradeType: 0
-    modifier: 2
-    ageCost: 2
+    modifier: 1
+    ageCost: 1
   - upgradeType: 1
     modifier: 1
-    ageCost: 10
+    ageCost: 3
   - upgradeType: 2
     modifier: 1
-    ageCost: 5
+    ageCost: 2
 --- !u!1 &431331135
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,14 +524,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
   upgrades:
   - upgradeType: 0
-    modifier: 2
-    ageCost: 5
+    modifier: 1
+    ageCost: 2
   - upgradeType: 1
     modifier: 2
-    ageCost: 25
+    ageCost: 5
   - upgradeType: 2
     modifier: 1
     ageCost: 5
+--- !u!1 &759359858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759359859}
+  - component: {fileID: 759359860}
+  m_Layer: 0
+  m_Name: 10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &759359859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759359858}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.14704, y: -9.03876, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1406509968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &759359860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759359858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91168e94d1456f4b8a9bdde2f3fd82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level
+  upgrades: {fileID: 0}
+  enemies:
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  enemyCounts: 1400000014000000
+  maxEnemysOnScreen: 4
+  enemySpawnRate: 1
 --- !u!1 &867580316
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +662,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &945383327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945383328}
+  - component: {fileID: 945383330}
+  - component: {fileID: 945383329}
+  m_Layer: 0
+  m_Name: 9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &945383328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945383327}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.14704, y: -9.03876, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1406509968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &945383329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945383327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ec5d1af30dc2e49af37d2ea8b72e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Upgrades
+  upgrades:
+  - upgradeType: 0
+    modifier: 1
+    ageCost: 7
+  - upgradeType: 1
+    modifier: 1
+    ageCost: 20
+  - upgradeType: 2
+    modifier: 1
+    ageCost: 10
+--- !u!114 &945383330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945383327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91168e94d1456f4b8a9bdde2f3fd82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level
+  upgrades: {fileID: 945383329}
+  enemies:
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  enemyCounts: 0a0000000a000000
+  maxEnemysOnScreen: 4
+  enemySpawnRate: 1
 --- !u!1 &1210816934
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +865,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1272002644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1272002647}
+  - component: {fileID: 1272002645}
+  - component: {fileID: 1272002646}
+  m_Layer: 0
+  m_Name: 6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1272002645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272002644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91168e94d1456f4b8a9bdde2f3fd82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level
+  upgrades: {fileID: 1272002646}
+  enemies:
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  enemyCounts: 1400000003000000
+  maxEnemysOnScreen: 4
+  enemySpawnRate: 1
+--- !u!114 &1272002646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272002644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ec5d1af30dc2e49af37d2ea8b72e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Upgrades
+  upgrades:
+  - upgradeType: 0
+    modifier: 1
+    ageCost: 5
+  - upgradeType: 1
+    modifier: 1
+    ageCost: 15
+  - upgradeType: 2
+    modifier: 1
+    ageCost: 10
+--- !u!4 &1272002647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272002644}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.14704, y: -9.03876, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1406509968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1276606605
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,10 +990,10 @@ MonoBehaviour:
     ageCost: 5
   - upgradeType: 1
     modifier: 1
-    ageCost: 15
+    ageCost: 10
   - upgradeType: 2
     modifier: 1
-    ageCost: 5
+    ageCost: 10
 --- !u!114 &1276606608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,7 +1010,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
-  enemyCounts: 0a00000014000000
+  enemyCounts: 0a00000007000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
 --- !u!1 &1382321706
@@ -908,6 +1181,11 @@ MonoBehaviour:
   - {fileID: 1999186040}
   - {fileID: 1276606608}
   - {fileID: 1633124147}
+  - {fileID: 1272002645}
+  - {fileID: 1436159040}
+  - {fileID: 120716690}
+  - {fileID: 945383330}
+  - {fileID: 759359860}
 --- !u!4 &1406509968
 Transform:
   m_ObjectHideFlags: 0
@@ -926,7 +1204,86 @@ Transform:
   - {fileID: 1999186039}
   - {fileID: 1276606606}
   - {fileID: 1633124146}
+  - {fileID: 1272002647}
+  - {fileID: 1436159042}
+  - {fileID: 120716688}
+  - {fileID: 945383328}
+  - {fileID: 759359859}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1436159039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1436159042}
+  - component: {fileID: 1436159040}
+  - component: {fileID: 1436159041}
+  m_Layer: 0
+  m_Name: 7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1436159040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436159039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a91168e94d1456f4b8a9bdde2f3fd82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Level
+  upgrades: {fileID: 1436159041}
+  enemies:
+  - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
+  - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
+  enemyCounts: 0a0000000a000000
+  maxEnemysOnScreen: 4
+  enemySpawnRate: 1
+--- !u!114 &1436159041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436159039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ec5d1af30dc2e49af37d2ea8b72e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Upgrades
+  upgrades:
+  - upgradeType: 0
+    modifier: 1
+    ageCost: 7
+  - upgradeType: 1
+    modifier: 1
+    ageCost: 20
+  - upgradeType: 2
+    modifier: 1
+    ageCost: 10
+--- !u!4 &1436159042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436159039}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.14704, y: -9.03876, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1406509968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1538408466
 GameObject:
@@ -3092,6 +3449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1633124146}
   - component: {fileID: 1633124147}
+  - component: {fileID: 1633124148}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -3126,13 +3484,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91168e94d1456f4b8a9bdde2f3fd82f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Level
-  upgrades: {fileID: 0}
+  upgrades: {fileID: 1633124148}
   enemies:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
-  enemyCounts: 140000001e000000
+  enemyCounts: 100000000a000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
+--- !u!114 &1633124148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633124145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ec5d1af30dc2e49af37d2ea8b72e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Upgrades
+  upgrades:
+  - upgradeType: 0
+    modifier: 1
+    ageCost: 3
+  - upgradeType: 1
+    modifier: 1
+    ageCost: 15
+  - upgradeType: 2
+    modifier: 1
+    ageCost: 5
 --- !u!1 &1925610579
 GameObject:
   m_ObjectHideFlags: 0
@@ -3227,7 +3607,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
-  enemyCounts: 0500000005000000
+  enemyCounts: 0600000004000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
 --- !u!114 &1999186041
@@ -3244,11 +3624,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
   upgrades:
   - upgradeType: 0
-    modifier: 2
-    ageCost: 5
+    modifier: 1
+    ageCost: 4
   - upgradeType: 1
     modifier: 2
-    ageCost: 25
+    ageCost: 7
   - upgradeType: 2
     modifier: 1
     ageCost: 5

@@ -75,8 +75,6 @@ public class EnemyAttackHandler : MonoBehaviour
         // Stop movement during cooldown
         manager.agent.isStopped = true;
         manager.isMoving = false;
-
-        Debug.Log("Entered cooldown (movement disabled)");
     }
 
     public void Attack()

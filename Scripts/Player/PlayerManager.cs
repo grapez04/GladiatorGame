@@ -17,8 +17,10 @@ public class PlayerManager : MonoBehaviour
     public PlayerUI playerUI;
 
     [Space]
+    [Header("Aging")]
     public AgeLevel[] ageLevels;
     public float currentAge;
+    [SerializeField] private AnimationCurve ageDecayCurve;
 
     private void SetStats()
     {
@@ -28,11 +30,16 @@ public class PlayerManager : MonoBehaviour
         attackHandler.radius = stats.attackRange;
         currentAge = stats.age;
 
+        // Age Decay:
         ApplyAgeLevel();
-        // health
-        // something about movement
+        float ageMultiplier = GetAgeSpeedMultiplier();
+
+        movement.movespeed = movement.movespeed * ageMultiplier;
+        Debug.Log("Speed is now " + movement.movespeed);
+
         // longer attack cooldown, smaller attack buffer
         // focus window decreases
+        // health affect
     }
 
     public void StartBattle()
@@ -57,6 +64,13 @@ public class PlayerManager : MonoBehaviour
                 return level;
         }
         return null;
+    }
+
+    private float GetAgeSpeedMultiplier()
+    {
+        float maxAge = ageLevels[^1].maxAge;
+        float age01 = Mathf.Clamp01(currentAge / maxAge);
+        return ageDecayCurve.Evaluate(age01);
     }
 
     [System.Serializable]

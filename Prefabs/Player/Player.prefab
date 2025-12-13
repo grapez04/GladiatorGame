@@ -135,7 +135,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ede20826cfbae5943992ce6341656b9f, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 4244306661190271864}
   - component: {fileID: 279724892914748951}
   - component: {fileID: 6423923090088135667}
+  - component: {fileID: 943892432403026006}
   - component: {fileID: 1810666206398678417}
   - component: {fileID: -4790769420912928797}
   - component: {fileID: 2903567935767451649}
@@ -494,6 +495,7 @@ MonoBehaviour:
   healthManager: {fileID: 6423923090088135667}
   attackHandler: {fileID: 4244306661190271864}
   mouseHandler: {fileID: 8059155061369008200}
+  shieldHandler: {fileID: 943892432403026006}
   vFXHandler: {fileID: 1810666206398678417}
   sFXHandler: {fileID: -4790769420912928797}
   spriteRenderer: {fileID: 7297986296610347129}
@@ -515,6 +517,48 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: b021c484879924d42abf5e7d0dedd5ca, type: 3}
     animator: {fileID: 22100000, guid: cdccb29f57bcedb4d8ee33f8691f2dd2, type: 2}
   currentAge: 0
+  ageDecayCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.09571909
+      outSlope: -0.09571909
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.23753661
+      value: 0.9772632
+      inSlope: -0.1625352
+      outSlope: -0.1625352
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.46530145
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.35209507
+      value: 0.66228634
+      inSlope: -1.2170532
+      outSlope: -1.2170532
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: -0.000012636185
+      inSlope: -1.0222163
+      outSlope: -1.0222163
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &4244306661190271864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,6 +605,19 @@ MonoBehaviour:
   manager: {fileID: 523705622815768941}
   maxHealth: 1
   currentHealth: 0
+--- !u!114 &943892432403026006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8577339854686143012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb77139488fd3f48b04870a0b8c312f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShieldHandler
+  slowTimeScale: 0.3
 --- !u!114 &1810666206398678417
 MonoBehaviour:
   m_ObjectHideFlags: 0
