@@ -28,15 +28,15 @@ public class PlayerInputManager : MonoBehaviour
             playerControls.Player.Move.canceled += i => moveInput = Vector2.zero;
 
             playerControls.Player.Aim.performed += OnMousePos;
-        }
 
-        playerControls.Player.Attack.performed += HandleAttack;
+            playerControls.Player.Attack.performed += HandleAttack;
+            playerControls.Player.Shield.performed += HandleShield;
+        }
         playerControls.Enable();
     }
 
     private void OnDisable()
     {
-        playerControls.Player.Attack.performed -= HandleAttack;
         playerControls.Disable();
     }
 
@@ -55,5 +55,10 @@ public class PlayerInputManager : MonoBehaviour
     {
         manager.attackHandler.Attack();
         manager.animatorManager.PlayTargetAnim("Attack");
+    }
+
+    private void HandleShield(InputAction.CallbackContext context)
+    {
+        manager.shieldHandler.Shield();
     }
 }

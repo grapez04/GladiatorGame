@@ -1645,6 +1645,24 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &464049499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8577339854686143012, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
+  m_PrefabInstance: {fileID: 4613253800319173284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &464049515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464049499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb77139488fd3f48b04870a0b8c312f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShieldHandler
+  slowTimeScale: 0.3
 --- !u!4 &481522009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6928981324077437910, guid: b6b5d33090ad50349adb72d906cecdfa, type: 3}
@@ -5482,10 +5500,14 @@ PrefabInstance:
       propertyPath: playerUI
       value: 
       objectReference: {fileID: 1810554047}
-    - target: {fileID: 1810666206398678417, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
-      propertyPath: bloodSplat
+    - target: {fileID: 523705622815768941, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
+      propertyPath: shieldHandler
       value: 
-      objectReference: {fileID: 692240328160846868, guid: 65ea485eae0c79f4faea132ee81870d2, type: 3}
+      objectReference: {fileID: 464049515}
+    - target: {fileID: 1750063371658502513, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2518139586023746782, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5537,7 +5559,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8577339854686143012, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
+      insertIndex: 12
+      addedObject: {fileID: 464049515}
   m_SourcePrefab: {fileID: 100100000, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
 --- !u!61 &6296146611520713853
 BoxCollider2D:

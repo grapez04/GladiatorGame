@@ -15,6 +15,8 @@ public class EnemyStats : Entity
 
     public void TakeDamage(float damage)
     {
+        manager.enemyAnimator.PlayTargetAnim("Hit");
+
         manager.vFXHandler.PlayOnDamageVFX();
 
         Debug.Log("Ouch");

@@ -36,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move()
     {
-        rb.linearVelocity = move * movespeed;
+        float timeCompensation = Time.timeScale > 0f ? 1f / Time.timeScale : 1f;
+        rb.linearVelocity = move * movespeed * timeCompensation;
     }
 
     private void RotateAim()

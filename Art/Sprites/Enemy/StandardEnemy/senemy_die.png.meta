@@ -52,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,133 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: senemyhurt_0
+      name: senemy_hurt_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 31
-        width: 19
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 356bbf287792caf90800000000000000
-      internalID: -6941127332409395629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: senemyhurt_1
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 31
-        width: 24
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 13c6c0e91a7244950800000000000000
-      internalID: 6432309742886743089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: senemyhurt_2
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 31
-        width: 21
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 879fe2945f22c0570800000000000000
-      internalID: 8434154639048243576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: senemyhurt_3
-      rect:
-        serializedVersion: 2
-        x: 99
+        x: 0
         y: 32
-        width: 21
-        height: 12
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e659884ad068de900800000000000000
-      internalID: 715375308974888302
+      spriteID: 1a5858375e5ab1748a7520692bab94a4
+      internalID: 301886386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: senemyhurt_4
+      name: senemy_hurt_1
       rect:
         serializedVersion: 2
-        x: 3
-        y: 0
-        width: 21
-        height: 12
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 514b9eda0208c1470800000000000000
-      internalID: 8366703085592622101
+      spriteID: d434ced6d8b65404e914b624eb97dec7
+      internalID: 89866044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: senemyhurt_5
+      name: senemy_hurt_2
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 21
-        height: 12
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3c40f5d2f8c930c70800000000000000
-      internalID: 8936158224388654275
+      spriteID: 366ea5ee5e6092e488ef91f7c9431297
+      internalID: -1160202666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: senemy_hurt_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c9edcf23126fb48b59d08aef40c917
+      internalID: -2013576555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: senemy_hurt_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7804e2165cbecb42bd8b7fc0d44e648
+      internalID: 907116554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: senemy_hurt_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7caa462f9cdae54bb170ff8fe44af37
+      internalID: -1820886224
       vertices: []
       indices: 
       edges: []
@@ -263,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4ba402020a5016b4a8ba7d3a503ccca9
     internalID: 0
     vertices: []
     indices: 
@@ -271,14 +271,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      senemyhurt_0: -6941127332409395629
-      senemyhurt_1: 6432309742886743089
-      senemyhurt_2: 8434154639048243576
-      senemyhurt_3: 715375308974888302
-      senemyhurt_4: 8366703085592622101
-      senemyhurt_5: 8936158224388654275
+      senemy_hurt_0: 301886386
+      senemy_hurt_1: 89866044
+      senemy_hurt_2: -1160202666
+      senemy_hurt_3: -2013576555
+      senemy_hurt_4: 907116554
+      senemy_hurt_5: -1820886224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
