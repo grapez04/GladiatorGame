@@ -3,18 +3,34 @@ using System.Collections;
 
 public class ShieldHandler : MonoBehaviour
 {
+    [SerializeField] private PlayerManager manager;
+
+    public bool isShielded { get; private set; } // only writable inside ShieldHandler
+
     [Header("Time Slow Settings")]
     public int shieldCount;
-    public float slowDuration = 1f;
+    public float slowDuration = 2f;
     [SerializeField] private float slowTimeScale = 0.3f;
 
     private Coroutine slowRoutine;
 
+    public void SetShieldCount(int _shieldCount)
+    {
+        shieldCount = _shieldCount;
+    }
+
     public void Shield()
     {
-        if (slowRoutine != null)
-            StopCoroutine(slowRoutine);
+        if (shieldCount <= 0 || isShielded)
+            return;
 
+        shieldCount--;
+
+        // Update stats + UI
+        manager.stats.shield = shieldCount;
+        manager.playerUI.HandleShields(manager.stats);
+
+        isShielded = true;
         slowRoutine = StartCoroutine(SlowTimeRoutine());
     }
 
@@ -25,12 +41,12 @@ public class ShieldHandler : MonoBehaviour
         yield return new WaitForSecondsRealtime(slowDuration);
 
         RestoreTime();
+        isShielded = false;
         slowRoutine = null;
     }
 
     private void OnDisable()
     {
-        // Scene reload / restart safety
         RestoreTime();
 
         if (slowRoutine != null)
@@ -38,6 +54,8 @@ public class ShieldHandler : MonoBehaviour
             StopCoroutine(slowRoutine);
             slowRoutine = null;
         }
+
+        isShielded = false;
     }
 
     private void ApplySlowTime()

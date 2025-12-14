@@ -5451,6 +5451,8 @@ MonoBehaviour:
   ageCounter: {fileID: 261355550}
   heartsHolder: {fileID: 1580095384}
   heartIcon: {fileID: 8303055932539995867, guid: b30302e14722d4649b4e356d16981406, type: 3}
+  shieldsHolder: {fileID: 1021098728}
+  shieldIcon: {fileID: 5980215578543607456, guid: ea2c2f41df422894c871ce95d879d954, type: 3}
 --- !u!1 &1849600739
 GameObject:
   m_ObjectHideFlags: 0
@@ -6337,6 +6339,10 @@ PrefabInstance:
       propertyPath: ageDecayCurve.m_Curve.Array.data[3].tangentMode
       value: 34
       objectReference: {fileID: 0}
+    - target: {fileID: 943892432403026006, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 4613253800319173285}
     - target: {fileID: 1750063371658502513, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
       propertyPath: m_UpdateMode
       value: 2
@@ -6394,6 +6400,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
+--- !u!114 &4613253800319173285 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 523705622815768941, guid: 2d875298c5d06b94a9f617bf467a0d6d, type: 3}
+  m_PrefabInstance: {fileID: 4613253800319173284}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb9361b7177e9e489a34a98d3556cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
 --- !u!61 &6296146611520713853
 BoxCollider2D:
   m_ObjectHideFlags: 0

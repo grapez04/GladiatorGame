@@ -15,11 +15,11 @@ public class GameManager : MonoBehaviour
     public static Level level;
 
     [Header("Player stats")]
-    public static float playerSpeed = 3f;
-    public static float playerDamage = 1f;
-    public static float playerHealth = 1f;
-    public static float playerRange = 1f;
-    public static float playerAge = 20;
+    public static int playerSpeed = 3;
+    public static int playerDamage = 1;
+    public static int playerHealth = 1;
+    public static int playerShield = 0;
+    public static int playerAge = 20;
 
     private static bool setPlayerStats = false;
     private static bool loadUpgrade = false;
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
                 playerStats.health = playerHealth;
                 playerStats.speed = playerSpeed;
                 playerStats.age = playerAge;
+                playerStats.shield = playerShield;
 
                 enemySpawner.spawnRate = level.enemySpawnRate;
                 enemySpawner.enemyCountsForBattle = (int[])level.enemyCounts.Clone();
@@ -83,11 +84,11 @@ public class GameManager : MonoBehaviour
 
     public static void StartGame()
     {
-        playerSpeed =  PlayerPrefs.GetFloat("Gamemanager_playerSpeed", playerSpeed);
-        playerDamage = PlayerPrefs.GetFloat("Gamemanager_playerDamage", playerDamage);
-        playerHealth = PlayerPrefs.GetFloat("Gamemanager_playerHealth", playerHealth);
-        playerRange =  PlayerPrefs.GetFloat("Gamemanager_playerRange", playerRange);
-        playerAge = PlayerPrefs.GetFloat("Gamemanager_playerAge", playerAge);
+        playerSpeed =  PlayerPrefs.GetInt("Gamemanager_playerSpeed", playerSpeed);
+        playerDamage = PlayerPrefs.GetInt("Gamemanager_playerDamage", playerDamage);
+        playerHealth = PlayerPrefs.GetInt("Gamemanager_playerHealth", playerHealth);
+        playerShield =  PlayerPrefs.GetInt("Gamemanager_playerShield", playerShield);
+        playerAge = PlayerPrefs.GetInt("Gamemanager_playerAge", playerAge);
 
         level = levels.levels[levels.currentLevel];
 
@@ -96,11 +97,11 @@ public class GameManager : MonoBehaviour
     }
     public static void RestartGame()
     {
-        PlayerPrefs.SetFloat("Gamemanager_playerSpeed", playerSpeed);
-        PlayerPrefs.SetFloat("Gamemanager_playerDamage", playerDamage);
-        PlayerPrefs.SetFloat("Gamemanager_playerHealth", playerHealth);
-        PlayerPrefs.SetFloat("Gamemanager_playerRange", playerRange);
-        PlayerPrefs.SetFloat("Gamemanager_playerAge", playerAge);
+        PlayerPrefs.SetInt("Gamemanager_playerSpeed", playerSpeed);
+        PlayerPrefs.SetInt("Gamemanager_playerDamage", playerDamage);
+        PlayerPrefs.SetInt("Gamemanager_playerHealth", playerHealth);
+        PlayerPrefs.SetInt("Gamemanager_playerShield", playerShield);
+        PlayerPrefs.SetInt("Gamemanager_playerAge", playerAge);
         PlayerPrefs.Save();
         
 

@@ -54,7 +54,6 @@ public class PlayerInputManager : MonoBehaviour
     private void HandleAttack(InputAction.CallbackContext context)
     {
         manager.attackHandler.Attack();
-        manager.animatorManager.PlayTargetAnim("Attack");
     }
 
     private void HandleShield(InputAction.CallbackContext context)

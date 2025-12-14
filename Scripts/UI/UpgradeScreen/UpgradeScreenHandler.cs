@@ -73,6 +73,9 @@ public class UpgradeScreenHandler : MonoBehaviour
             case UpgradeType.Health:
                 GameManager.playerHealth += selected.modifier;
                 break;
+            case UpgradeType.Shield:
+                GameManager.playerShield += selected.modifier;
+                break;
         }
 
         GameManager.RestartGame();

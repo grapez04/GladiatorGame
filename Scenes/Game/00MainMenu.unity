@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
   upgrades:
   - upgradeType: 0
-    modifier: 3
+    modifier: 2
     ageCost: 4
   - upgradeType: 1
     modifier: 1
@@ -228,7 +228,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   enemyCounts: 03000000
   maxEnemysOnScreen: 3
-  enemySpawnRate: 1
+  enemySpawnRate: 2
 --- !u!4 &123033805
 Transform:
   m_ObjectHideFlags: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
   enemyCounts: 0400000002000000
   maxEnemysOnScreen: 4
-  enemySpawnRate: 1
+  enemySpawnRate: 2
 --- !u!4 &541843646
 Transform:
   m_ObjectHideFlags: 0
@@ -709,9 +709,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
   upgrades:
   - upgradeType: 0
-    modifier: 2
+    modifier: 3
     ageCost: 7
-  - upgradeType: 1
+  - upgradeType: 3
     modifier: 1
     ageCost: 14
   - upgradeType: 2
@@ -1012,7 +1012,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
   enemyCounts: 0a00000007000000
   maxEnemysOnScreen: 4
-  enemySpawnRate: 1
+  enemySpawnRate: 2
 --- !u!1 &1382321706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
   upgrades:
   - upgradeType: 0
-    modifier: 1
+    modifier: 2
     ageCost: 9
   - upgradeType: 1
     modifier: 1
@@ -3507,7 +3507,7 @@ MonoBehaviour:
   - upgradeType: 0
     modifier: 1
     ageCost: 3
-  - upgradeType: 1
+  - upgradeType: 3
     modifier: 1
     ageCost: 13
   - upgradeType: 2
@@ -3609,7 +3609,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
   enemyCounts: 0600000004000000
   maxEnemysOnScreen: 4
-  enemySpawnRate: 1
+  enemySpawnRate: 2
 --- !u!114 &1999186041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3625,10 +3625,10 @@ MonoBehaviour:
   upgrades:
   - upgradeType: 0
     modifier: 1
-    ageCost: 4
-  - upgradeType: 1
-    modifier: 2
     ageCost: 7
+  - upgradeType: 3
+    modifier: 1
+    ageCost: 2
   - upgradeType: 2
     modifier: 1
     ageCost: 5

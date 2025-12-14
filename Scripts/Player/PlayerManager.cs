@@ -27,16 +27,18 @@ public class PlayerManager : MonoBehaviour
         healthManager.SetHealth(stats.health);
         movement.movespeed = stats.speed;
         attackHandler.attackDamage = stats.attackDamage;
-        attackHandler.radius = stats.attackRange;
+        shieldHandler.SetShieldCount(stats.shield);
         currentAge = stats.age;
 
         // Age Decay:
         ApplyAgeLevel();
-        float ageMultiplier = GetAgeSpeedMultiplier();
+        float ageMultiplier = GetAgeMultiplier();
 
-        movement.movespeed = movement.movespeed * ageMultiplier;
-        Debug.Log("Speed is now " + movement.movespeed);
+        ApplyAgeAttackCooldown();
+        movement.movespeed *= ageMultiplier;
+        Debug.Log("Speed is now " + movement.movespeed + ", Cooldown is now " + attackHandler.currentAttackCooldown);
 
+        // attackHandler.radius = stats.attackRange;
         // longer attack cooldown, smaller attack buffer
         // focus window decreases
         // health affect
@@ -66,11 +68,27 @@ public class PlayerManager : MonoBehaviour
         return null;
     }
 
-    private float GetAgeSpeedMultiplier()
+    private float GetAgeMultiplier()
     {
         float maxAge = ageLevels[^1].maxAge;
         float age01 = Mathf.Clamp01(currentAge / maxAge);
         return ageDecayCurve.Evaluate(age01);
+    }
+
+    private void ApplyAgeAttackCooldown()
+    {
+        float maxAge = ageLevels[^1].maxAge;
+
+        float age01 = Mathf.Clamp01(currentAge / maxAge);
+        float invertedAge01 = 1f - age01;
+
+        // Curve now means: X = youth ? old age, Y = cooldown multiplier
+        float cooldownMultiplier = ageDecayCurve.Evaluate(invertedAge01);
+
+        // button-mash floor
+        float minCooldown = 0.03f;
+
+        attackHandler.currentAttackCooldown = Mathf.Max(minCooldown, attackHandler.baseAttackCooldown * cooldownMultiplier);
     }
 
     [System.Serializable]

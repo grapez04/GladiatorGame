@@ -4,13 +4,14 @@ using UnityEngine;
 public class Upgrade
 {
     public UpgradeType upgradeType;
-    public float modifier;
-    public float ageCost;
+    public int modifier;
+    public int ageCost;
 }
 
 public enum UpgradeType
 {
     Speed,
     Health,
-    Damage
+    Damage,
+    Shield
 }

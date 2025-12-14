@@ -16,6 +16,8 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        if (manager.shieldHandler.isShielded) return;
+
         manager.vFXHandler.PlayOnDamageVFX();
 
         Debug.Log("Player was hurt");
@@ -24,7 +26,7 @@ public class PlayerHealthManager : MonoBehaviour
 
         // Update UI
         manager.stats.health = currentHealth;
-        manager.playerUI.SetUI(manager.stats);
+        manager.playerUI.HandleHearts(manager.stats);
 
         if (currentHealth <= 0)
         {

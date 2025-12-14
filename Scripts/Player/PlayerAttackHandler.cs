@@ -18,6 +18,11 @@ public class PlayerAttackHandler : MonoBehaviour
     [Header("DamageValues")]
     public float attackDamage = 1f;
 
+    [Header("Attack Cooldown")]
+    [HideInInspector] public float baseAttackCooldown = 0.4f;
+    public float currentAttackCooldown;
+    private float lastAttackTime;
+
     private void Awake()
     {
         manager = GetComponent<PlayerManager>();
@@ -92,23 +97,29 @@ public class PlayerAttackHandler : MonoBehaviour
 
     public void Attack()
     {
+        if (!CanAttack())
+            return;
+
+        lastAttackTime = Time.time;
+        manager.animatorManager.PlayTargetAnim("Attack");
+
         foreach (Collider2D col in hitColliders)
         {
-            if (col != null)
-            {
-                // Get EnemyManager
-                EnemyManager enemyManager = col.GetComponent<EnemyManager>();
-                if (enemyManager == null) continue;
+            if (col == null) continue;
 
-                // Get EnemyStats
-                EnemyStats enemyStats = enemyManager.enemyStats;
-                if (enemyStats == null) continue;
+            EnemyManager enemyManager = col.GetComponent<EnemyManager>();
+            if (enemyManager == null) continue;
 
-                // Call Damage
-                enemyStats.TakeDamage(attackDamage);
+            EnemyStats enemyStats = enemyManager.enemyStats;
+            if (enemyStats == null) continue;
 
-                manager.sFXHandler.PlaySFX(manager.sFXHandler.slashClip);
-            }
+            enemyStats.TakeDamage(attackDamage);
+            manager.sFXHandler.PlaySFX(manager.sFXHandler.slashClip);
         }
+    }
+
+    private bool CanAttack()
+    {
+        return Time.time >= lastAttackTime + currentAttackCooldown;
     }
 }
