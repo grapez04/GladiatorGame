@@ -17,6 +17,12 @@ public class UpgradeScreenHandler : MonoBehaviour
 
     private void Start()
     {
+        // Clear
+        foreach (Transform child in upgradeHolder.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
         ageDisplay.text = GameManager.playerAge.ToString();
 
         // Get current level

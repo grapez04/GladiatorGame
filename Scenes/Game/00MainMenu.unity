@@ -3490,7 +3490,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
   enemyCounts: 100000000a000000
   maxEnemysOnScreen: 4
-  enemySpawnRate: 1
+  enemySpawnRate: 2
 --- !u!114 &1633124148
 MonoBehaviour:
   m_ObjectHideFlags: 0
