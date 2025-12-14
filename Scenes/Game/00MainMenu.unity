@@ -166,11 +166,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Upgrades
   upgrades:
   - upgradeType: 0
-    modifier: 1
-    ageCost: 7
+    modifier: 3
+    ageCost: 4
   - upgradeType: 1
     modifier: 1
-    ageCost: 20
+    ageCost: 16
   - upgradeType: 2
     modifier: 1
     ageCost: 10
@@ -713,7 +713,7 @@ MonoBehaviour:
     ageCost: 7
   - upgradeType: 1
     modifier: 1
-    ageCost: 20
+    ageCost: 14
   - upgradeType: 2
     modifier: 1
     ageCost: 10
@@ -923,7 +923,7 @@ MonoBehaviour:
     ageCost: 15
   - upgradeType: 2
     modifier: 1
-    ageCost: 10
+    ageCost: 8
 --- !u!4 &1272002647
 Transform:
   m_ObjectHideFlags: 0
@@ -993,7 +993,7 @@ MonoBehaviour:
     ageCost: 10
   - upgradeType: 2
     modifier: 1
-    ageCost: 10
+    ageCost: 7
 --- !u!114 &1276606608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1263,13 +1263,13 @@ MonoBehaviour:
   upgrades:
   - upgradeType: 0
     modifier: 1
-    ageCost: 7
+    ageCost: 9
   - upgradeType: 1
     modifier: 1
-    ageCost: 20
+    ageCost: 18
   - upgradeType: 2
     modifier: 1
-    ageCost: 10
+    ageCost: 16
 --- !u!4 &1436159042
 Transform:
   m_ObjectHideFlags: 0
@@ -3509,10 +3509,10 @@ MonoBehaviour:
     ageCost: 3
   - upgradeType: 1
     modifier: 1
-    ageCost: 15
+    ageCost: 13
   - upgradeType: 2
     modifier: 1
-    ageCost: 5
+    ageCost: 6
 --- !u!1 &1925610579
 GameObject:
   m_ObjectHideFlags: 0

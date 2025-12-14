@@ -4,8 +4,9 @@ using System.Collections;
 public class ShieldHandler : MonoBehaviour
 {
     [Header("Time Slow Settings")]
+    public int shieldCount;
+    public float slowDuration = 1f;
     [SerializeField] private float slowTimeScale = 0.3f;
-    private float slowDuration = 1f;
 
     private Coroutine slowRoutine;
 
