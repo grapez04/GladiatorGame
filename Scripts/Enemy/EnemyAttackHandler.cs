@@ -41,9 +41,9 @@ public class EnemyAttackHandler : MonoBehaviour
                 // Reset target
                 attackSnapshotPos = Vector3.zero;
 
-
                 // Restore normal speed
                 manager.stateHandler.SetSpeed(manager.currentEnemy.speed);
+                manager.agent.ResetPath();
                 manager.agent.isStopped = false;
 
                 Debug.Log("Cooldown finished ? movement restored");
@@ -86,20 +86,32 @@ public class EnemyAttackHandler : MonoBehaviour
     // Called by animation event
     public void Charge()
     {
+        manager.sFXHandler.PlaySFX(manager.currentEnemy.attack);
+
         Debug.Log("CHARGE!");
 
-        // Charge toward player
-        attackSnapshotPos = manager.player.transform.position;
+        Vector3 enemyPos = transform.position;
+        Vector3 playerPos = manager.player.transform.position;
+
+        // Direction toward player
+        Vector3 dirToPlayer = (playerPos - enemyPos).normalized;
+
+        // Distance to player
+        float distanceToPlayer = Vector3.Distance(enemyPos, playerPos);
+
+        // Clamp using maxChargeDistance from Enemy ScriptableObject
+        float maxDistance = manager.currentEnemy.maxChargeDistance;
+        float chargeDistance = Mathf.Min(distanceToPlayer, maxDistance);
+
+        // Set final snapshot
+        attackSnapshotPos = enemyPos + dirToPlayer * chargeDistance;
 
         isCharging = true;
 
         manager.agent.isStopped = false;
         manager.isMoving = true;
 
-        // Set charge speed
-        manager.stateHandler.SetSpeed(chargeSpeed);
-
-        // Once charge is done, we start cooldown (in EnemyStateHandler)
+        manager.stateHandler.SetSpeed(manager.currentEnemy.chargeSpeed);
     }
 
     public void TryDealDamage()

@@ -3,17 +3,38 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class UpgradeScreenHandler : MonoBehaviour
 {
+    public static UpgradeScreenHandler Instance;
+
     [SerializeField] private GameObject upgradeHolder;
     [SerializeField] private GameObject entryPrefab;
-    [SerializeField] private Sprite[] upgradeTypeIcons;
 
     [Space]
     [SerializeField] private TextMeshProUGUI ageDisplay;
     [SerializeField] private Color normalColor = Color.white;
     [SerializeField] private Color hoverColor = Color.red;
+    [SerializeField] private TextMeshProUGUI upgradeInfo;
+    [SerializeField] private TextMeshProUGUI upgradeHowTo;
+
+    [Header("Upgrade Icons")]
+    public Sprite speedIcon;
+    public Sprite healthIcon;
+    public Sprite damageIcon;
+    public Sprite shieldIcon;
+
+    [Header("Upgrade Info")]
+    [TextArea(2, 10)] public string speedInfo;
+    [TextArea(2, 10)] public string healthInfo;
+    [TextArea(2, 10)] public string damageInfo;
+    [TextArea(2, 10)] public string shieldInfo;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -24,6 +45,8 @@ public class UpgradeScreenHandler : MonoBehaviour
         }
 
         ageDisplay.text = GameManager.playerAge.ToString();
+        upgradeInfo.text = "";
+        upgradeHowTo.text = "";
 
         // Get current level
         Level level = GameManager.levels.levels[GameManager.levels.currentLevel - 1];
@@ -52,6 +75,27 @@ public class UpgradeScreenHandler : MonoBehaviour
     {
         ageDisplay.text = (GameManager.playerAge + upgrade.ageCost).ToString();
         ageDisplay.color = hoverColor;
+
+        switch (upgrade.upgradeType)
+        {
+            case UpgradeType.Speed:
+                upgradeInfo.text = speedInfo;
+                break;
+
+            case UpgradeType.Damage:
+                upgradeInfo.text = damageInfo;
+                break;
+
+            case UpgradeType.Health:
+                upgradeInfo.text = healthInfo;
+                break;
+
+            case UpgradeType.Shield:
+                upgradeInfo.text = shieldInfo;
+                break;
+        }
+
+        upgradeHowTo.text = upgrade.howTo.ToString();
     }
 
     private void OnExitHover()
@@ -79,6 +123,7 @@ public class UpgradeScreenHandler : MonoBehaviour
             case UpgradeType.Health:
                 GameManager.playerHealth += selected.modifier;
                 break;
+
             case UpgradeType.Shield:
                 GameManager.playerShield += selected.modifier;
                 break;

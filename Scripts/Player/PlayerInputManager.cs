@@ -37,6 +37,9 @@ public class PlayerInputManager : MonoBehaviour
 
     private void OnDisable()
     {
+        playerControls.Player.Attack.performed -= HandleAttack;
+        playerControls.Player.Shield.performed -= HandleShield;
+
         playerControls.Disable();
     }
 

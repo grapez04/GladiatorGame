@@ -15,4 +15,10 @@ public class Enemy: ScriptableObject
     public int attackDamage = 1;
     public float attackCooldown = 0.5f;
     public float chargeSpeed = 10;
+    public float maxChargeDistance = 1f;
+
+    [Space]
+
+    [Header("SFX")]
+    public AudioClip attack;
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9041e0e2c59601d4a9e36efe813ca73f
+guid: 7dbb1e6012b1be044b3ead1adb77a8ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5474736753573006793
-    second: Gladiatorfloor__0
+      213: -2554911446779591992
+    second: ShieldFull_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gladiatorfloor__0
+      name: ShieldFull_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 1
+        y: 2
+        width: 14
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7327184dde3d504b0800000000000000
-      internalID: -5474736753573006793
+      spriteID: 8c28f1e53912b8cd0800000000000000
+      internalID: -2554911446779591992
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Gladiatorfloor__0: -5474736753573006793
+      ShieldFull_0: -2554911446779591992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -168,12 +168,15 @@ MonoBehaviour:
   - upgradeType: 0
     modifier: 2
     ageCost: 4
+    howTo: 
   - upgradeType: 1
     modifier: 1
     ageCost: 16
+    howTo: 
   - upgradeType: 2
     modifier: 1
     ageCost: 10
+    howTo: 
 --- !u!114 &120716690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,12 +263,15 @@ MonoBehaviour:
   - upgradeType: 0
     modifier: 1
     ageCost: 1
+    howTo: 
   - upgradeType: 1
     modifier: 1
     ageCost: 3
-  - upgradeType: 2
+    howTo: 
+  - upgradeType: 3
     modifier: 1
     ageCost: 2
+    howTo: 
 --- !u!1 &431331135
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,12 +532,15 @@ MonoBehaviour:
   - upgradeType: 0
     modifier: 1
     ageCost: 2
+    howTo: 
   - upgradeType: 1
     modifier: 2
     ageCost: 5
+    howTo: 
   - upgradeType: 2
     modifier: 1
     ageCost: 5
+    howTo: 
 --- !u!1 &759359858
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,12 +720,15 @@ MonoBehaviour:
   - upgradeType: 0
     modifier: 3
     ageCost: 7
+    howTo: 
   - upgradeType: 3
     modifier: 1
     ageCost: 14
+    howTo: 
   - upgradeType: 2
     modifier: 1
     ageCost: 10
+    howTo: 
 --- !u!114 &945383330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -918,12 +930,15 @@ MonoBehaviour:
   - upgradeType: 0
     modifier: 1
     ageCost: 5
+    howTo: 
   - upgradeType: 1
     modifier: 1
     ageCost: 15
+    howTo: 
   - upgradeType: 2
     modifier: 1
     ageCost: 8
+    howTo: 
 --- !u!4 &1272002647
 Transform:
   m_ObjectHideFlags: 0
@@ -988,12 +1003,15 @@ MonoBehaviour:
   - upgradeType: 0
     modifier: 2
     ageCost: 5
+    howTo: 
   - upgradeType: 1
     modifier: 1
     ageCost: 10
+    howTo: 
   - upgradeType: 2
     modifier: 1
     ageCost: 7
+    howTo: 
 --- !u!114 &1276606608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,7 +1030,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
   enemyCounts: 0a00000007000000
   maxEnemysOnScreen: 4
-  enemySpawnRate: 2
+  enemySpawnRate: 1.4
 --- !u!1 &1382321706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,12 +1282,15 @@ MonoBehaviour:
   - upgradeType: 0
     modifier: 2
     ageCost: 9
+    howTo: 
   - upgradeType: 1
     modifier: 1
     ageCost: 18
+    howTo: 
   - upgradeType: 2
     modifier: 1
     ageCost: 16
+    howTo: 
 --- !u!4 &1436159042
 Transform:
   m_ObjectHideFlags: 0
@@ -3488,9 +3509,9 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
-  enemyCounts: 100000000a000000
+  enemyCounts: 0e00000009000000
   maxEnemysOnScreen: 4
-  enemySpawnRate: 2
+  enemySpawnRate: 1
 --- !u!114 &1633124148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3507,12 +3528,15 @@ MonoBehaviour:
   - upgradeType: 0
     modifier: 1
     ageCost: 3
+    howTo: 
   - upgradeType: 3
     modifier: 1
     ageCost: 13
+    howTo: 
   - upgradeType: 2
     modifier: 1
     ageCost: 6
+    howTo: 
 --- !u!1 &1925610579
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,12 +3650,15 @@ MonoBehaviour:
   - upgradeType: 0
     modifier: 1
     ageCost: 7
+    howTo: 
   - upgradeType: 3
     modifier: 1
     ageCost: 2
+    howTo: Press Right Mouse Button
   - upgradeType: 2
     modifier: 1
     ageCost: 5
+    howTo: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

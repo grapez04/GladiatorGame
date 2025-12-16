@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     public Vector2 move;
+    public bool isMoving = false;
 
     [HideInInspector] public float movespeed = 5f;
 
@@ -25,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (move != Vector2.zero) isMoving = true;
+        else isMoving = false;
+
         RotateAim();
         Flip();
     }

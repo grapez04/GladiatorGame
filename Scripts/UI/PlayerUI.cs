@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -6,20 +7,20 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dayCounter;
     [SerializeField] private TextMeshProUGUI ageCounter;
 
-    [SerializeField] private GameObject heartsHolder;
+    [SerializeField] private Transform heartsHolder;
     [SerializeField] private GameObject heartIcon;
 
-    [SerializeField] private GameObject shieldsHolder;
+    [SerializeField] private Transform shieldsHolder;
     [SerializeField] private GameObject shieldIcon;
+
+    private readonly List<ShieldUI> shields = new();
 
     public void SetUI(PlayerStats stats)
     {
-        print("Set UI");
+        Debug.Log("Set UI");
 
         dayCounter.text = $"Day: {GameManager.levels.currentLevel + 1}";
         ageCounter.text = $"Age: {stats.age}";
-
-        ageCounter.text = "Age: " + stats.age.ToString();
 
         HandleHearts(stats);
         HandleShields(stats);
@@ -27,35 +28,39 @@ public class PlayerUI : MonoBehaviour
 
     public void HandleHearts(PlayerStats stats)
     {
-        // Clear current hearts
-        foreach (Transform child in heartsHolder.transform)
-        {
+        foreach (Transform child in heartsHolder)
             Destroy(child.gameObject);
-        }
 
-        int heartsToSpawn = (int)stats.health;
-
-        // Spawn hearts
-        for (int i = 0; i < heartsToSpawn; i++)
-        {
-            Instantiate(heartIcon, heartsHolder.transform);
-        }
+        for (int i = 0; i < (int)stats.health; i++)
+            Instantiate(heartIcon, heartsHolder);
     }
 
     public void HandleShields(PlayerStats stats)
     {
-        // Clear current hearts
-        foreach (Transform child in shieldsHolder.transform)
-        {
+        // Clear existing shields (same as hearts)
+        foreach (Transform child in shieldsHolder)
             Destroy(child.gameObject);
-        }
 
-        int shieldsToSpawn = (int)stats.shield;
+        shields.Clear();
 
-        // Spawn hearts
-        for (int i = 0; i < shieldsToSpawn; i++)
+        // Recreate shields based on stats
+        for (int i = 0; i < stats.shield; i++)
         {
-            Instantiate(shieldIcon, shieldsHolder.transform);
+            ShieldUI shield = Instantiate(shieldIcon, shieldsHolder)
+                .GetComponent<ShieldUI>();
+
+            shields.Add(shield);
         }
+    }
+
+    public ShieldUI GetNextAvailableShield()
+    {
+        foreach (var shield in shields)
+        {
+            if (shield.IsFull)
+                return shield;
+        }
+
+        return null;
     }
 }

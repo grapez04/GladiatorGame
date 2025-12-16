@@ -9,10 +9,15 @@ public class ShieldHandler : MonoBehaviour
 
     [Header("Time Slow Settings")]
     public int shieldCount;
-    public float slowDuration = 2f;
-    [SerializeField] private float slowTimeScale = 0.3f;
+    private float slowDuration = 3f; // Shorten by age
+    private float slowTimeScale = 0.3f;
+    private float refillDuration = 9f; // Lengthen by age
 
     private Coroutine slowRoutine;
+    private ShieldUI activeShield;
+
+    [Header("Effects")]
+    [SerializeField] private AudioClip tune;
 
     public void SetShieldCount(int _shieldCount)
     {
@@ -21,41 +26,39 @@ public class ShieldHandler : MonoBehaviour
 
     public void Shield()
     {
-        if (shieldCount <= 0 || isShielded)
-            return;
+        if (isShielded) return;
 
-        shieldCount--;
+        activeShield = manager.playerUI.GetNextAvailableShield();
+        if (activeShield == null) return;
 
-        // Update stats + UI
-        manager.stats.shield = shieldCount;
-        manager.playerUI.HandleShields(manager.stats);
-
-        isShielded = true;
         slowRoutine = StartCoroutine(SlowTimeRoutine());
     }
 
     private IEnumerator SlowTimeRoutine()
     {
+        isShielded = true;
         ApplySlowTime();
 
-        yield return new WaitForSecondsRealtime(slowDuration);
+        // FX
+        manager.sFXHandler.PlayLoopSFX(tune);
 
-        RestoreTime();
-        isShielded = false;
-        slowRoutine = null;
-    }
+        float t = 0f;
 
-    private void OnDisable()
-    {
-        RestoreTime();
-
-        if (slowRoutine != null)
+        while (t < slowDuration)
         {
-            StopCoroutine(slowRoutine);
-            slowRoutine = null;
+            t += Time.unscaledDeltaTime;
+            float fill = Mathf.Lerp(100f, 0f, t / slowDuration);
+            activeShield.SetFill(fill);
+            yield return null;
         }
 
+        activeShield.SetFill(0f);
+        activeShield.StartRefill(this, refillDuration);
+
+        RestoreTime();
         isShielded = false;
+        activeShield = null;
+        slowRoutine = null;
     }
 
     private void ApplySlowTime()
@@ -66,7 +69,15 @@ public class ShieldHandler : MonoBehaviour
 
     private void RestoreTime()
     {
+        manager.sFXHandler.StopLastLoop();
+
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f;
+    }
+
+    private void OnDisable()
+    {
+        RestoreTime();
+        isShielded = false;
     }
 }

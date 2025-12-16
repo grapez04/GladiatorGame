@@ -22,7 +22,7 @@ public class VFXHandler : MonoBehaviour
         Instantiate(bloodSplat, transform.position, Quaternion.identity);
 
         if (onDamageVFXCo != null)
-            StopCoroutine(OnDamageVFXCo());
+            StopCoroutine(onDamageVFXCo);
 
         onDamageVFXCo = StartCoroutine(OnDamageVFXCo());
     }
@@ -31,7 +31,7 @@ public class VFXHandler : MonoBehaviour
     {
         sr.material = onDamageMat;
 
-        yield return new WaitForSeconds(onDamageVFXDuration);
+        yield return new WaitForSecondsRealtime(onDamageVFXDuration);
 
         sr.material = originalMat;
     }

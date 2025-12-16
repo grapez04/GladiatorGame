@@ -109,10 +109,10 @@ public class EnemyStateHandler : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, stopDistance);
 
         // Draw the snapshot position if charging
-        if (manager != null && manager.attackHandler != null && manager.attackHandler.isCharging)
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(manager.attackHandler.attackSnapshotPos, 0.2f); // small debug sphere
-        }
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(manager.attackHandler.attackSnapshotPos, 0.2f); // small debug sphere
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, manager.currentEnemy.maxChargeDistance);
     }
 }

@@ -100,7 +100,7 @@ public class PlayerAttackHandler : MonoBehaviour
         if (!CanAttack())
             return;
 
-        lastAttackTime = Time.time;
+        lastAttackTime = Time.unscaledTime;
         manager.animatorManager.PlayTargetAnim("Attack");
 
         foreach (Collider2D col in hitColliders)
@@ -120,6 +120,6 @@ public class PlayerAttackHandler : MonoBehaviour
 
     private bool CanAttack()
     {
-        return Time.time >= lastAttackTime + currentAttackCooldown;
+        return Time.unscaledTime >= lastAttackTime + currentAttackCooldown;
     }
 }

@@ -18,5 +18,7 @@ MonoBehaviour:
   health: 3
   stopDistance: 3
   attackDamage: 1
-  attackCooldown: 1
+  attackCooldown: 2
   chargeSpeed: 15
+  maxChargeDistance: 3
+  attack: {fileID: 8300000, guid: f4d61d569b64cf148a1d8ca9a802a5c5, type: 3}

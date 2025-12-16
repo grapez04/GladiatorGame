@@ -13,6 +13,7 @@ public class EnemyManager : MonoBehaviour
     public EnemyAttackHandler attackHandler;
     public NavMeshAgent agent;
     public VFXHandler vFXHandler;
+    public SFXHandler sFXHandler;
     public SpriteRenderer spriteRenderer;
 
     public bool isMoving;
