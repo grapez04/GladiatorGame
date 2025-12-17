@@ -8,4 +8,8 @@ public class Level : MonoBehaviour
     [SerializeField] public int[] enemyCounts;
     [SerializeField] public int maxEnemysOnScreen;
     [SerializeField] public float enemySpawnRate;
+
+    [Space]
+    [Header("Cutscene")]
+    public Cutscene cutscene;
 }

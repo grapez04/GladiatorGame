@@ -4,4 +4,5 @@ public class Levels : MonoBehaviour
 {
     public int currentLevel;
     public Level[] levels;
+    public GameObject cutscenePrefab;
 }

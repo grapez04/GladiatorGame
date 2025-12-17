@@ -129,7 +129,13 @@ public class UpgradeScreenHandler : MonoBehaviour
                 break;
         }
 
-        GameManager.RestartGame();
-
+        if (GameManager.level.cutscene != null)
+        {
+            GameManager.ShowCutscene();
+        }
+        else
+        {
+            GameManager.RestartGame();
+        }
     }
 }

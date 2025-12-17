@@ -108,4 +108,13 @@ public class GameManager : MonoBehaviour
     {
         loadUpgrade = true;
     }
+
+    public static void ShowCutscene()
+    {
+        GameObject instantiatedCutscene = Instantiate(levels.cutscenePrefab);
+        CutsceneHandle handle = instantiatedCutscene.GetComponentInChildren<CutsceneHandle>();
+        handle.spriteHolder.sprite = level.cutscene.art;
+        handle.TypeText(level.cutscene.monologue);
+        handle.OnContinue += RestartGame;
+    }
 }

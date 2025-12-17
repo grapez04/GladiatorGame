@@ -167,7 +167,7 @@ MonoBehaviour:
   upgrades:
   - upgradeType: 0
     modifier: 2
-    ageCost: 4
+    ageCost: 6
     howTo: 
   - upgradeType: 1
     modifier: 1
@@ -196,6 +196,7 @@ MonoBehaviour:
   enemyCounts: 050000000a000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
+  cutscene: {fileID: 0}
 --- !u!1 &123033802
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +232,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e13afe462af8ce438752156ba7b0630, type: 2}
   enemyCounts: 03000000
   maxEnemysOnScreen: 3
-  enemySpawnRate: 2
+  enemySpawnRate: 1
+  cutscene: {fileID: 0}
 --- !u!4 &123033805
 Transform:
   m_ObjectHideFlags: 0
@@ -268,7 +270,7 @@ MonoBehaviour:
     modifier: 1
     ageCost: 3
     howTo: 
-  - upgradeType: 3
+  - upgradeType: 2
     modifier: 1
     ageCost: 2
     howTo: 
@@ -284,7 +286,7 @@ GameObject:
   - component: {fileID: 431331138}
   - component: {fileID: 431331137}
   m_Layer: 5
-  m_Name: title
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -464,6 +466,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleScreenManager
   levels: {fileID: 1406509967}
+  cutscenePrefab: {fileID: 3140788955286139716, guid: 59d6e8a2c0755624383d834fc58e6c35, type: 3}
+  intro: {fileID: 11400000, guid: 0f78d4e2c90d308498fe38f55fc88b05, type: 2}
 --- !u!1 &541843643
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +505,7 @@ MonoBehaviour:
   enemyCounts: 0400000002000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 2
+  cutscene: {fileID: 0}
 --- !u!4 &541843646
 Transform:
   m_ObjectHideFlags: 0
@@ -539,7 +544,7 @@ MonoBehaviour:
     howTo: 
   - upgradeType: 2
     modifier: 1
-    ageCost: 5
+    ageCost: 4
     howTo: 
 --- !u!1 &759359858
 GameObject:
@@ -592,6 +597,7 @@ MonoBehaviour:
   enemyCounts: 1400000014000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
+  cutscene: {fileID: 0}
 --- !u!1 &867580316
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +754,7 @@ MonoBehaviour:
   enemyCounts: 0a0000000a000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
+  cutscene: {fileID: 11400000, guid: 360e2e549776f6143a3226b947b81033, type: 2}
 --- !u!1 &1210816934
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,6 +921,7 @@ MonoBehaviour:
   enemyCounts: 1400000003000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
+  cutscene: {fileID: 11400000, guid: 91b8f612e12e27e499c9e9fab163de35, type: 2}
 --- !u!114 &1272002646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,7 +941,7 @@ MonoBehaviour:
     howTo: 
   - upgradeType: 1
     modifier: 1
-    ageCost: 15
+    ageCost: 12
     howTo: 
   - upgradeType: 2
     modifier: 1
@@ -1006,7 +1014,7 @@ MonoBehaviour:
     howTo: 
   - upgradeType: 1
     modifier: 1
-    ageCost: 10
+    ageCost: 9
     howTo: 
   - upgradeType: 2
     modifier: 1
@@ -1031,6 +1039,7 @@ MonoBehaviour:
   enemyCounts: 0a00000007000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1.4
+  cutscene: {fileID: 0}
 --- !u!1 &1382321706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 471021734}
         m_TargetAssemblyTypeName: TitleScreenManager, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: StartIntro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1204,6 +1213,7 @@ MonoBehaviour:
   - {fileID: 120716690}
   - {fileID: 945383330}
   - {fileID: 759359860}
+  cutscenePrefab: {fileID: 3140788955286139716, guid: 59d6e8a2c0755624383d834fc58e6c35, type: 3}
 --- !u!4 &1406509968
 Transform:
   m_ObjectHideFlags: 0
@@ -1266,6 +1276,7 @@ MonoBehaviour:
   enemyCounts: 0a0000000a000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
+  cutscene: {fileID: 0}
 --- !u!114 &1436159041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,15 +1292,15 @@ MonoBehaviour:
   upgrades:
   - upgradeType: 0
     modifier: 2
-    ageCost: 9
+    ageCost: 4
     howTo: 
   - upgradeType: 1
     modifier: 1
-    ageCost: 18
+    ageCost: 14
     howTo: 
   - upgradeType: 2
     modifier: 1
-    ageCost: 16
+    ageCost: 7
     howTo: 
 --- !u!4 &1436159042
 Transform:
@@ -3512,6 +3523,7 @@ MonoBehaviour:
   enemyCounts: 0e00000009000000
   maxEnemysOnScreen: 4
   enemySpawnRate: 1
+  cutscene: {fileID: 0}
 --- !u!114 &1633124148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3633,7 +3645,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 667c11796af68f94f8efdca418eda9f9, type: 2}
   enemyCounts: 0600000004000000
   maxEnemysOnScreen: 4
-  enemySpawnRate: 2
+  enemySpawnRate: 1
+  cutscene: {fileID: 11400000, guid: 2e094171cae80364881186129cb704ae, type: 2}
 --- !u!114 &1999186041
 MonoBehaviour:
   m_ObjectHideFlags: 0
