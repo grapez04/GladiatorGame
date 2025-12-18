@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -202,11 +202,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Once upon a time Once upon a time Once upon a time Once upon a time Once
+  m_text: 'Once upon a time Once upon a time Once upon a time Once upon a time Once
     upon a time Once upon a time Once upon a time Once upon a time Once upon a time
-    Once upon a time Once upon a time Once upon a time Once upon a time Once upon
-    a time Once upon a time Once upon a time Once upon a time Once upon a time Once
-    upon a time Once upon a time Once upon a time
+    Once upon a time Once upon a time Once upon a time '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fae617cf16dc15e40888923d90706db5, type: 2}
   m_sharedMaterial: {fileID: -7226841790605966323, guid: fae617cf16dc15e40888923d90706db5, type: 2}
@@ -233,8 +231,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -246,7 +244,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -338,7 +336,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &3684394811409484426
 MonoBehaviour:
@@ -433,7 +431,6 @@ MonoBehaviour:
   textHolder: {fileID: 4365925069150366377}
   continueText: {fileID: 7597956402960330950}
   canContinue: 0
-  continueDelay: 2
   typingSpeed: 0.04
 --- !u!1 &6248289314070691143
 GameObject:

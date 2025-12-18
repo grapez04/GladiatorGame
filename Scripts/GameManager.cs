@@ -1,8 +1,11 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+
     [SerializeField] private float sceneLoadWaitTime = 1f;
 
     public delegate void EnemyDied();
@@ -22,8 +25,22 @@ public class GameManager : MonoBehaviour
     private static bool loadUpgrade = false;
     private static float loadUpgradeTime = 0f;
 
+    public static int playerDeathCount = 0;
+    public static int enemiesKilled = 0;
+
+    [Space]
+    [SerializeField] private Animator crossfade;
+
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+
         levels = FindAnyObjectByType<Levels>();
         level = levels.levels[levels.currentLevel];
         StartGame();
@@ -52,7 +69,7 @@ public class GameManager : MonoBehaviour
                 enemySpawner.enemies = level.enemies;
 
                 playerManager.StartBattle();
-                StartCoroutine(enemySpawner.StartBattle());
+                StartCoroutine(enemySpawner.StartSpawning());
             }
         }
 
@@ -65,11 +82,11 @@ public class GameManager : MonoBehaviour
                 levels.currentLevel += 1;
                 if (levels.levels.Length <= levels.currentLevel)
                 {
-                    SceneManager.LoadScene("03Ending");
+                    StartCoroutine(LoadScene("03Ending"));
                 }
                 else
                 {
-                    SceneManager.LoadScene("02Upgrades");
+                    StartCoroutine(LoadScene("02Upgrades"));
                 }
             }
             else
@@ -100,10 +117,15 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("Gamemanager_playerShield", playerShield);
         PlayerPrefs.SetInt("Gamemanager_playerAge", playerAge);
         PlayerPrefs.Save();
-        
 
+        Instance.StartCoroutine(Instance.LoadScene("01Battle"));
+    }
+
+    public static void OnDeath()
+    {
         SceneManager.LoadScene("01Battle");
     }
+
     public static void Upgrade()
     {
         loadUpgrade = true;
@@ -116,5 +138,14 @@ public class GameManager : MonoBehaviour
         handle.spriteHolder.sprite = level.cutscene.art;
         handle.TypeText(level.cutscene.monologue);
         handle.OnContinue += RestartGame;
+    }
+
+    IEnumerator LoadScene(string sceneName)
+    {
+        crossfade.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(sceneName);
     }
 }

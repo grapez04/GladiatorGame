@@ -34,8 +34,9 @@ public class PlayerHealthManager : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
-        GameManager.RestartGame();
+        GameManager.playerDeathCount++;
+        GameManager.OnDeath();
     }
 }

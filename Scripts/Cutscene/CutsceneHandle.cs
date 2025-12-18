@@ -10,17 +10,15 @@ public class CutsceneHandle : MonoBehaviour
     public TextMeshProUGUI continueText;
 
     public bool canContinue = false;
-    public float continueDelay = 2f;
     public float typingSpeed = 0.04f;
 
     public event System.Action OnContinue;
 
-    Coroutine typingCoroutine;
+    private Coroutine typingCoroutine;
 
     private void Start()
     {
         continueText.gameObject.SetActive(false);
-        StartCoroutine(ShowContinueAfterDelay());
     }
 
     public void TypeText(string text)
@@ -43,14 +41,9 @@ public class CutsceneHandle : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
 
-        StartCoroutine(ShowContinueAfterDelay());
-    }
-
-    private IEnumerator ShowContinueAfterDelay()
-    {
-        yield return new WaitForSeconds(continueDelay);
-        continueText.gameObject.SetActive(true);
+        // Typing finished
         canContinue = true;
+        continueText.gameObject.SetActive(true);
     }
 
     public void Continue()

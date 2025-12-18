@@ -17,7 +17,7 @@ public class ShieldHandler : MonoBehaviour
     private ShieldUI activeShield;
 
     [Header("Effects")]
-    [SerializeField] private AudioClip tune;
+    [SerializeField] private AudioClip shieldUse;
 
     public void SetShieldCount(int _shieldCount)
     {
@@ -40,7 +40,8 @@ public class ShieldHandler : MonoBehaviour
         ApplySlowTime();
 
         // FX
-        manager.sFXHandler.PlayLoopSFX(tune);
+        manager.sFXHandler.PlaySFX(shieldUse);
+        manager.sFXHandler.PlayLoopSFX(null);
 
         float t = 0f;
 

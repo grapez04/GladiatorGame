@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
         GameManager.enemyDied += EnemyDied;
     }
 
-    public IEnumerator StartBattle()
+    public IEnumerator StartSpawning()
     {
         _enemyCountsForBattle = (int[])enemyCountsForBattle.Clone();
         enemysInBattle = 0;
