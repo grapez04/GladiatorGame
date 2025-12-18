@@ -10,9 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35cc469d553f4134995552bd465c4153, type: 3}
-  m_Name: Memory 3
+  m_Name: IF1
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
-  art: {fileID: 5368215799173761234, guid: a4b86fd768368584d88a439ef0d8211a, type: 3}
-  monologue: My memory is getting worse. My flesh is weakening. I start to feel the
-    heavyness of my sword. I no longer remember the face of the man I killed. I see
-    him in every man, numbers don't matter anymore.
+  art: {fileID: 3000043449074835079, guid: 625ac659815b4fe4ebbb50910bb2d0dd, type: 3}
+  monologue: I am a slave to the crowd

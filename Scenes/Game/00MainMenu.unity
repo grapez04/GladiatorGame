@@ -468,7 +468,9 @@ MonoBehaviour:
   levels: {fileID: 1406509967}
   crossfade: {fileID: 1766218580}
   cutscenePrefab: {fileID: 3140788955286139716, guid: 59d6e8a2c0755624383d834fc58e6c35, type: 3}
-  intro: {fileID: 11400000, guid: 0f78d4e2c90d308498fe38f55fc88b05, type: 2}
+  intro:
+  - {fileID: 11400000, guid: 0f78d4e2c90d308498fe38f55fc88b05, type: 2}
+  - {fileID: 11400000, guid: 48448bd076e40ec419cc306a935c07f6, type: 2}
 --- !u!1 &541843643
 GameObject:
   m_ObjectHideFlags: 0

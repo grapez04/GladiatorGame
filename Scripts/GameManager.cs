@@ -148,4 +148,35 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(sceneName);
     }
+
+
+    public static void ResetGameState()
+    {
+        // Reset player stats
+        playerSpeed = 3;
+        playerDamage = 1;
+        playerHealth = 1;
+        playerShield = 0;
+        playerAge = 20;
+
+        // Reset counters
+        playerDeathCount = 0;
+        enemiesKilled = 0;
+
+        // Reset progression flags
+        setPlayerStats = false;
+        loadUpgrade = false;
+        loadUpgradeTime = 0f;
+
+        // Reset levels
+        if (levels != null)
+        {
+            levels.currentLevel = 0;
+        }
+
+        // Clear saved data
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+    }
+
 }

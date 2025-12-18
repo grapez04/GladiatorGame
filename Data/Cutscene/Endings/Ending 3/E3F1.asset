@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35cc469d553f4134995552bd465c4153, type: 3}
-  m_Name: Ending 1
+  m_Name: E3F1
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
-  art: {fileID: 21300000, guid: b6df6c9efa0da8749918245565292084, type: 3}
-  monologue: 'Adult: I died young in the arena'
+  art: {fileID: -5753556171340102600, guid: 10caaa41a23183b4c8506b9db605ff43, type: 3}
+  monologue: Old ending

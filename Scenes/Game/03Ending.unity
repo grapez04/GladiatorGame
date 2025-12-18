@@ -815,11 +815,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a1d8a7f9f078a4ab45309d1388844e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndingScreenManager
-  ending1: {fileID: 11400000, guid: 5fabe7a054e3b24449ed8122806f40aa, type: 2}
-  ending2: {fileID: 11400000, guid: 5ced240fb555fb847a327d2628492100, type: 2}
-  ending3: {fileID: 11400000, guid: 06042cd6aba51f342b4450eaca32a79b, type: 2}
+  ending1:
+  - {fileID: 11400000, guid: 5fabe7a054e3b24449ed8122806f40aa, type: 2}
+  - {fileID: 11400000, guid: e2d524a8df9daa647b81d0dbd4729e0c, type: 2}
+  ending2:
+  - {fileID: 11400000, guid: 5ced240fb555fb847a327d2628492100, type: 2}
+  - {fileID: 11400000, guid: a16e2d552ba2a6a40b3f1c638e1e9954, type: 2}
+  ending3:
+  - {fileID: 11400000, guid: 06042cd6aba51f342b4450eaca32a79b, type: 2}
+  - {fileID: 11400000, guid: cba03bf4bb2587e44a597ac667b84900, type: 2}
   cutscenePrefab: {fileID: 3140788955286139716, guid: 59d6e8a2c0755624383d834fc58e6c35, type: 3}
-  chosenEnding: {fileID: 11400000, guid: 5fabe7a054e3b24449ed8122806f40aa, type: 2}
+  chosenEnding:
+  - {fileID: 11400000, guid: cba03bf4bb2587e44a597ac667b84900, type: 2}
+  - {fileID: 11400000, guid: cba03bf4bb2587e44a597ac667b84900, type: 2}
   finalAge: {fileID: 1389668262}
   enemiesKilled: {fileID: 1639553965}
   deathCount: {fileID: 1376137082}
@@ -1358,6 +1366,7 @@ GameObject:
   - component: {fileID: 1671986522}
   - component: {fileID: 1671986521}
   - component: {fileID: 1671986520}
+  - component: {fileID: 1671986523}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1439,6 +1448,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1671986523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671986519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &1788698873
 GameObject:
   m_ObjectHideFlags: 0

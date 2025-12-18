@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class EndingScreenManager : MonoBehaviour
 {
-    [SerializeField] private Cutscene ending1;
-    [SerializeField] private Cutscene ending2;
-    [SerializeField] private Cutscene ending3;
+    [SerializeField] private Cutscene[] ending1;
+    [SerializeField] private Cutscene[] ending2;
+    [SerializeField] private Cutscene[] ending3;
     [Space]
     [Header("Ending")]
     [SerializeField] private GameObject cutscenePrefab;
-    [SerializeField] private Cutscene chosenEnding;
+    [SerializeField] private Cutscene[] chosenEnding;
 
     [Space]
     [Header("Stats")]
@@ -24,6 +24,8 @@ public class EndingScreenManager : MonoBehaviour
 
     private GameObject instantiationRef;
     private bool faded = false;
+
+    private int currentCutsceneIndex = 0;
 
     private void Start()
     {
@@ -53,14 +55,45 @@ public class EndingScreenManager : MonoBehaviour
 
     private void PlayEnding()
     {
+        currentCutsceneIndex = 0;
+        PlayCurrentCutscene();
+    }
+
+    private void PlayCurrentCutscene()
+    {
+        // Clean up previous cutscene if needed
+        if (instantiationRef != null)
+        {
+            Destroy(instantiationRef);
+        }
+
         GameObject instantiatedEnding = Instantiate(cutscenePrefab);
         instantiationRef = instantiatedEnding;
 
         CutsceneHandle handle = instantiatedEnding.GetComponentInChildren<CutsceneHandle>();
-        handle.spriteHolder.sprite = chosenEnding.art;
-        handle.TypeText(chosenEnding.monologue);
-        handle.OnContinue += FadeOut;
+
+        Cutscene cutscene = chosenEnding[currentCutsceneIndex];
+
+        handle.spriteHolder.sprite = cutscene.art;
+        handle.TypeText(cutscene.monologue);
+
+        handle.OnContinue += GoToNextCutscene;
     }
+
+    private void GoToNextCutscene()
+    {
+        currentCutsceneIndex++;
+
+        if (currentCutsceneIndex >= chosenEnding.Length)
+        {
+            FadeOut(); // last cutscene finished
+        }
+        else
+        {
+            PlayCurrentCutscene(); // play next one
+        }
+    }
+
 
     private void SetOverview()
     {
@@ -70,6 +103,7 @@ public class EndingScreenManager : MonoBehaviour
 
     public void ToTitle()
     {
+        GameManager.ResetGameState();
         SceneManager.LoadScene("00MainMenu");
     }
 

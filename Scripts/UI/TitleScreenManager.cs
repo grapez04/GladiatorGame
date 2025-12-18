@@ -11,9 +11,12 @@ public class TitleScreenManager : MonoBehaviour
     [Space]
     [Header("Intro")]
     [SerializeField] private GameObject cutscenePrefab;
-    [SerializeField] private Cutscene intro;
+    [SerializeField] private Cutscene[] intro;
 
     private bool faded = false;
+
+    private int currentIntroIndex = 0;
+    private GameObject instantiationRef;
 
     private void Awake()
     {
@@ -25,12 +28,7 @@ public class TitleScreenManager : MonoBehaviour
 
     private void StartGame()
     {
-        PlayerPrefs.DeleteAll();
-        foreach (Levels _levels in FindObjectsByType<Levels>(FindObjectsSortMode.None))
-        {
-            _levels.currentLevel = 0;
-        }
-
+        GameManager.ResetGameState();
         StartCoroutine(LoadScene());
     }
 
@@ -62,10 +60,41 @@ public class TitleScreenManager : MonoBehaviour
 
     private void StartIntro()
     {
-        GameObject instantiatedIntro = Instantiate(cutscenePrefab);
-        CutsceneHandle handle = instantiatedIntro.GetComponentInChildren<CutsceneHandle>();
-        handle.spriteHolder.sprite = intro.art;
-        handle.TypeText(intro.monologue);
-        handle.OnContinue += StartGame;
+        currentIntroIndex = 0;
+        PlayCurrentIntroFrame();
+    }
+
+    private void PlayCurrentIntroFrame()
+    {
+        // Clean up previous frame
+        if (instantiationRef != null)
+        {
+            Destroy(instantiationRef);
+        }
+
+        instantiationRef = Instantiate(cutscenePrefab);
+
+        CutsceneHandle handle = instantiationRef.GetComponentInChildren<CutsceneHandle>();
+
+        Cutscene cutscene = intro[currentIntroIndex];
+
+        handle.spriteHolder.sprite = cutscene.art;
+        handle.TypeText(cutscene.monologue);
+
+        handle.OnContinue += GoToNextIntroFrame;
+    }
+
+    private void GoToNextIntroFrame()
+    {
+        currentIntroIndex++;
+
+        if (currentIntroIndex >= intro.Length)
+        {
+            StartGame(); // finished intro
+        }
+        else
+        {
+            PlayCurrentIntroFrame(); // next frame
+        }
     }
 }
