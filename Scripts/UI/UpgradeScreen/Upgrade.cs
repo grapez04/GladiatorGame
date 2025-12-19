@@ -7,7 +7,7 @@ public class Upgrade
     public UpgradeType upgradeType;
     public int modifier;
     public int ageCost;
-    [TextArea(2, 10)] public string specialInfo;
+    [TextArea(1, 10)] public string specialInfo;
 }
 
 public enum UpgradeType

@@ -3,8 +3,8 @@ guid: 0c21562f64b70764a910f1f1f38522a4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4155973682957842779
-    second: CutsceneEnding2Frame1_0
+      213: 4071860985314009440
+    second: E2F1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CutsceneEnding2Frame1_0
+      name: E2F1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b59f29c9b0cfca930800000000000000
-      internalID: 4155973682957842779
+      spriteID: 061e9641ef7228830800000000000000
+      internalID: 4071860985314009440
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CutsceneEnding2Frame1_0: 4155973682957842779
+      E2F1_0: 4071860985314009440
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

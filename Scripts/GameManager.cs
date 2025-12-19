@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public static Levels levels;
     public static Level level;
 
+    private float battleStartDelay = 2f;
+
     [Header("Player stats")]
     public static int playerSpeed = 3;
     public static int playerDamage = 1;
@@ -25,6 +27,7 @@ public class GameManager : MonoBehaviour
     private static bool loadUpgrade = false;
     private static float loadUpgradeTime = 0f;
 
+    [Header("Overview")]
     public static int playerDeathCount = 0;
     public static int enemiesKilled = 0;
 
@@ -53,23 +56,27 @@ public class GameManager : MonoBehaviour
             PlayerStats playerStats = FindAnyObjectByType<PlayerStats>();
             EnemySpawner enemySpawner = FindAnyObjectByType<EnemySpawner>();
             PlayerManager playerManager = FindAnyObjectByType<PlayerManager>();
+
             if (playerStats != null && enemySpawner != null && playerManager != null)
             {
                 setPlayerStats = false;
-                playerStats = FindAnyObjectByType<PlayerStats>();
+
+                // Apply stats immediately
                 playerStats.attackDamage = playerDamage;
                 playerStats.health = playerHealth;
                 playerStats.speed = playerSpeed;
                 playerStats.age = playerAge;
                 playerStats.shield = playerShield;
+                playerManager.SetStats();
 
+                // Enemy spawner
                 enemySpawner.spawnRate = level.enemySpawnRate;
                 enemySpawner.enemyCountsForBattle = (int[])level.enemyCounts.Clone();
                 enemySpawner.maxEnenemysInBattle = level.maxEnemysOnScreen;
                 enemySpawner.enemies = level.enemies;
 
-                playerManager.StartBattle();
-                StartCoroutine(enemySpawner.StartSpawning());
+                // Start battle after delay
+                StartCoroutine(DelayedBattleStart(enemySpawner, battleStartDelay));
             }
         }
 
@@ -94,6 +101,13 @@ public class GameManager : MonoBehaviour
                 loadUpgradeTime += Time.deltaTime;
             }
         }
+    }
+
+    private IEnumerator DelayedBattleStart(EnemySpawner enemySpawner, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        StartCoroutine(enemySpawner.StartSpawning());
     }
 
     public static void StartGame()
@@ -135,8 +149,7 @@ public class GameManager : MonoBehaviour
     {
         GameObject instantiatedCutscene = Instantiate(levels.cutscenePrefab);
         CutsceneHandle handle = instantiatedCutscene.GetComponentInChildren<CutsceneHandle>();
-        handle.spriteHolder.sprite = level.cutscene.art;
-        handle.TypeText(level.cutscene.monologue);
+        handle.SetProperties(level.cutscene);
         handle.OnContinue += RestartGame;
     }
 

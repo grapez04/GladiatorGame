@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cc469d553f4134995552bd465c4153, type: 3}
   m_Name: Memory 2
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
-  art: {fileID: 21300000, guid: b6df6c9efa0da8749918245565292084, type: 3}
-  monologue: My hearing is worsening. I miss the sound of the leaves in the tree
-    that stands at their grave site.
+  art: {fileID: 21300000, guid: a4b86fd768368584d88a439ef0d8211a, type: 3}
+  monologue:
+  - 'Among the now muffled cheers of the crowd
+
+    and the trembling of my heart,
+
+    I
+    could hear the clear sound of rustling of leaves.'
+  - 'In it, I reminisced the freshness
+
+    of the land I had left behind.'

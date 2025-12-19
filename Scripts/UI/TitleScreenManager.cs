@@ -18,6 +18,10 @@ public class TitleScreenManager : MonoBehaviour
     private int currentIntroIndex = 0;
     private GameObject instantiationRef;
 
+    [Space]
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioClip introTheme;
+
     private void Awake()
     {
         if(FindObjectsByType<Levels>(FindObjectsSortMode.None).Length == 1)
@@ -61,6 +65,11 @@ public class TitleScreenManager : MonoBehaviour
     private void StartIntro()
     {
         currentIntroIndex = 0;
+
+        musicSource.Stop();
+        musicSource.clip = introTheme;
+        musicSource.Play();
+
         PlayCurrentIntroFrame();
     }
 
@@ -77,9 +86,7 @@ public class TitleScreenManager : MonoBehaviour
         CutsceneHandle handle = instantiationRef.GetComponentInChildren<CutsceneHandle>();
 
         Cutscene cutscene = intro[currentIntroIndex];
-
-        handle.spriteHolder.sprite = cutscene.art;
-        handle.TypeText(cutscene.monologue);
+        handle.SetProperties(cutscene);
 
         handle.OnContinue += GoToNextIntroFrame;
     }

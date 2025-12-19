@@ -74,9 +74,7 @@ public class EndingScreenManager : MonoBehaviour
 
         Cutscene cutscene = chosenEnding[currentCutsceneIndex];
 
-        handle.spriteHolder.sprite = cutscene.art;
-        handle.TypeText(cutscene.monologue);
-
+        handle.SetProperties(cutscene);
         handle.OnContinue += GoToNextCutscene;
     }
 

@@ -22,7 +22,7 @@ public class PlayerManager : MonoBehaviour
     public float currentAge;
     [SerializeField] private AnimationCurve ageDecayCurve;
 
-    private void SetStats()
+    public void SetStats()
     {
         healthManager.SetHealth(stats.health);
         movement.movespeed = stats.speed;
@@ -42,11 +42,7 @@ public class PlayerManager : MonoBehaviour
         // longer attack cooldown, smaller attack buffer
         // focus window decreases
         // health affect
-    }
 
-    public void StartBattle()
-    {
-        SetStats();
         playerUI.SetUI(stats);
     }
 

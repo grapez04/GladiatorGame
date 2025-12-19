@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cc469d553f4134995552bd465c4153, type: 3}
   m_Name: Memory 3
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
-  art: {fileID: 5368215799173761234, guid: a4b86fd768368584d88a439ef0d8211a, type: 3}
-  monologue: My memory is getting worse. My flesh is weakening. I start to feel the
-    heavyness of my sword. I no longer remember the face of the man I killed. I see
-    him in every man, numbers don't matter anymore.
+  art: {fileID: 21300000, guid: 01019928c6b933c45aa2b4ce1a15873e, type: 3}
+  monologue:
+  - 'With my bones getting weaker,
+
+    the heaviness of my sword grows.'
+  - 'Gripping strongly my sword,
+
+    I felt the blood of the one who stole my light
+
+    Pooling
+    all around my feet'

@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cc469d553f4134995552bd465c4153, type: 3}
   m_Name: IF1
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
-  art: {fileID: 3000043449074835079, guid: 625ac659815b4fe4ebbb50910bb2d0dd, type: 3}
-  monologue: I am a slave to the crowd
+  art: {fileID: 21300000, guid: 625ac659815b4fe4ebbb50910bb2d0dd, type: 3}
+  monologue:
+  - I have been a slave since I could remember.
+  - 'Somebody with no memory of my comings or
+
+    my identity, but lingering a sense
+    of loss'
+  - Day after day, as if Minerva herself had decided to punish me, I am forced to
+    fight for my life to entertain the masses.
+  controller: {fileID: 0}

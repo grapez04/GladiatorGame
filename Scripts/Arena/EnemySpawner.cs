@@ -18,6 +18,9 @@ public class EnemySpawner : MonoBehaviour
 
     private int[] _enemyCountsForBattle;
 
+    [Space]
+    [SerializeField] private Animator[] gates;
+
     void Start()
     {
         GameManager.enemyDied += EnemyDied;
@@ -25,6 +28,13 @@ public class EnemySpawner : MonoBehaviour
 
     public IEnumerator StartSpawning()
     {
+        // Gates
+        foreach (Animator anim in gates)
+        {
+            anim.SetTrigger("Start");
+        }
+
+        // Spawn
         _enemyCountsForBattle = (int[])enemyCountsForBattle.Clone();
         enemysInBattle = 0;
         while (_enemyCountsForBattle.Sum() != 0)

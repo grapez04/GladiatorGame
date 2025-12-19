@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: Memory 1
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
   art: {fileID: 21300000, guid: b6df6c9efa0da8749918245565292084, type: 3}
-  monologue: How many years will I sacrifice to the arena. I feel my vision getting
-    blurry. I miss the image of the loved on I lost
+  monologue:
+  - "As my vision started slowly blurring, \nI saw the figure of someone \nwho I
+    thought I had forgotten."
+  - 'And, after a long time,
+
+    I sensed a warmth in my heart.
+
+    And, for once,
+    I wished to escape this hell.'

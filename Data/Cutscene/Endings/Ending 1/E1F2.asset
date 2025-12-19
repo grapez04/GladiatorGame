@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cc469d553f4134995552bd465c4153, type: 3}
   m_Name: E1F2
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
-  art: {fileID: 471073347947094578, guid: 2160179d484a67c4394668415f3dcf8b, type: 3}
-  monologue: Died in the arena
+  art: {fileID: 21300000, guid: 2160179d484a67c4394668415f3dcf8b, type: 3}
+  monologue:
+  - 'I was mercilessly stabbed,
+
+    just like I had done it to other
+
+    Many times
+    in my lifetime'
+  - "Then, only, then, I wished I hadn\u2019t wasted my youth\r\nIn pursuing glory,
+    that was never there."

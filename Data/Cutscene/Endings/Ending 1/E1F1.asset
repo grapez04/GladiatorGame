@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cc469d553f4134995552bd465c4153, type: 3}
   m_Name: E1F1
   m_EditorClassIdentifier: Assembly-CSharp::Cutscene
-  art: {fileID: 967565284144821133, guid: ca489a41d39d66a4ea5eccef50d5e7f7, type: 3}
-  monologue: Adult ending
+  art: {fileID: 21300000, guid: ca489a41d39d66a4ea5eccef50d5e7f7, type: 3}
+  monologue:
+  - 'Days pass, nights fade.
+
+    All the same in this arena.'
+  - 'Nonstop, I keep fighting for my glory,
+
+    Silently praying to be recognized
+    by the public.'
+  - "But, when I lowered my defense for once\u2026"

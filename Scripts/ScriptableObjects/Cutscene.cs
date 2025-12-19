@@ -5,5 +5,7 @@ public class Cutscene : ScriptableObject
 {
     public Sprite art;
     [TextArea(5, 10)]
-    public string monologue;
+    public string[] monologue;
+
+    public RuntimeAnimatorController controller;
 }
