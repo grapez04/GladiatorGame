@@ -1652,20 +1652,32 @@ MonoBehaviour:
   shieldHowTo: Use with Right Mouse Button
   crossfade: {fileID: 649977247}
   merchantIntroductionText:
-  - Hello warworn one
   - Having a hard time sleeping?
-  - I know how hard you people have it during daytime
-  - "I apologize for my lack of transparency. I am a merchant who seeks to help people
-    like you. See, an entertainer\u2014someone like yourself, will keep performing,
-    for however long the people request it. "
-  - BUT, when does such person retire you may ask? Only when he has made a proper
-    impression on the audience; One that will finally fulfill their appetite
-  - And one can only do that with a great range of skill. That my friend is what
-    I want to offer you.
-  - The price? we'll keep it simple. You decide how many years you want to sacrifice,
-    I give you corresponding powers
-  - 'But beware: The more powers you choose, the older you''ll become'
-  - I'll be in town for the next 10 days
+  - I know of the hardships your kind has, up there.
+  - "Fighting, day after day, drowning ever so in your own sorrow\u2026"
+  - "Searching for glory\u2026"
+  - "\u2026"
+  - Apologies, I should know better than to interrupt your rest.
+  - I am a merchant who seeks to help people like you - entertainments for the likes
+    of the public.
+  - Scurrae that make them clap, laugh, fall all over themselves.
+  - Actors who make them feel purified from their guilt by seeing your blood spill
+    all over the floor.
+  - Over, and over again, with no reward other than being kept alive.
+  - However, no human is able to withstand this forever. And I have seen enough of
+    you wishing to leave this endless cycle.
+  - So, you wish to escape, you must make an upstanding impression on them! Word
+    of the coliseum says that a streak of 10 wins will give the public the catharsis
+    they seek for and only then, you will be freed.
+  - 'But, everybody knows only heroes are capable of feats like this. And I know
+    that you are no hero. '
+  - 'That is where, my friend, I would be able to assist you. '
+  - 'I am giving you the chance to rise up in the arena and earn your freedom. '
+  - For the next 10 days, I will be offering you gifts that will be beneficial for
+    your performance out there.
+  - In exchange, I will ask for years of your lifetime.
+  - 'So, the stronger you get, your lifespan will be drained out of you. '
+  - Having said this; warrior, do we have a deal?
   defaultUpgradeText: Please pick an upgrade
   musicSource: {fileID: 649977249}
   memoryTheme: {fileID: 8300000, guid: 88521f6eb26318e41aed6e2446c22408, type: 3}

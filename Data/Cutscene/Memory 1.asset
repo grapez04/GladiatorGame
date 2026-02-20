@@ -16,9 +16,10 @@ MonoBehaviour:
   monologue:
   - "As my vision started slowly blurring, \nI saw the figure of someone \nwho I
     thought I had forgotten."
-  - 'And, after a long time,
+  - 'After a long time,
 
     I sensed a warmth in my heart.
 
-    And, for once,
-    I wished to escape this hell.'
+    And, for once, I
+    wished to escape this hell.'
+  controller: {fileID: 0}
